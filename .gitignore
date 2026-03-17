@@ -5,6 +5,7 @@
 .openclaw/sessions/
 .openclaw/*.token
 .openclaw/*.key
+.openclaw/devices/*.json
 .openclaw/sandboxes/
 .openclaw/sandboxes/agent-main-f331f052/
 
@@ -19,7 +20,9 @@
 .openclaw/agents/main/agent/sessions/
 
 # Logs
-.openclaw/logs/
+.openclaw/logs/*.jsonl
+.openclaw/logs/*.json
+.openclaw/logs/*.log
 
 # Keep config and instructions
 !.openclaw/openclaw.json

@@ -27,14 +27,15 @@
         "to": "1771281565"
       },
       "state": {
-        "nextRunAtMs": 1773722507165,
+        "nextRunAtMs": 1773723519477,
         "lastRunAtMs": 1773721607165,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
         "lastDurationMs": 7840,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": false
+        "lastDelivered": false,
+        "runningAtMs": 1773723519481
       }
     },
     {
