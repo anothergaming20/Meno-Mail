@@ -442,9 +442,9 @@
     "totalTokensFresh": true
   },
   "agent:main:main": {
-    "sessionId": "4edf3b93-b760-4ee6-8b15-5e5ac139122b",
-    "updatedAt": 1773605973002,
-    "systemSent": false,
+    "sessionId": "c17ca7f5-f262-48fa-8c0b-2bd5b7499feb",
+    "updatedAt": 1773723997795,
+    "systemSent": true,
     "abortedLastRun": false,
     "chatType": "direct",
     "deliveryContext": {
@@ -456,10 +456,10 @@
       "surface": "webchat",
       "chatType": "direct"
     },
-    "sessionFile": "/Users/aiagnet/.openclaw/agents/main/sessions/4edf3b93-b760-4ee6-8b15-5e5ac139122b.jsonl",
+    "sessionFile": "/Users/aiagnet/.openclaw/agents/main/sessions/c17ca7f5-f262-48fa-8c0b-2bd5b7499feb.jsonl",
     "compactionCount": 0,
     "skillsSnapshot": {
-      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>apple-notes</name>\n    <description>Manage Apple Notes via the `memo` CLI on macOS (create, view, edit, delete, search, move, and export notes). Use when a user asks OpenClaw to add a note, list notes, search notes, or manage note folders.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/apple-notes/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawhub</name>\n    <description>Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/clawhub/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>coding-agent</name>\n    <description>Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (spawn in temp dir), (3) refactoring large codebases, (4) iterative coding that needs file exploration. NOT for: simple one-liner fixes (just edit), reading code (use read tool), thread-bound ACP harness requests in chat (for example spawn/run Codex or Claude Code in a Discord thread; use sessions_spawn with runtime:&quot;acp&quot;), or any work in ~/clawd workspace (never spawn agents here). Claude Code: use --print --permission-mode bypassPermissions (no PTY). Codex/Pi/OpenCode: pty:true required.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/coding-agent/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gh-issues</name>\n    <description>Fetch GitHub issues, spawn sub-agents to implement fixes and open PRs, then monitor and address PR review comments. Usage: /gh-issues [owner/repo] [--label bug] [--limit 5] [--milestone v1.0] [--assignee @me] [--fork user/repo] [--watch] [--interval 5] [--reviews-only] [--cron] [--dry-run] [--model glm-5] [--notify-channel -1002381931352]</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/gh-issues/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>GitHub operations via `gh` CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commenting on issues, (3) listing/filtering PRs or issues, (4) viewing run logs. NOT for: complex web UI interactions requiring manual browser flows (use browser tooling when available), bulk operations across many repos (script with gh api), or when gh auth is not configured.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>here-now</name>\n    <description>Publish files and folders to the web instantly. Use when asked to &quot;publish this&quot;, &quot;host this&quot;, &quot;deploy this&quot;, &quot;share this on the web&quot;, &quot;make a website&quot;, or &quot;put this online&quot;. Outputs a live URL at {slug}.here.now.\n</description>\n    <location>~/.agents/skills/here-now/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>agentmail</name>\n    <description>API-first email platform designed for AI agents. Create and manage dedicated email inboxes, send and receive emails programmatically, and handle email-based workflows with webhooks and real-time events. Use when you need to set up agent email identity, send emails from agents, handle incoming email workflows, or replace traditional email providers like Gmail with agent-friendly infrastructure.</description>\n    <location>~/.openclaw/workspace/skills/agentmail/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>apple-notes</name>\n    <description>Manage Apple Notes via the `memo` CLI on macOS (create, view, edit, delete, search, move, and export notes). Use when a user asks OpenClaw to add a note, list notes, search notes, or manage note folders.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/apple-notes/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>clawhub</name>\n    <description>Use the ClawHub CLI to search, install, update, and publish agent skills from clawhub.com. Use when you need to fetch new skills on the fly, sync installed skills to latest or a specific version, or publish new/updated skill folders with the npm-installed clawhub CLI.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/clawhub/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>coding-agent</name>\n    <description>Delegate coding tasks to Codex, Claude Code, or Pi agents via background process. Use when: (1) building/creating new features or apps, (2) reviewing PRs (spawn in temp dir), (3) refactoring large codebases, (4) iterative coding that needs file exploration. NOT for: simple one-liner fixes (just edit), reading code (use read tool), thread-bound ACP harness requests in chat (for example spawn/run Codex or Claude Code in a Discord thread; use sessions_spawn with runtime:&quot;acp&quot;), or any work in ~/clawd workspace (never spawn agents here). Claude Code: use --print --permission-mode bypassPermissions (no PTY). Codex/Pi/OpenCode: pty:true required.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/coding-agent/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>gh-issues</name>\n    <description>Fetch GitHub issues, spawn sub-agents to implement fixes and open PRs, then monitor and address PR review comments. Usage: /gh-issues [owner/repo] [--label bug] [--limit 5] [--milestone v1.0] [--assignee @me] [--fork user/repo] [--watch] [--interval 5] [--reviews-only] [--cron] [--dry-run] [--model glm-5] [--notify-channel -1002381931352]</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/gh-issues/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>github</name>\n    <description>GitHub operations via `gh` CLI: issues, PRs, CI runs, code review, API queries. Use when: (1) checking PR status or CI, (2) creating/commenting on issues, (3) listing/filtering PRs or issues, (4) viewing run logs. NOT for: complex web UI interactions requiring manual browser flows (use browser tooling when available), bulk operations across many repos (script with gh api), or when gh auth is not configured.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/github/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>healthcheck</name>\n    <description>Host security hardening and risk-tolerance configuration for OpenClaw deployments. Use when a user asks for security audits, firewall/SSH/update hardening, risk posture, exposure review, OpenClaw cron scheduling for periodic checks, or version status checks on a machine running OpenClaw (laptop, workstation, Pi, VPS).</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/healthcheck/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>node-connect</name>\n    <description>Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/node-connect/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>skill-creator</name>\n    <description>Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like &quot;create a skill&quot;, &quot;author a skill&quot;, &quot;tidy up a skill&quot;, &quot;improve this skill&quot;, &quot;review the skill&quot;, &quot;clean up the skill&quot;, &quot;audit the skill&quot;.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/skill-creator/SKILL.md</location>\n  </skill>\n  <skill>\n    <name>weather</name>\n    <description>Get current weather and forecasts via wttr.in or Open-Meteo. Use when: user asks about weather, temperature, or forecasts for any location. NOT for: historical weather data, severe weather alerts, or detailed meteorological analysis. No API key needed.</description>\n    <location>/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/weather/SKILL.md</location>\n  </skill>\n</available_skills>",
       "skills": [
         {
           "name": "apple-notes",
@@ -486,17 +486,14 @@
           "name": "healthcheck"
         },
         {
+          "name": "node-connect"
+        },
+        {
           "name": "skill-creator"
         },
         {
           "name": "weather",
           "requiredEnv": []
-        },
-        {
-          "name": "here-now"
-        },
-        {
-          "name": "agentmail"
         }
       ],
       "resolvedSkills": [
@@ -549,6 +546,14 @@
           "disableModelInvocation": false
         },
         {
+          "name": "node-connect",
+          "description": "Diagnose OpenClaw node connection and pairing failures for Android, iOS, and macOS companion apps. Use when QR/setup code/manual connect fails, local Wi-Fi works but VPS/tailnet does not, or errors mention pairing required, unauthorized, bootstrap token invalid or expired, gateway.bind, gateway.remote.url, Tailscale, or plugins.entries.device-pair.config.publicUrl.",
+          "filePath": "/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/node-connect/SKILL.md",
+          "baseDir": "/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/node-connect",
+          "source": "openclaw-bundled",
+          "disableModelInvocation": false
+        },
+        {
           "name": "skill-creator",
           "description": "Create, edit, improve, or audit AgentSkills. Use when creating a new skill from scratch or when asked to improve, review, audit, tidy up, or clean up an existing skill or SKILL.md file. Also use when editing or restructuring a skill directory (moving files to references/ or scripts/, removing stale content, validating against the AgentSkills spec). Triggers on phrases like \"create a skill\", \"author a skill\", \"tidy up a skill\", \"improve this skill\", \"review the skill\", \"clean up the skill\", \"audit the skill\".",
           "filePath": "/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/skill-creator/SKILL.md",
@@ -563,33 +568,20 @@
           "baseDir": "/usr/local/Cellar/node@22/22.22.0_1/lib/node_modules/openclaw/skills/weather",
           "source": "openclaw-bundled",
           "disableModelInvocation": false
-        },
-        {
-          "name": "here-now",
-          "description": "Publish files and folders to the web instantly. Use when asked to \"publish this\", \"host this\", \"deploy this\", \"share this on the web\", \"make a website\", or \"put this online\". Outputs a live URL at {slug}.here.now.\n",
-          "filePath": "/Users/aiagnet/.agents/skills/here-now/SKILL.md",
-          "baseDir": "/Users/aiagnet/.agents/skills/here-now",
-          "source": "agents-skills-personal",
-          "disableModelInvocation": false
-        },
-        {
-          "name": "agentmail",
-          "description": "API-first email platform designed for AI agents. Create and manage dedicated email inboxes, send and receive emails programmatically, and handle email-based workflows with webhooks and real-time events. Use when you need to set up agent email identity, send emails from agents, handle incoming email workflows, or replace traditional email providers like Gmail with agent-friendly infrastructure.",
-          "filePath": "/Users/aiagnet/.openclaw/workspace/skills/agentmail/SKILL.md",
-          "baseDir": "/Users/aiagnet/.openclaw/workspace/skills/agentmail",
-          "source": "openclaw-workspace",
-          "disableModelInvocation": false
         }
       ],
       "version": 0
     },
-    "contextTokens": 1000000,
+    "authProfileOverride": "anthropic:claude",
+    "authProfileOverrideSource": "auto",
+    "authProfileOverrideCompactionCount": 0,
     "modelProvider": "anthropic",
     "model": "claude-opus-4-6",
+    "contextTokens": 1000000,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1773605968642,
-      "sessionId": "4edf3b93-b760-4ee6-8b15-5e5ac139122b",
+      "generatedAt": 1773723980141,
+      "sessionId": "c17ca7f5-f262-48fa-8c0b-2bd5b7499feb",
       "sessionKey": "agent:main:main",
       "provider": "anthropic",
       "model": "claude-opus-4-6",
@@ -608,9 +600,9 @@
         "sandboxed": false
       },
       "systemPrompt": {
-        "chars": 34597,
+        "chars": 34799,
         "projectContextChars": 16931,
-        "nonProjectContextChars": 17666
+        "nonProjectContextChars": 17868
       },
       "injectedWorkspaceFiles": [
         {
@@ -679,7 +671,7 @@
         }
       ],
       "skills": {
-        "promptChars": 5913,
+        "promptChars": 5517,
         "entries": [
           {
             "name": "apple-notes",
@@ -706,20 +698,16 @@
             "blockChars": 513
           },
           {
+            "name": "node-connect",
+            "blockChars": 563
+          },
+          {
             "name": "skill-creator",
             "blockChars": 781
           },
           {
             "name": "weather",
             "blockChars": 438
-          },
-          {
-            "name": "here-now",
-            "blockChars": 410
-          },
-          {
-            "name": "agentmail",
-            "blockChars": 546
           }
         ]
       },
@@ -898,12 +886,12 @@
         ]
       }
     },
-    "inputTokens": 3,
-    "outputTokens": 58,
-    "totalTokens": 99043,
-    "totalTokensFresh": true,
-    "cacheRead": 97877,
-    "cacheWrite": 1163
+    "inputTokens": 4,
+    "outputTokens": 195,
+    "cacheRead": 20177,
+    "cacheWrite": 224,
+    "totalTokens": 20402,
+    "totalTokensFresh": true
   },
   "agent:main:telegram:slash:1771281565": {
     "origin": {
