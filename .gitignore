@@ -1,6 +1,5 @@
 # OpenClaw runtime / sensitive
 # .openclaw/memory/
-# .openclaw/qmd/
 .openclaw/logs/
 .openclaw/cache/
 .openclaw/sessions/
@@ -8,14 +7,17 @@
 .openclaw/*.key
 .openclaw/sandboxes/
 
+# email-triage Agent
 .openclaw/agents/email-triage/agent/auth-profiles.json
 .openclaw/agents/email-triage/agent/models.json
 .openclaw/agents/email-triage/agent/sessions/
 
+# Main agent
 .openclaw/agents/main/agent/auth-profiles.json
 .openclaw/agents/main/agent/models.json
 .openclaw/agents/main/agent/sessions/
 
+# Logs
 .openclaw/logs/
 
 # Keep config and instructions
