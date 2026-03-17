@@ -12,17 +12,18 @@
 # email-triage Agent
 .openclaw/agents/email-triage/agent/auth-profiles.json
 .openclaw/agents/email-triage/agent/models.json
-.openclaw/agents/email-triage/agent/sessions/
+agents/email-triage/sessions/
 
 # Main agent
 .openclaw/agents/main/agent/auth-profiles.json
 .openclaw/agents/main/agent/models.json
-.openclaw/agents/main/agent/sessions/
+agents/main/sessions/
 
 # Logs
 .openclaw/logs/*.jsonl
 .openclaw/logs/*.json
 .openclaw/logs/*.log
+logs/gateway.err.log
 
 # Keep config and instructions
 !.openclaw/openclaw.json

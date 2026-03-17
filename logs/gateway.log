@@ -4923,3 +4923,14 @@
 2026-03-17T00:57:02.330-04:00 [ws] ⇄ res ✓ config.set 89ms conn=26aa413b…aae8 id=b00263be…aa1c
 2026-03-17T00:57:02.841-04:00 [reload] config change detected; evaluating reload (meta.lastTouchedAt)
 2026-03-17T00:57:02.847-04:00 [reload] config change applied (dynamic reads: meta.lastTouchedAt)
+2026-03-17T01:00:20.076-04:00 [ws] ⇄ res ✓ channels.status 866ms conn=49f3048d…f962 id=23d87134…1c60
+2026-03-17T01:00:40.817-04:00 [ws] ⇄ res ✓ skills.status 367ms conn=26aa413b…aae8 id=eb77b484…b063
+2026-03-17T01:00:41.814-04:00 [ws] ⇄ res ✓ config.get 87ms conn=26aa413b…aae8 id=1afcf01a…40eb
+2026-03-17T01:00:55.871-04:00 [ws] ⇄ res ✓ config.set 70ms conn=26aa413b…aae8 id=02a4d333…a998
+2026-03-17T01:00:56.382-04:00 [reload] config change detected; evaluating reload (meta.lastTouchedAt)
+2026-03-17T01:00:56.387-04:00 [reload] config change applied (dynamic reads: meta.lastTouchedAt)
+2026-03-17T01:00:58.262-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=26aa413b-1985-4756-8fc5-ed3d6ffdaae8
+2026-03-17T01:00:58.496-04:00 [ws] webchat connected conn=f7948dea-2e29-44b7-b07a-17af27665d1a remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.13
+2026-03-17T01:00:58.665-04:00 [ws] ⇄ res ✓ config.get 91ms conn=f7948dea…5d1a id=5f54e837…102b
+2026-03-17T01:00:58.773-04:00 [ws] ⇄ res ✓ device.pair.list 167ms conn=f7948dea…5d1a id=162400eb…7785
+2026-03-17T01:00:58.781-04:00 [ws] ⇄ res ✓ node.list 214ms conn=f7948dea…5d1a id=44ce8f70…a1cd
