@@ -7,7 +7,7 @@
       "description": "Fetch, classify, and act on new inbox emails",
       "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1773723525159,
+      "updatedAtMs": 1773724425678,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -27,11 +27,11 @@
         "to": "1771281565"
       },
       "state": {
-        "nextRunAtMs": 1773724419484,
-        "lastRunAtMs": 1773723519484,
+        "nextRunAtMs": 1773725319494,
+        "lastRunAtMs": 1773724419494,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 5675,
+        "lastDurationMs": 6184,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
