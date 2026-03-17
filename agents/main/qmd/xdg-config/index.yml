@@ -1,0 +1,13 @@
+collections:
+  memory-root-main:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: MEMORY.md
+  memory-alt-main:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: memory.md
+  memory-dir-main:
+    path: /Users/aiagnet/.openclaw/workspace/memory
+    pattern: "**/*.md"
+  workspace-main:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: "**/*.md"

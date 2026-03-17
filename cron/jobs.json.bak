@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "60c2f369-62dc-42fe-b2f3-0b8d32648593",
+      "name": "email-triage-dispatcher",
+      "description": "Fetch, classify, and act on new inbox emails",
+      "enabled": true,
+      "createdAtMs": 1773551619477,
+      "updatedAtMs": 1773721615005,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 900000,
+        "anchorMs": 1773551619477
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the email triage dispatcher: bash ~/.openclaw/workspace/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors.",
+        "lightContext": true,
+        "model": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "telegram",
+        "to": "1771281565"
+      },
+      "state": {
+        "nextRunAtMs": 1773722507165,
+        "lastRunAtMs": 1773721607165,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 7840,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
+      }
+    },
+    {
+      "id": "6fa273bf-74f9-42c8-bdec-99f4b8d5a7c5",
+      "name": "email-triage-cleanup",
+      "description": "Purge pending draft entries older than 48h",
+      "enabled": true,
+      "createdAtMs": 1773551637280,
+      "updatedAtMs": 1773645517521,
+      "schedule": {
+        "kind": "cron",
+        "expr": "17 3 * * *",
+        "tz": "America/New_York"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the stale draft cleanup: bash ~/.openclaw/workspace/scripts/cleanup-stale-drafts.sh — report how many drafts were removed.",
+        "lightContext": true,
+        "model": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "1771281565"
+      },
+      "state": {
+        "nextRunAtMs": 1773731820000,
+        "lastRunAtMs": 1773645495456,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 22065,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    }
+  ]
+}

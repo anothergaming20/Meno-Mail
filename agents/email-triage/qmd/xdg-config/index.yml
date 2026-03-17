@@ -1,0 +1,13 @@
+collections:
+  memory-root-email-triage:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: MEMORY.md
+  memory-alt-email-triage:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: memory.md
+  memory-dir-email-triage:
+    path: /Users/aiagnet/.openclaw/workspace/memory
+    pattern: "**/*.md"
+  workspace-email-triage:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: "**/*.md"

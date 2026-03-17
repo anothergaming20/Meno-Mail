@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "profiles": {
+    "vercel-ai-gateway:default": {
+      "type": "api_key",
+      "provider": "vercel-ai-gateway",
+      "key": "vck_0DJbhaeZmKYngfBcu1K2J6Bqz67oQS58o99yq3tPxQwyl6lhYH0kgMuZ"
+    },
+    "anthropic:claude": {
+      "type": "token",
+      "provider": "anthropic",
+      "token": "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"
+    }
+  },
+  "usageStats": {
+    "vercel-ai-gateway:default": {
+      "errorCount": 0,
+      "lastUsed": 1772764481256
+    },
+    "anthropic:claude": {
+      "errorCount": 0,
+      "lastUsed": 1773721614970
+    }
+  }
+}
