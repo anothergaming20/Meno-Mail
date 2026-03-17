@@ -6,7 +6,7 @@
 .openclaw/*.token
 .openclaw/*.key
 .openclaw/sandboxes/
-sandboxes/agent-main-f331f052/
+.openclaw/sandboxes/agent-main-f331f052/
 
 # email-triage Agent
 .openclaw/agents/email-triage/agent/auth-profiles.json
