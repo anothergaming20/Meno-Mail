@@ -4827,3 +4827,119 @@
 2026-03-17T00:31:12.896-04:00 [gateway] qmd memory startup initialization armed for agent "email-triage"
 2026-03-17T00:32:08.940-04:00 [telegram] autoSelectFamily=true (default-node22)
 2026-03-17T00:32:08.945-04:00 [telegram] dnsResultOrder=ipv4first (default-node22)
+2026-03-17T00:55:50.026-04:00 [gateway] signal SIGTERM received
+2026-03-17T00:55:50.029-04:00 [gateway] received SIGTERM; shutting down
+2026-03-17T00:55:50.143-04:00 [gmail-watcher] gmail watcher stopped
+2026-03-17T00:56:01.123-04:00 [canvas] host mounted at http://127.0.0.1:18789/__openclaw__/canvas/ (root /Users/aiagnet/.openclaw/canvas)
+2026-03-17T00:56:01.245-04:00 [heartbeat] started
+2026-03-17T00:56:01.252-04:00 [health-monitor] started (interval: 300s, startup-grace: 60s, channel-connect-grace: 120s)
+2026-03-17T00:56:01.258-04:00 [gateway] agent model: anthropic/claude-opus-4-6
+2026-03-17T00:56:01.260-04:00 [gateway] listening on ws://127.0.0.1:18789, ws://[::1]:18789 (PID 76696)
+2026-03-17T00:56:01.264-04:00 [gateway] log file: /tmp/openclaw/openclaw-2026-03-17.log
+2026-03-17T00:56:01.271-04:00 [telegram] autoSelectFamily=true (default-node22)
+2026-03-17T00:56:01.273-04:00 [telegram] dnsResultOrder=ipv4first (default-node22)
+2026-03-17T00:56:01.330-04:00 [browser/server] Browser control listening on http://127.0.0.1:18791/ (auth=token)
+2026-03-17T00:56:02.221-04:00 [hooks:loader] Registered hook: boot-md -> gateway:startup
+2026-03-17T00:56:02.351-04:00 [hooks:loader] Registered hook: bootstrap-extra-files -> agent:bootstrap
+2026-03-17T00:56:02.358-04:00 [hooks:loader] Registered hook: command-logger -> command
+2026-03-17T00:56:02.401-04:00 [hooks:loader] Registered hook: session-memory -> command:new, command:reset
+2026-03-17T00:56:02.406-04:00 [hooks] loaded 4 internal hook handlers
+2026-03-17T00:56:02.965-04:00 [telegram] [default] starting provider (@Nay_local_bot)
+2026-03-17T00:56:02.982-04:00 [telegram] autoSelectFamily=true (default-node22)
+2026-03-17T00:56:02.988-04:00 [telegram] dnsResultOrder=ipv4first (default-node22)
+2026-03-17T00:56:03.662-04:00 [gateway] qmd memory startup initialization armed for agent "main"
+2026-03-17T00:56:04.860-04:00 [gateway] qmd memory startup initialization armed for agent "email-triage"
+2026-03-17T00:56:08.669-04:00 [ws] webchat connected conn=30d5a95e-8911-4a5c-a213-954c41e104f5 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.13
+2026-03-17T00:56:08.695-04:00 [telegram] autoSelectFamily=true (default-node22)
+2026-03-17T00:56:08.733-04:00 [telegram] dnsResultOrder=ipv4first (default-node22)
+2026-03-17T00:56:08.821-04:00 [ws] ⇄ res ✓ agent.identity.get 73ms conn=30d5a95e…04f5 id=79d7a749…8608
+2026-03-17T00:56:09.258-04:00 [ws] ⇄ res ✓ sessions.list 277ms conn=30d5a95e…04f5 id=323106e2…da64
+2026-03-17T00:56:09.305-04:00 [ws] ⇄ res ✓ node.list 474ms conn=30d5a95e…04f5 id=71785ff1…3996
+2026-03-17T00:56:09.334-04:00 [ws] ⇄ res ✓ device.pair.list 501ms conn=30d5a95e…04f5 id=9cbd947e…8517
+2026-03-17T00:56:09.527-04:00 [ws] ⇄ res ✓ chat.history 691ms conn=30d5a95e…04f5 id=55dd9ee7…1c69
+2026-03-17T00:56:09.534-04:00 [ws] ⇄ res ✓ models.list 270ms conn=30d5a95e…04f5 id=0cf32926…56dc
+2026-03-17T00:56:11.271-04:00 [ws] ⇄ res ✓ sessions.list 73ms conn=30d5a95e…04f5 id=dd4250c0…c025
+2026-03-17T00:56:11.775-04:00 [ws] ⇄ res ✓ skills.status 472ms conn=30d5a95e…04f5 id=58fcf7d1…02c0
+2026-03-17T00:56:11.810-04:00 [ws] ⇄ res ✓ models.list 508ms conn=30d5a95e…04f5 id=6e9b8795…a007
+2026-03-17T00:56:11.813-04:00 [ws] ⇄ res ✓ channels.status 654ms conn=30d5a95e…04f5 id=9a1e1bda…2157
+2026-03-17T00:56:11.830-04:00 [ws] ⇄ res ✓ status 551ms conn=30d5a95e…04f5 id=bea47774…2283
+2026-03-17T00:56:11.833-04:00 [ws] ⇄ res ✓ cron.status 559ms conn=30d5a95e…04f5 id=8e21c644…73ee
+2026-03-17T00:56:11.839-04:00 [ws] ⇄ res ✓ cron.list 558ms conn=30d5a95e…04f5 id=04321cd6…73b3
+2026-03-17T00:56:11.892-04:00 [ws] ⇄ res ✓ logs.tail 91ms conn=30d5a95e…04f5 id=f08a5f08…c32a
+2026-03-17T00:56:11.898-04:00 [ws] ⇄ res ✓ usage.cost 99ms conn=30d5a95e…04f5 id=65b1bb9d…406d
+2026-03-17T00:56:11.995-04:00 [ws] ⇄ res ✓ sessions.usage 199ms conn=30d5a95e…04f5 id=aeb7bf31…bb1a
+2026-03-17T00:56:12.861-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=30d5a95e-8911-4a5c-a213-954c41e104f5
+2026-03-17T00:56:13.264-04:00 [ws] webchat connected conn=c641e826-457b-4ba9-8dd7-23998c0fb26b remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.13
+2026-03-17T00:56:13.588-04:00 [ws] ⇄ res ✓ sessions.list 67ms conn=c641e826…b26b id=d425a5a0…ff10
+2026-03-17T00:56:14.039-04:00 [ws] ⇄ res ✓ skills.status 443ms conn=c641e826…b26b id=6460c3ed…2d7e
+2026-03-17T00:56:14.070-04:00 [ws] ⇄ res ✓ models.list 476ms conn=c641e826…b26b id=326d71aa…dcb1
+2026-03-17T00:56:14.081-04:00 [ws] ⇄ res ✓ channels.status 563ms conn=c641e826…b26b id=84a7edd9…bd03
+2026-03-17T00:56:14.099-04:00 [ws] ⇄ res ✓ status 505ms conn=c641e826…b26b id=8e23a848…75ff
+2026-03-17T00:56:14.104-04:00 [ws] ⇄ res ✓ cron.status 510ms conn=c641e826…b26b id=d3b3ac3d…b14c
+2026-03-17T00:56:14.111-04:00 [ws] ⇄ res ✓ cron.list 515ms conn=c641e826…b26b id=7f435b96…fcca
+2026-03-17T00:56:14.129-04:00 [ws] ⇄ res ✓ node.list 620ms conn=c641e826…b26b id=8cb10be8…3c53
+2026-03-17T00:56:14.133-04:00 [ws] ⇄ res ✓ device.pair.list 621ms conn=c641e826…b26b id=5e91f54c…e096
+2026-03-17T00:56:14.160-04:00 [ws] ⇄ res ✓ logs.tail 75ms conn=c641e826…b26b id=267327e6…1681
+2026-03-17T00:56:14.230-04:00 [ws] ⇄ res ✓ sessions.usage 186ms conn=c641e826…b26b id=3ac5febd…6031
+2026-03-17T00:56:14.860-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=c641e826-457b-4ba9-8dd7-23998c0fb26b
+2026-03-17T00:56:15.134-04:00 [ws] webchat connected conn=7c2c6d75-67a9-49c8-a54a-468fb716d43f remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.13
+2026-03-17T00:56:15.605-04:00 [ws] ⇄ res ✓ skills.status 303ms conn=7c2c6d75…d43f id=6b177dce…437d
+2026-03-17T00:56:15.644-04:00 [ws] ⇄ res ✓ models.list 345ms conn=7c2c6d75…d43f id=19661816…e0a4
+2026-03-17T00:56:15.655-04:00 [ws] ⇄ res ✓ channels.status 382ms conn=7c2c6d75…d43f id=12c57292…b3e9
+2026-03-17T00:56:15.675-04:00 [ws] ⇄ res ✓ status 377ms conn=7c2c6d75…d43f id=217f4224…8c14
+2026-03-17T00:56:15.680-04:00 [ws] ⇄ res ✓ cron.status 382ms conn=7c2c6d75…d43f id=87481a7a…dc04
+2026-03-17T00:56:15.683-04:00 [ws] ⇄ res ✓ cron.list 386ms conn=7c2c6d75…d43f id=62c883f7…a06a
+2026-03-17T00:56:15.699-04:00 [ws] ⇄ res ✓ device.pair.list 433ms conn=7c2c6d75…d43f id=55f37487…421c
+2026-03-17T00:56:15.704-04:00 [ws] ⇄ res ✓ node.list 438ms conn=7c2c6d75…d43f id=c1fc4b8e…dd8a
+2026-03-17T00:56:15.728-04:00 [ws] ⇄ res ✓ logs.tail 100ms conn=7c2c6d75…d43f id=1ec18956…d13d
+2026-03-17T00:56:15.784-04:00 [ws] ⇄ res ✓ sessions.usage 148ms conn=7c2c6d75…d43f id=25ea7530…09a0
+2026-03-17T00:56:17.881-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=7c2c6d75-67a9-49c8-a54a-468fb716d43f
+2026-03-17T00:56:18.094-04:00 [ws] webchat connected conn=26aa413b-1985-4756-8fc5-ed3d6ffdaae8 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.13
+2026-03-17T00:56:18.521-04:00 [ws] ⇄ res ✓ skills.status 349ms conn=26aa413b…aae8 id=cbdb77e2…4c24
+2026-03-17T00:56:18.551-04:00 [ws] ⇄ res ✓ models.list 385ms conn=26aa413b…aae8 id=b5e379ea…4c01
+2026-03-17T00:56:18.554-04:00 [ws] ⇄ res ✓ channels.status 429ms conn=26aa413b…aae8 id=48566418…a746
+2026-03-17T00:56:18.571-04:00 [ws] ⇄ res ✓ status 404ms conn=26aa413b…aae8 id=5cc65d01…ea54
+2026-03-17T00:56:18.574-04:00 [ws] ⇄ res ✓ cron.status 409ms conn=26aa413b…aae8 id=b1ee3346…1733
+2026-03-17T00:56:18.578-04:00 [ws] ⇄ res ✓ cron.list 412ms conn=26aa413b…aae8 id=f36c87fa…d83d
+2026-03-17T00:56:18.596-04:00 [ws] ⇄ res ✓ node.list 471ms conn=26aa413b…aae8 id=e8961dc2…e62f
+2026-03-17T00:56:18.599-04:00 [ws] ⇄ res ✓ device.pair.list 474ms conn=26aa413b…aae8 id=2e146c8b…5490
+2026-03-17T00:56:18.609-04:00 [ws] ⇄ res ✓ logs.tail 64ms conn=26aa413b…aae8 id=7d004c72…752a
+2026-03-17T00:56:18.629-04:00 [ws] ⇄ res ✓ sessions.usage 100ms conn=26aa413b…aae8 id=5b2e2511…aa31
+2026-03-17T00:56:31.160-04:00 [ws] ⇄ res ✓ usage.cost 324ms conn=26aa413b…aae8 id=33e8445c…f2d0
+2026-03-17T00:56:31.649-04:00 [ws] ⇄ res ✓ sessions.usage 828ms conn=26aa413b…aae8 id=cf572e72…7385
+2026-03-17T00:56:32.448-04:00 [ws] ⇄ res ✓ sessions.usage 742ms conn=26aa413b…aae8 id=248d1c1e…fb8f
+2026-03-17T00:56:33.987-04:00 [ws] ⇄ res ✓ skills.status 255ms conn=26aa413b…aae8 id=8fea9283…2bda
+2026-03-17T00:56:34.012-04:00 [ws] ⇄ res ✓ models.list 280ms conn=26aa413b…aae8 id=934e74ec…c0fe
+2026-03-17T00:56:34.018-04:00 [ws] ⇄ res ✓ channels.status 386ms conn=26aa413b…aae8 id=8280aece…c7d3
+2026-03-17T00:56:34.032-04:00 [ws] ⇄ res ✓ status 345ms conn=26aa413b…aae8 id=f34ca30e…7ec6
+2026-03-17T00:56:34.035-04:00 [ws] ⇄ res ✓ cron.status 348ms conn=26aa413b…aae8 id=e93d4c19…84b4
+2026-03-17T00:56:34.038-04:00 [ws] ⇄ res ✓ cron.list 351ms conn=26aa413b…aae8 id=cb5f2ddb…9dd3
+2026-03-17T00:56:34.451-04:00 [ws] ⇄ res ✓ sessions.usage 455ms conn=26aa413b…aae8 id=d6ab1385…a0f5
+2026-03-17T00:56:44.610-04:00 [ws] ⇄ res ✓ config.get 3413ms conn=26aa413b…aae8 id=104da314…9573
+2026-03-17T00:56:44.684-04:00 [ws] ⇄ res ✓ config.get 66ms conn=26aa413b…aae8 id=c81129c4…101e
+2026-03-17T00:56:44.706-04:00 [ws] ⇄ res ✓ node.list 93ms conn=26aa413b…aae8 id=4d0829fd…c93c
+2026-03-17T00:56:45.286-04:00 [ws] ⇄ res ✓ skills.status 108ms conn=26aa413b…aae8 id=0db58f4a…6355
+2026-03-17T00:56:45.859-04:00 [ws] ⇄ res ✓ config.get 85ms conn=26aa413b…aae8 id=2fc4a86a…69cc
+2026-03-17T00:57:02.330-04:00 [ws] ⇄ res ✓ config.set 89ms conn=26aa413b…aae8 id=b00263be…aa1c
+2026-03-17T00:57:02.841-04:00 [reload] config change detected; evaluating reload (meta.lastTouchedAt)
+2026-03-17T00:57:02.847-04:00 [reload] config change applied (dynamic reads: meta.lastTouchedAt)
+2026-03-17T01:00:20.076-04:00 [ws] ⇄ res ✓ channels.status 866ms conn=49f3048d…f962 id=23d87134…1c60
+2026-03-17T01:00:40.817-04:00 [ws] ⇄ res ✓ skills.status 367ms conn=26aa413b…aae8 id=eb77b484…b063
+2026-03-17T01:00:41.814-04:00 [ws] ⇄ res ✓ config.get 87ms conn=26aa413b…aae8 id=1afcf01a…40eb
+2026-03-17T01:00:55.871-04:00 [ws] ⇄ res ✓ config.set 70ms conn=26aa413b…aae8 id=02a4d333…a998
+2026-03-17T01:00:56.382-04:00 [reload] config change detected; evaluating reload (meta.lastTouchedAt)
+2026-03-17T01:00:56.387-04:00 [reload] config change applied (dynamic reads: meta.lastTouchedAt)
+2026-03-17T01:00:58.262-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=26aa413b-1985-4756-8fc5-ed3d6ffdaae8
+2026-03-17T01:00:58.496-04:00 [ws] webchat connected conn=f7948dea-2e29-44b7-b07a-17af27665d1a remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.13
+2026-03-17T01:00:58.665-04:00 [ws] ⇄ res ✓ config.get 91ms conn=f7948dea…5d1a id=5f54e837…102b
+2026-03-17T01:00:58.773-04:00 [ws] ⇄ res ✓ device.pair.list 167ms conn=f7948dea…5d1a id=162400eb…7785
+2026-03-17T01:00:58.781-04:00 [ws] ⇄ res ✓ node.list 214ms conn=f7948dea…5d1a id=44ce8f70…a1cd
+2026-03-17T01:05:41.502-04:00 [ws] ⇄ res ✓ config.set 92ms conn=f7948dea…5d1a id=7997ac8b…7833
+2026-03-17T01:05:42.027-04:00 [reload] config change detected; evaluating reload (meta.lastTouchedAt)
+2026-03-17T01:05:42.036-04:00 [reload] config change applied (dynamic reads: meta.lastTouchedAt)
+2026-03-17T01:05:47.686-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=f7948dea-2e29-44b7-b07a-17af27665d1a
+2026-03-17T01:05:48.000-04:00 [ws] webchat connected conn=528f88b8-7754-4e58-8324-27504e25ed88 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.13
+2026-03-17T01:05:48.160-04:00 [ws] ⇄ res ✓ config.get 83ms conn=528f88b8…ed88 id=6c282c5c…90f8
+2026-03-17T01:05:48.194-04:00 [ws] ⇄ res ✓ node.list 117ms conn=528f88b8…ed88 id=a302395f…dc64
+2026-03-17T01:05:48.205-04:00 [ws] ⇄ res ✓ device.pair.list 125ms conn=528f88b8…ed88 id=11d9872c…596d
+2026-03-17T01:06:14.501-04:00 [ws] ⇄ res ✓ chat.history 120ms conn=528f88b8…ed88 id=d11727af…4547

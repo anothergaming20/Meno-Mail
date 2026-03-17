@@ -1,26 +1,33 @@
 # OpenClaw runtime / sensitive
 # .openclaw/memory/
-# .openclaw/qmd/
-.openclaw/logs/
-.openclaw/cache/
-.openclaw/sessions/
-.openclaw/*.token
-.openclaw/*.key
-.openclaw/sandboxes/
+logs/
+cache/
+sessions/
+*.token
+*.key
+devices/*.json
+sandboxes/
+sandboxes/agent-main-f331f052/
 
-.openclaw/agents/email-triage/agent/auth-profiles.json
-.openclaw/agents/email-triage/agent/models.json
-.openclaw/agents/email-triage/agent/sessions/
+# email-triage Agent
+agents/email-triage/agent/auth-profiles.json
+agents/email-triage/agent/models.json
+agents/email-triage/sessions/
 
-.openclaw/agents/main/agent/auth-profiles.json
-.openclaw/agents/main/agent/models.json
-.openclaw/agents/main/agent/sessions/
+# Main agent
+agents/main/agent/auth-profiles.json
+agents/main/agent/models.json
+agents/main/sessions/
 
-.openclaw/logs/
+# Logs
+logs/*.jsonl
+logs/*.json
+logs/*.log
+logs/gateway.err.log
 
 # Keep config and instructions
-!.openclaw/openclaw.json
-!.openclaw/AGENTS.md
+!openclaw.json
+!AGENTS.md
 
 # Environment variables
 .DS_Store

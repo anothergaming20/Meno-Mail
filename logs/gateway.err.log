@@ -2434,3 +2434,7 @@ Run: openclaw doctor --fix
 2026-03-16T23:41:47.087-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
 2026-03-16T23:42:02.798-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
 2026-03-17T00:30:54.889-04:00 [reload] config change requires gateway restart (env.vars.AGENTMAIL_API_KEY)
+2026-03-17T00:56:02.283-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TimeoutError: The operation was aborted due to timeout
+2026-03-17T00:57:02.313-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 039fe9d066dca007f75402d3b1c6886041a75dd0c476df6905975407a0bdbcd4 -> 5b5e7a497e293072aae932bbefc2d2c24ee15c88b5617f727eb31e27db29ca91, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-17T01:00:55.864-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 5b5e7a497e293072aae932bbefc2d2c24ee15c88b5617f727eb31e27db29ca91 -> 41517102a6256d45d178bf4332a8ba7260fefbf81fdff4a4d3bf138cddd6508d, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-17T01:05:41.490-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 41517102a6256d45d178bf4332a8ba7260fefbf81fdff4a4d3bf138cddd6508d -> c7a191e76154bec671ecebdd9e4329edb253a49ca961163cb27a49748f0ff105, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
