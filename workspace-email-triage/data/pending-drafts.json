@@ -1,1 +1,42 @@
-{}
+{
+  "19d27d88ad6de3ad": {
+    "draft": "Got it—thanks for flagging the LiteLLM breach. I'll check my version and rotate credentials.",
+    "gmail_draft_id": "r8704703176243894521",
+    "from": "Nay Tun Thein <naytunthein70@gmail.com>",
+    "subject": "Fwd: 🦞 Agents Reframe Open Source",
+    "message_id": "<1185bbad-f38d-4eda-9e2e-d67b1eea0809@Spark>",
+    "created_at": "2026-03-26T02:40:21Z",
+    "risk_flags": [
+      {
+        "code": "new_third_party",
+        "severity": "amber",
+        "message": "Draft mentions 'Got' — this name does not appear in the original email or sender notes."
+      },
+      {
+        "code": "unknown_sender",
+        "severity": "amber",
+        "message": "No prior history with sender naytunthein70@gmail.com. Exercise caution approving this draft."
+      }
+    ]
+  },
+  "19d27d8567a737bd": {
+    "draft": "Thanks for the digest—looks like some good reads in there. Anything jump out at you?",
+    "gmail_draft_id": "r-2699056320483346143",
+    "from": "Nay Tun Thein <naytunthein70@gmail.com>",
+    "subject": "Fwd: The Great Framework Showdown: Superpowers vs. BMAD vs. SpecKit vs. GSD | Rick Hightower",
+    "message_id": "<2b7f842a-7658-4906-8589-c303026df582@Spark>",
+    "created_at": "2026-03-26T02:40:52Z",
+    "risk_flags": [
+      {
+        "code": "new_third_party",
+        "severity": "amber",
+        "message": "Draft mentions 'Anything' — this name does not appear in the original email or sender notes."
+      },
+      {
+        "code": "unknown_sender",
+        "severity": "amber",
+        "message": "No prior history with sender naytunthein70@gmail.com. Exercise caution approving this draft."
+      }
+    ]
+  }
+}

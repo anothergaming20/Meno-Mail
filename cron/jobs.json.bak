@@ -7,34 +7,26 @@
       "description": "Fetch, classify, and act on new inbox emails",
       "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1774482762959,
+      "updatedAtMs": 1774492961785,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
         "anchorMs": 1773551619477
       },
-      "sessionTarget": "isolated",
+      "sessionTarget": "main",
       "wakeMode": "now",
       "payload": {
-        "kind": "agentTurn",
-        "message": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors.",
-        "lightContext": true,
-        "model": "anthropic/claude-haiku-4-5-20251001"
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "telegram",
-        "to": "1771281565"
+        "kind": "systemEvent",
+        "text": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
       },
       "state": {
-        "nextRunAtMs": 1774483545124,
-        "lastRunAtMs": 1774482645124,
+        "nextRunAtMs": 1774493625989,
+        "lastRunAtMs": 1774492952740,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 24197,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": false
+        "lastDurationMs": 9045,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -71,6 +63,33 @@
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
+      }
+    },
+    {
+      "id": "d62bfecc-28a5-44c9-8db1-8b187f60af62",
+      "name": "memory-consolidation",
+      "enabled": true,
+      "createdAtMs": 1774482821786,
+      "updatedAtMs": 1774482821786,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "tz": "America/New_York"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run memory consolidation: bash ~/Projects/menomail/scripts/consolidation-pass.sh",
+        "model": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "1771281565"
+      },
+      "state": {
+        "nextRunAtMs": 1774512000000
       }
     }
   ]

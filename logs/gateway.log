@@ -6873,3 +6873,63 @@
 2026-03-25T21:07:46.668-04:00 ```json
 {"draft_reply": "Thanks for letting me know! I'll check out the Claude integration when I get a chance."}
 ```
+2026-03-25T21:47:24.955-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=0c1dc5e4-373c-4308-906f-d23100f83dc9
+2026-03-25T21:47:25.236-04:00 [ws] webchat connected conn=f08825ef-c084-4695-8cde-0c2562d73da1 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-25T21:47:26.057-04:00 [ws] ⇄ res ✓ skills.status 725ms conn=f08825ef…3da1 id=70be8723…c28f
+2026-03-25T21:47:26.092-04:00 [ws] ⇄ res ✓ models.list 767ms conn=f08825ef…3da1 id=6c788564…f8ea
+2026-03-25T21:47:26.100-04:00 [ws] ⇄ res ✓ channels.status 819ms conn=f08825ef…3da1 id=1676e4b4…ebce
+2026-03-25T21:47:26.106-04:00 [ws] ⇄ res ✓ cron.status 787ms conn=f08825ef…3da1 id=c15fa5c6…b81b
+2026-03-25T21:47:26.129-04:00 [ws] ⇄ res ✓ status 811ms conn=f08825ef…3da1 id=1803f326…a33d
+2026-03-25T21:47:26.132-04:00 [ws] ⇄ res ✓ cron.list 813ms conn=f08825ef…3da1 id=83e0835d…cfb0
+2026-03-25T21:47:26.169-04:00 [ws] ⇄ res ✓ device.pair.list 893ms conn=f08825ef…3da1 id=94b410d2…fb13
+2026-03-25T21:47:26.174-04:00 [ws] ⇄ res ✓ node.list 897ms conn=f08825ef…3da1 id=3f1f2feb…3e7c
+2026-03-25T21:47:26.184-04:00 [ws] ⇄ res ✓ logs.tail 100ms conn=f08825ef…3da1 id=d32f56d4…b538
+2026-03-25T21:47:26.768-04:00 [ws] ⇄ res ✓ chat.history 179ms conn=f08825ef…3da1 id=f0ddb091…7fee
+2026-03-25T21:47:27.224-04:00 [ws] ⇄ res ✓ sessions.usage 1164ms conn=f08825ef…3da1 id=f1a1a5d3…b097
+2026-03-25T21:47:27.733-04:00 [ws] ⇄ res ✓ chat.history 73ms conn=f08825ef…3da1 id=8afab505…cb21
+2026-03-25T21:47:41.491-04:00 [hooks/session-memory] Session context saved to ~/.openclaw/workspace-email-triage/memory/2026-03-26-notification-signup.md
+2026-03-25T21:48:10.466-04:00 [ws] ⇄ res ✓ sessions.list 79ms conn=f08825ef…3da1 id=1c565828…0514
+2026-03-25T21:48:10.860-04:00 [ws] ⇄ res ✓ skills.status 354ms conn=f08825ef…3da1 id=5ca210c6…1bad
+2026-03-25T21:48:10.885-04:00 [ws] ⇄ res ✓ models.list 379ms conn=f08825ef…3da1 id=cb1a5488…0a50
+2026-03-25T21:48:10.888-04:00 [ws] ⇄ res ✓ cron.status 419ms conn=f08825ef…3da1 id=4c71ac16…cb80
+2026-03-25T21:48:10.918-04:00 [ws] ⇄ res ✓ status 446ms conn=f08825ef…3da1 id=7dc32df1…179a
+2026-03-25T21:48:10.920-04:00 [ws] ⇄ res ✓ cron.list 452ms conn=f08825ef…3da1 id=5b3c18c3…8089
+2026-03-25T21:48:10.944-04:00 [ws] ⇄ res ✓ logs.tail 67ms conn=f08825ef…3da1 id=84e48983…b221
+2026-03-25T21:48:11.664-04:00 [ws] ⇄ res ✓ sessions.usage 795ms conn=f08825ef…3da1 id=7c2d8fce…a45d
+2026-03-25T21:50:47.163-04:00 [ws] ⇄ res ✓ node.list 176ms conn=f08825ef…3da1 id=0fb7ffc6…016f
+2026-03-25T21:50:52.890-04:00 [ws] ⇄ res ✓ sessions.list 84ms conn=f08825ef…3da1 id=28b969f4…9c9a
+2026-03-25T21:53:51.057-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=f08825ef-c084-4695-8cde-0c2562d73da1
+2026-03-25T21:53:51.369-04:00 [ws] webchat connected conn=d0e04006-5836-4e4a-acf0-958580499b80 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-25T21:53:57.917-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=d0e04006-5836-4e4a-acf0-958580499b80
+2026-03-25T21:53:58.150-04:00 [ws] webchat connected conn=d59c4e3d-94ec-47e5-8361-053df5d546ca remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-25T21:54:18.383-04:00 [ws] ⇄ res ✓ node.list 169ms conn=d59c4e3d…46ca id=604e9cfa…5eea
+2026-03-25T22:04:42.333-04:00 ```json
+["AI tool integration", "Claude feature", "product updates"]
+```
+2026-03-25T22:05:39.317-04:00 ```json
+["tiny house architecture", "home design", "floor plans", "Japanese design"]
+```
+2026-03-25T22:25:29.288-04:00 [telegram] sendMessage ok chat=1771281565 message=258
+2026-03-25T22:26:44.753-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=d59c4e3d-94ec-47e5-8361-053df5d546ca
+2026-03-25T22:26:45.017-04:00 [ws] webchat connected conn=91693c92-5e89-4bee-9884-e2b2e4fd9327 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-25T22:26:45.126-04:00 [ws] ⇄ res ✓ cron.runs 52ms conn=91693c92…9327 id=be63780c…41b4
+2026-03-25T22:36:20.573-04:00 [ws] ⇄ res ✗ cron.update 12ms errorCode=UNAVAILABLE errorMessage=Error: main cron jobs require payload.kind="systemEvent" conn=c927b4cc…91ce id=c4c27bdc…3870
+2026-03-25T22:36:38.705-04:00 [gateway] cron: job updated
+2026-03-25T22:39:41.267-04:00 {"bucket": "notification", "confidence": 0.95, "reason": "Service notification from Fly.io about deployment success with helpful resources; no reply needed, archive from inbox."}
+2026-03-25T22:39:58.935-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a newsletter; VIP classification overrides content type per triage rules."}
+2026-03-25T22:40:20.596-04:00 [ws] ⇄ res ✓ sessions.list 50ms conn=91693c92…9327 id=74e5c24f…897f
+2026-03-25T22:40:20.667-04:00 ```json
+{"draft_reply": "Got it—thanks for flagging the LiteLLM breach. I'll check my version and rotate credentials."}
+```
+2026-03-25T22:40:30.713-04:00 [ws] ⇄ res ✓ sessions.list 106ms conn=91693c92…9327 id=1d708eba…492e
+2026-03-25T22:40:36.652-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding Medium digest; VIP classification overrides content type per triage rules."}
+2026-03-25T22:40:50.941-04:00 ```json
+{"draft_reply": "Thanks for the digest—looks like some good reads in there. Anything jump out at you?"}
+```
+2026-03-25T22:41:16.728-04:00 {"bucket": "notification", "confidence": 0.92, "reason": "Security alert from Google about account access; actionable information that doesn't require a reply, similar to bank alerts."}
+2026-03-25T22:41:26.586-04:00 [ws] ⇄ res ✓ agent 64ms runId=90cf6e20-240a-472d-af50-61035cc1d130 conn=ac5adeac…2032 id=2e1eb490…16fa
+2026-03-25T22:41:32.461-04:00 {"bucket": "notification", "confidence": 0.92, "reason": "Promotional email about support trial offer; informational and actionable but no reply needed, matches pre-classified 'scan' status."}
+2026-03-25T22:41:42.292-04:00 [ws] ⇄ res ✓ sessions.list 90ms conn=91693c92…9327 id=a91b984d…72f1
+2026-03-25T22:41:48.683-04:00 {"bucket": "notification", "confidence": 0.90, "reason": "Account activation and setup email from Fly.io; transactional confirmation with self-service password reset link, no reply needed."}
+2026-03-25T22:42:33.272-04:00 [ws] ⇄ res ✓ cron.runs 346ms conn=91693c92…9327 id=7bd65c85…06b2
+2026-03-25T22:46:04.031-04:00 [gateway] cron: job updated

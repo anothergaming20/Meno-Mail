@@ -5,36 +5,27 @@
       "id": "60c2f369-62dc-42fe-b2f3-0b8d32648593",
       "name": "email-triage-dispatcher",
       "description": "Fetch, classify, and act on new inbox emails",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1774488953480,
+      "updatedAtMs": 1774493164026,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
         "anchorMs": 1773551619477
       },
-      "sessionTarget": "isolated",
+      "sessionTarget": "main",
       "wakeMode": "now",
       "payload": {
-        "kind": "agentTurn",
-        "message": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors.",
-        "lightContext": true,
-        "model": "anthropic/claude-haiku-4-5-20251001"
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "telegram",
-        "to": "1771281565"
+        "kind": "systemEvent",
+        "text": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
       },
       "state": {
-        "nextRunAtMs": 1774489845157,
-        "lastRunAtMs": 1774488945157,
+        "lastRunAtMs": 1774492952740,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 8323,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": false
+        "lastDurationMs": 9045,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
       }
     },
     {

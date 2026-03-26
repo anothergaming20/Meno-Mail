@@ -4950,3 +4950,18 @@ Use a different name with --name <name>
 2026-03-25T19:50:02.195-04:00 [telegram] getUpdates conflict: Call to 'getUpdates' failed! (409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running); retrying in 30s.
 2026-03-25T19:50:46.995-04:00 [tools] tools.allow allowlist contains unknown entries (lobster). These entries won't match any tool unless the plugin is enabled.
 2026-03-25T20:41:51.571-04:00 [agent/embedded] read tool called without path: toolCallId=toolu_01DgdmKPokHTc8q6Ctb717zx argsType=object
+2026-03-25T22:04:00.879-04:00 [telegram] getUpdates conflict: Call to 'getUpdates' failed! (409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running); retrying in 30s.
+2026-03-25T22:04:34.568-04:00 [telegram] getUpdates conflict: Call to 'getUpdates' failed! (409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running); retrying in 30s.
+2026-03-25T22:04:55.014-04:00 [telegram] answerCallbackQuery failed: Call to 'answerCallbackQuery' failed! (400: Bad Request: query is too old and response timeout expired or query ID is invalid)
+2026-03-25T22:05:05.095-04:00 [telegram] sendChatAction failed: Network request for 'sendChatAction' failed!
+2026-03-25T22:05:07.806-04:00 [telegram] sendChatAction failed: Network request for 'sendChatAction' failed!
+2026-03-25T22:05:11.296-04:00 [telegram] getUpdates conflict: Call to 'getUpdates' failed! (409: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running); retrying in 30s.
+2026-03-25T22:05:11.594-04:00 [telegram] sendChatAction failed: Network request for 'sendChatAction' failed!
+2026-03-25T22:05:12.595-04:00 [telegram] sendMessage failed: Network request for 'sendMessage' failed!
+2026-03-25T22:05:12.598-04:00 [telegram] final reply failed: HttpError: Network request for 'sendMessage' failed!
+2026-03-25T22:05:13.592-04:00 [telegram] sendMessage failed: Network request for 'sendMessage' failed!
+2026-03-25T22:05:13.595-04:00 [telegram] message processing failed: HttpError: Network request for 'sendMessage' failed!
+2026-03-25T22:05:43.590-04:00 [telegram] answerCallbackQuery failed: Call to 'answerCallbackQuery' failed! (400: Bad Request: query is too old and response timeout expired or query ID is invalid)
+2026-03-25T22:05:58.707-04:00 [telegram] answerCallbackQuery failed: Call to 'answerCallbackQuery' failed! (400: Bad Request: query is too old and response timeout expired or query ID is invalid)
+2026-03-25T22:06:08.127-04:00 [telegram] answerCallbackQuery failed: Call to 'answerCallbackQuery' failed! (400: Bad Request: query is too old and response timeout expired or query ID is invalid)
+2026-03-25T22:36:20.571-04:00 [gateway] request handler failed: Error: main cron jobs require payload.kind="systemEvent"
