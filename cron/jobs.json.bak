@@ -7,52 +7,53 @@
       "description": "Fetch, classify, and act on new inbox emails",
       "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1774552592064,
+      "updatedAtMs": 1774557468701,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
         "anchorMs": 1773551619477
       },
-      "sessionTarget": "main",
+      "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
-        "kind": "systemEvent",
-        "text": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
+        "kind": "agentTurn",
+        "message": "Run the email triage dispatcher: bash ~/.openclaw/workspace-email-triage/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors.",
+        "model": "anthropic/claude-haiku-4-5-20251001"
       },
       "state": {
-        "lastRunAtMs": 1774544293771,
+        "lastRunAtMs": 1774557439949,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 13255,
-        "lastDeliveryStatus": "not-requested",
+        "lastDurationMs": 28752,
+        "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774553319477
+        "nextRunAtMs": 1774557754718,
+        "lastDelivered": false
+      },
+      "agentId": "email-triage",
+      "delivery": {
+        "mode": "announce"
       }
     },
     {
       "id": "6fa273bf-74f9-42c8-bdec-99f4b8d5a7c5",
       "name": "email-triage-cleanup",
       "description": "Purge pending draft entries older than 48h",
-      "enabled": false,
+      "enabled": true,
       "createdAtMs": 1773551637280,
-      "updatedAtMs": 1774493664793,
+      "updatedAtMs": 1774552599199,
       "schedule": {
         "kind": "cron",
         "expr": "17 3 * * *",
         "tz": "America/New_York"
       },
-      "sessionTarget": "isolated",
+      "sessionTarget": "main",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
         "message": "Run the stale draft cleanup: bash ~/Projects/menomail/scripts/cleanup-stale-drafts.sh — report how many drafts were removed.",
         "lightContext": true,
         "model": "anthropic/claude-haiku-4-5-20251001"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "telegram",
-        "to": "1771281565"
       },
       "state": {
         "lastRunAtMs": 1774478409952,
@@ -61,15 +62,16 @@
         "lastDurationMs": 24806,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": true
+        "lastDelivered": true,
+        "nextRunAtMs": 1774595820000
       }
     },
     {
       "id": "d62bfecc-28a5-44c9-8db1-8b187f60af62",
       "name": "memory-consolidation",
-      "enabled": false,
+      "enabled": true,
       "createdAtMs": 1774482821786,
-      "updatedAtMs": 1774493671347,
+      "updatedAtMs": 1774556881665,
       "schedule": {
         "kind": "cron",
         "expr": "0 4 * * *",
@@ -87,7 +89,9 @@
         "channel": "telegram",
         "to": "1771281565"
       },
-      "state": {}
+      "state": {
+        "nextRunAtMs": 1774598400000
+      }
     }
   ]
 }

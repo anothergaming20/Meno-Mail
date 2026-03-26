@@ -7,7 +7,7 @@
       "description": "Fetch, classify, and act on new inbox emails",
       "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1774556033382,
+      "updatedAtMs": 1774557554799,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -17,16 +17,16 @@
       "wakeMode": "now",
       "payload": {
         "kind": "systemEvent",
-        "text": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
+        "text": "Run the email triage dispatcher: bash ~/.openclaw/workspace-email-triage/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
       },
       "state": {
-        "lastRunAtMs": 1774556019494,
+        "lastRunAtMs": 1774557543690,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 13888,
+        "lastDurationMs": 11109,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774556919494
+        "nextRunAtMs": 1774558339949
       }
     },
     {
@@ -41,18 +41,13 @@
         "expr": "17 3 * * *",
         "tz": "America/New_York"
       },
-      "sessionTarget": "isolated",
+      "sessionTarget": "main",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
         "message": "Run the stale draft cleanup: bash ~/Projects/menomail/scripts/cleanup-stale-drafts.sh — report how many drafts were removed.",
         "lightContext": true,
         "model": "anthropic/claude-haiku-4-5-20251001"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "telegram",
-        "to": "1771281565"
       },
       "state": {
         "lastRunAtMs": 1774478409952,
@@ -68,9 +63,9 @@
     {
       "id": "d62bfecc-28a5-44c9-8db1-8b187f60af62",
       "name": "memory-consolidation",
-      "enabled": false,
+      "enabled": true,
       "createdAtMs": 1774482821786,
-      "updatedAtMs": 1774493671347,
+      "updatedAtMs": 1774556881665,
       "schedule": {
         "kind": "cron",
         "expr": "0 4 * * *",
@@ -88,7 +83,9 @@
         "channel": "telegram",
         "to": "1771281565"
       },
-      "state": {}
+      "state": {
+        "nextRunAtMs": 1774598400000
+      }
     }
   ]
 }

@@ -23,12 +23,23 @@
       "configHash": "8eb2bd19c47584dbff796306483a2fc3b7703d9add6d0d33b87abd17fcc99850"
     },
     {
+      "containerName": "openclaw-sbx-agent-newsletter-extract-9c623beb",
+      "backendId": "docker",
+      "runtimeLabel": "openclaw-sbx-agent-newsletter-extract-9c623beb",
+      "sessionKey": "agent:newsletter-extract",
+      "createdAtMs": 1774556573018,
+      "lastUsedAtMs": 1774557608086,
+      "image": "openclaw-sandbox:bookworm-slim",
+      "configLabelKind": "Image",
+      "configHash": "26dc92da8db7c1dbcbe588f2a0e89f88e328815fa4f8290d515cd09401286b91"
+    },
+    {
       "containerName": "openclaw-sbx-agent-email-triage-269b6b6e",
       "backendId": "docker",
       "runtimeLabel": "openclaw-sbx-agent-email-triage-269b6b6e",
       "sessionKey": "agent:email-triage",
       "createdAtMs": 1774481746521,
-      "lastUsedAtMs": 1774556021304,
+      "lastUsedAtMs": 1774557679854,
       "image": "openclaw-sandbox:bookworm-slim",
       "configLabelKind": "Image",
       "configHash": "8c07d0df0ceaf428e9817646a3f246560bf95203cd0ee9a552e5e8fef44ffc51"

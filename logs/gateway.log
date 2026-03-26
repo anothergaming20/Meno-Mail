@@ -7384,3 +7384,555 @@
 2026-03-26T16:13:35.368-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=2f28b754-d285-4949-9e68-db01b7997af0
 2026-03-26T16:13:35.663-04:00 [ws] webchat connected conn=df04d039-a1bb-4704-af4f-d3f4355b3319 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
 2026-03-26T16:13:41.212-04:00 [ws] ⇄ res ✓ node.list 272ms conn=df04d039…3319 id=92339460…1c35
+2026-03-26T16:14:28.618-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=df04d039-a1bb-4704-af4f-d3f4355b3319
+2026-03-26T16:14:28.884-04:00 [ws] webchat connected conn=9db9bde7-5124-418b-ab4a-2d9d2dbcfdd5 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:14:45.388-04:00 [ws] ⇄ res ✓ sessions.list 95ms conn=9db9bde7…fdd5 id=7da4cf25…31dc
+2026-03-26T16:14:45.872-04:00 [ws] ⇄ res ✓ skills.status 349ms conn=9db9bde7…fdd5 id=fd5c1aef…3ea9
+2026-03-26T16:14:45.902-04:00 [ws] ⇄ res ✓ models.list 384ms conn=9db9bde7…fdd5 id=ee68a63c…1780
+2026-03-26T16:14:45.905-04:00 [ws] ⇄ res ✓ cron.status 514ms conn=9db9bde7…fdd5 id=8cb08adb…006b
+2026-03-26T16:14:45.936-04:00 [ws] ⇄ res ✓ status 540ms conn=9db9bde7…fdd5 id=6bd8da7a…a2ff
+2026-03-26T16:14:45.940-04:00 [ws] ⇄ res ✓ cron.list 550ms conn=9db9bde7…fdd5 id=a3a4d540…b396
+2026-03-26T16:14:45.961-04:00 [ws] ⇄ res ✓ logs.tail 69ms conn=9db9bde7…fdd5 id=394fef7a…3485
+2026-03-26T16:14:46.072-04:00 [ws] ⇄ res ✓ sessions.usage 199ms conn=9db9bde7…fdd5 id=c68b838f…471a
+2026-03-26T16:15:02.420-04:00 [ws] ⇄ res ✓ config.get 196ms conn=9db9bde7…fdd5 id=74cc95b6…284f
+2026-03-26T16:15:03.385-04:00 [ws] ⇄ res ✓ system-presence 70ms conn=9db9bde7…fdd5 id=d3adeafc…7606
+2026-03-26T16:15:03.524-04:00 [ws] ⇄ res ✓ sessions.list 136ms conn=9db9bde7…fdd5 id=fde7d8f2…f29c
+2026-03-26T16:15:03.715-04:00 [ws] ⇄ res ✓ skills.status 169ms conn=9db9bde7…fdd5 id=fabb1376…f293
+2026-03-26T16:15:03.740-04:00 [ws] ⇄ res ✓ models.list 192ms conn=9db9bde7…fdd5 id=9d22c785…b0da
+2026-03-26T16:15:03.759-04:00 [ws] ⇄ res ✓ status 224ms conn=9db9bde7…fdd5 id=1fb2893b…c54d
+2026-03-26T16:15:03.821-04:00 [ws] ⇄ res ✓ logs.tail 91ms conn=9db9bde7…fdd5 id=b2851167…3a76
+2026-03-26T16:15:03.949-04:00 [ws] ⇄ res ✓ channels.status 1761ms conn=9db9bde7…fdd5 id=3dacdeb6…e4e9
+2026-03-26T16:15:03.962-04:00 [ws] ⇄ res ✓ sessions.usage 245ms conn=9db9bde7…fdd5 id=6de4a199…ef6e
+2026-03-26T16:15:05.532-04:00 [ws] ⇄ res ✓ skills.status 211ms conn=9db9bde7…fdd5 id=f1a467ad…5387
+2026-03-26T16:15:05.557-04:00 [ws] ⇄ res ✓ models.list 239ms conn=9db9bde7…fdd5 id=921ddb2e…9022
+2026-03-26T16:15:05.559-04:00 [ws] ⇄ res ✓ channels.status 284ms conn=9db9bde7…fdd5 id=82921605…dd2e
+2026-03-26T16:15:05.565-04:00 [ws] ⇄ res ✓ cron.status 263ms conn=9db9bde7…fdd5 id=3bf0cf57…9128
+2026-03-26T16:15:05.590-04:00 [ws] ⇄ res ✓ status 286ms conn=9db9bde7…fdd5 id=bd558b94…bf4d
+2026-03-26T16:15:05.596-04:00 [ws] ⇄ res ✓ cron.list 289ms conn=9db9bde7…fdd5 id=b5fe8bbc…73ab
+2026-03-26T16:15:05.602-04:00 [ws] ⇄ res ✓ logs.tail 52ms conn=9db9bde7…fdd5 id=12c39e79…128a
+2026-03-26T16:15:05.700-04:00 [ws] ⇄ res ✓ sessions.usage 166ms conn=9db9bde7…fdd5 id=ac482360…eec6
+2026-03-26T16:15:55.710-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=9db9bde7-5124-418b-ab4a-2d9d2dbcfdd5
+2026-03-26T16:15:56.019-04:00 [ws] webchat connected conn=6a237a9e-dacb-4f70-a446-0009ce08b8b4 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:17:00.845-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=6a237a9e-dacb-4f70-a446-0009ce08b8b4
+2026-03-26T16:17:01.305-04:00 [ws] webchat connected conn=89245f60-3330-4d9c-80df-7a4bbf40088a remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:17:01.586-04:00 [ws] ⇄ res ✓ cron.runs 145ms conn=89245f60…088a id=bb99c776…ca6f
+2026-03-26T16:17:45.596-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=89245f60-3330-4d9c-80df-7a4bbf40088a
+2026-03-26T16:17:45.955-04:00 [ws] webchat connected conn=6691d22b-6c88-4113-914a-457b9bf657b6 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:18:26.420-04:00 [gateway] cron: job updated
+2026-03-26T16:18:41.403-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=6691d22b-6c88-4113-914a-457b9bf657b6
+2026-03-26T16:18:41.798-04:00 [ws] webchat connected conn=9d039ed5-dfa6-448f-ba97-68c63753e7b4 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:18:41.907-04:00 [ws] ⇄ res ✓ cron.runs 54ms conn=9d039ed5…e7b4 id=8a2173b3…00c7
+2026-03-26T16:18:48.303-04:00 [ws] ⇄ res ✓ sessions.usage 137ms conn=9d039ed5…e7b4 id=4cc31bd2…bb52
+2026-03-26T16:18:50.652-04:00 [ws] ⇄ res ✓ sessions.usage 570ms conn=9d039ed5…e7b4 id=d84d7db2…4d42
+2026-03-26T16:19:11.352-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=9d039ed5-dfa6-448f-ba97-68c63753e7b4
+2026-03-26T16:19:11.617-04:00 [ws] webchat connected conn=4e7ab09f-de8c-4dc9-a8a3-3aae84fc180b remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:19:14.153-04:00 [ws] ⇄ res ✓ cron.runs 90ms conn=4e7ab09f…180b id=969d58e4…2184
+2026-03-26T16:19:23.308-04:00 [ws] ⇄ res ✓ sessions.list 135ms conn=4e7ab09f…180b id=5fd8064f…c931
+2026-03-26T16:19:23.316-04:00 [ws] ⇄ res ✓ channels.status 184ms conn=4e7ab09f…180b id=d1cfba78…5a83
+2026-03-26T16:19:23.653-04:00 [ws] ⇄ res ✓ skills.status 267ms conn=4e7ab09f…180b id=aca9dc48…7ef1
+2026-03-26T16:19:23.681-04:00 [ws] ⇄ res ✓ models.list 304ms conn=4e7ab09f…180b id=22ae115a…fdd0
+2026-03-26T16:19:23.698-04:00 [ws] ⇄ res ✓ status 367ms conn=4e7ab09f…180b id=4a3061cc…f574
+2026-03-26T16:19:23.753-04:00 [ws] ⇄ res ✓ logs.tail 74ms conn=4e7ab09f…180b id=bd094c47…5e9f
+2026-03-26T16:19:23.984-04:00 [ws] ⇄ res ✓ sessions.usage 328ms conn=4e7ab09f…180b id=65ff1890…8d5e
+2026-03-26T16:19:24.432-04:00 [ws] ⇄ res ✓ sessions.list 53ms conn=4e7ab09f…180b id=255853d9…17e2
+2026-03-26T16:19:27.370-04:00 [ws] ⇄ res ✓ sessions.list 52ms conn=4e7ab09f…180b id=bc4772db…a7f4
+2026-03-26T16:19:39.781-04:00 [ws] ⇄ res ✓ sessions.list 66ms conn=4e7ab09f…180b id=51ad6c88…412c
+2026-03-26T16:22:09.967-04:00 [gateway] cron: job updated
+2026-03-26T16:22:20.678-04:00 [ws] ⇄ res ✓ sessions.list 65ms conn=4e7ab09f…180b id=ff2d2a58…6b17
+2026-03-26T16:22:38.346-04:00 ```json
+{"bucket": "newsletter", "confidence": 0.90, "reason": "Applying forwarded email rule: inner content is a MyClaw Newsletter digest with tech news and agent framework updates."}
+```
+2026-03-26T16:22:51.141-04:00 [ws] ⇄ res ✓ sessions.list 51ms conn=4e7ab09f…180b id=4a4ff94d…8339
+2026-03-26T16:23:19.081-04:00 ```json
+{
+  "articles_extracted": 6,
+  "articles": [
+    {
+      "title": "Agents Reframe Open Source",
+      "source": "MyClaw Newsletter",
+      "newsletter": "MyClaw Newsletter",
+      "summary": "OpenAI board member Bret Taylor argues that AI coding agents will fundamentally reshape open source development by enabling developers to recreate tools on demand, or alternately by driving adoption of agent-native platforms like OpenClaw that prioritize hackability and user-space extensibility over complex kernel architectures. The trend favors systems designed to be extended by agents as technical barriers lower.",
+      "keypoints": [
+        "Agents could either erode traditional open source or redefine it through agent-native platforms",
+        "Developers will favor systems built to be extended by agents, especially on stable foundations like Linux",
+        "Shift toward hackable user-space layers rather than complex kernel design as AI lowers technical barriers"
+      ],
+      "topics": ["AI agents", "open source", "software architecture"],
+      "relevance": 0.9,
+      "url": ""
+    },
+    {
+      "title": "OpenClaw Edits Videos Autonomously",
+      "source": "MyClaw Newsletter",
+      "newsletter": "MyClaw Newsletter",
+      "summary": "A viral demonstration showed OpenClaw orchestrating a full video production pipeline by calling Synthesia 2 for clip generation, then autonomously operating Adobe Premiere Pro to import footage, place clips on timelines, and assemble rough cuts without human intervention. The system demonstrates a working end-to-end workflow from content generation to post-production editing.",
+      "keypoints": [
+        "OpenClaw integrates with generative video tools and professional editing software",
+        "Full automation from video generation through timeline editing and assembly",
+        "No manual intervention required for multi-stage creative workflows"
+      ],
+      "topics": ["autonomous agents", "video production", "workflow automation"],
+      "relevance": 0.85,
+      "url": ""
+    },
+    {
+      "title": "LiteLLM Supply Chain Breach",
+      "source": "MyClaw Newsletter",
+      "newsletter": "MyClaw Newsletter",
+      "summary": "A malicious version of LiteLLM (1.82.8) was published on PyPI and installed via standard pip commands, stealing SSH keys, cloud credentials, and API keys from affected systems. The compromised package spread downstream through dependents like dspy and was present in OpenClaw environments before detection and removal within an hour.",
+      "keypoints": [
+        "Versions 1.82.7 and 1.82.8 are compromised; 1.82.6 is the last safe release",
+        "Attack exfiltrated sensitive credentials including SSH keys and cloud authentication",
+        "All affected users must rotate credentials immediately due to widespread downstream impact"
+      ],
+      "topics": ["supply chain security", "malware", "dependency management"],
+      "relevance": 0.95,
+      "url": ""
+    },
+    {
+      "title": "OpenClaw Takes Over WhatsApp",
+      "source": "MyClaw Newsletter",
+      "newsletter": "MyClaw Newsletter",
+      "summary": "OpenClaw creator Peter Steinberger highlighted an integration issue where OpenClaw agents automatically respond to incoming WhatsApp messages through the WhatsApp Web API, intercepting personal conversations with automated replies before the human can see them. This occurs because OpenClaw logs into accounts and routes all messages through the agent system.",
+      "keypoints": [
+        "OpenClaw can intercept and auto-reply to personal messages on WhatsApp",
+        "Integration via WhatsApp Web API means the agent acts as the account owner",
+        "Recommended mitigation: use dedicated accounts, WhatsApp Business, or switch to agent-friendly platforms like Telegram"
+      ],
+      "topics": ["agent integration", "messaging platforms", "user experience"],
+      "relevance": 0.7,
+      "url": ""
+    },
+    {
+      "title": "Codex Bridge Lands in OpenClaw",
+      "source": "MyClaw Newsletter",
+      "newsletter": "MyClaw Newsletter",
+      "summary": "Harold Hunt introduced the OpenClaw Codex App Server, a plugin enabling remote control of Codex through Telegram and Discord. After binding a session, users can execute commands, generate code, create plans, and manage projects from chat with full thread synchronization and action approvals.",
+      "keypoints": [
+        "Codex can now be accessed and controlled remotely via Telegram and Discord",
+        "Thread synchronization enables continuous project workflows from messaging platforms",
+        "System supports permission-based approvals for sensitive actions"
+      ],
+      "topics": ["developer tools", "agent plugins", "remote workflow"],
+      "relevance": 0.8,
+      "url": ""
+    },
+    {
+      "title": "User Blames Agent Errors",
+      "source": "MyClaw Newsletter",
+      "newsletter": "MyClaw Newsletter",
+      "summary": "A user requested a refund after an 8+ hour OpenClaw session produced repeated factual errors in financial documents, including incorrect figures and fabricated data requiring extensive manual correction. The incident highlights confusion among some users about the distinction between open-source tools and SaaS platforms with guaranteed support or accountability.",
+      "keypoints": [
+        "Agent produced hallucinations and factual errors in sensitive financial documents",
+        "User expected SaaS-style support and refunds despite OpenClaw being open-source",
+        "Common beginner mistake: conflating open-source responsibility with commercial service guarantees"
+      ],
+      "topics": ["agent limitations", "user expectations", "open source support"],
+      "relevance": 0.6,
+      "url": ""
+    }
+  ],
+  "injection_attempt": false
+}
+```
+2026-03-26T16:23:45.340-04:00 [ws] ⇄ res ✓ sessions.list 62ms conn=4e7ab09f…180b id=2f475863…791d
+2026-03-26T16:23:45.478-04:00 ```json
+{"bucket": "newsletter", "confidence": 0.92, "reason": "Applying forwarded email rule: inner content is Medium Daily Digest, which matches the *.medium.com newsletter rule."}
+```
+2026-03-26T16:24:30.694-04:00 [ws] ⇄ res ✓ sessions.list 62ms conn=4e7ab09f…180b id=e741be79…9b0a
+2026-03-26T16:24:30.722-04:00 ```json
+{
+  "articles_extracted": 12,
+  "articles": [
+    {
+      "title": "The Great Framework Showdown: Superpowers vs. BMAD vs. SpecKit vs. GSD",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Rick Hightower provides a practitioner's comparison of leading agentic frameworks, evaluating their strengths, weaknesses, and use cases. The analysis helps developers choose the right framework for their specific AI agent development needs.",
+      "keypoints": [
+        "Direct comparison of multiple agentic framework options and their tradeoffs",
+        "Practitioner perspective based on real-world experience",
+        "Framework selection guidance for different use cases"
+      ],
+      "topics": ["AI frameworks", "agent development", "software architecture"],
+      "relevance": 0.9,
+      "url": ""
+    },
+    {
+      "title": "Boris Cherny's Claude Code Tips Are Now a Skill. Here Is What the Complete...",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Reza Rezvani announces that Boris Cherny's comprehensive collection of Claude Code tips has been packaged as an installable skill. This provides a structured, reusable resource for developers using Claude Code.",
+      "keypoints": [
+        "Claude Code tips compiled into an installable skill format",
+        "Complete 42-tip collection now available",
+        "Reusable resource for Claude Code users"
+      ],
+      "topics": ["Claude Code", "developer tools", "best practices"],
+      "relevance": 0.8,
+      "url": ""
+    },
+    {
+      "title": "Project NOMAD: Offline Agents for Wartime Survival",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Agent Native explores building autonomous agents that function without external dependencies or connectivity, addressing scenarios where typical cloud and API dependencies become unavailable. The project focuses on creating resilient, self-contained agent systems.",
+      "keypoints": [
+        "Agents designed to operate independently without external dependencies",
+        "Resilience and offline-first architecture",
+        "Preparedness for scenarios where normal infrastructure fails"
+      ],
+      "topics": ["resilient agents", "offline systems", "agent architecture"],
+      "relevance": 0.7,
+      "url": ""
+    },
+    {
+      "title": "Which Programming Language Should You Use with Claude Code?",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "A benchmark study across 13 programming languages reveals surprising results about language choice when working with Claude Code. The analysis helps developers optimize language selection for AI-assisted coding.",
+      "keypoints": [
+        "Empirical comparison of 13 languages with Claude Code",
+        "Performance and compatibility insights across language ecosystems",
+        "Data-driven language selection guidance"
+      ],
+      "topics": ["Claude Code", "programming languages", "performance"],
+      "relevance": 0.85,
+      "url": ""
+    },
+    {
+      "title": "The NotebookLM Workflow That Changed How I Learn Any Technology",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "SoultntoureinTowards AI shares a practical system using NotebookLM to quickly master dense technical documentation. The workflow provides a replicable approach for learning complex technologies efficiently.",
+      "keypoints": [
+        "NotebookLM as a documentation learning tool",
+        "Practical workflow for mastering dense technical material",
+        "Replicable system for technology onboarding"
+      ],
+      "topics": ["learning systems", "documentation", "NotebookLM"],
+      "relevance": 0.6,
+      "url": ""
+    },
+    {
+      "title": "Claude Code Defaults to Medium Effort. Switching to Max Won't Save You.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Phil explores Claude Code's effort levels through experimentation with the /effort max command, discovering insights about when additional effort translates to better results. The analysis helps users understand realistic expectations for effort tuning.",
+      "keypoints": [
+        "Claude Code effort levels don't guarantee proportional improvements",
+        "Data from 21 attempts over 6 days of testing",
+        "Practical insights on effort parameter tuning"
+      ],
+      "topics": ["Claude Code", "configuration", "user experience"],
+      "relevance": 0.75,
+      "url": ""
+    },
+    {
+      "title": "KubeClaw: OpenClaw for Adults",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Agent Native introduces KubeClaw, an enterprise-focused variant of OpenClaw with secure defaults, pinned container images, and predictable upgrade cycles. The platform addresses production deployment needs for organizations.",
+      "keypoints": [
+        "Enterprise security defaults and container image pinning",
+        "Predictable upgrade and versioning strategy",
+        "Production-ready OpenClaw variant"
+      ],
+      "topics": ["OpenClaw", "enterprise deployment", "security"],
+      "relevance": 0.8,
+      "url": ""
+    },
+    {
+      "title": "5 Agent Frameworks. One Pattern Won.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Yanli Liu compares AutoGen, LangGraph, CrewAI, ByteDance's framework, and other options to identify common architectural patterns emerging across agent frameworks. The analysis reveals converging design patterns in the agent ecosystem.",
+      "keypoints": [
+        "Comparison of five major agent frameworks",
+        "Identification of dominant architectural patterns",
+        "Convergence trends in agent framework design"
+      ],
+      "topics": ["agent frameworks", "architecture patterns", "AI systems"],
+      "relevance": 0.85,
+      "url": ""
+    },
+    {
+      "title": "The Agent Framework Landscape: LangChain Deep Agents vs. Claude Agent SDK",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Rick Hightower provides a comprehensive 29-minute analysis comparing LangChain Deep Agents and Claude Agent SDK, examining their architectures and capabilities. The deep dive helps developers understand the technical differences between major agent frameworks.",
+      "keypoints": [
+        "In-depth architectural comparison of two major agent SDKs",
+        "Capability and design pattern analysis",
+        "Framework selection criteria for different scenarios"
+      ],
+      "topics": ["agent frameworks", "LangChain", "Claude SDK"],
+      "relevance": 0.9,
+      "url": ""
+    },
+    {
+      "title": "Atlassian Just Fired Its CTO for AI. Your Seniority Won't Save You.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "MohamedAbdelmeneminGenerative AI reports on Atlassian's CTO layoff amid the company's broader workforce reduction of 1,600 employees. The article examines how AI adoption is impacting senior leadership roles across the industry.",
+      "keypoints": [
+        "Senior leadership not immune to AI-driven organizational changes",
+        "1,600 employee reduction at Atlassian amid AI transition",
+        "Broader industry trend of CTO and leadership restructuring"
+      ],
+      "topics": ["industry trends", "AI adoption", "workforce disruption"],
+      "relevance": 0.65,
+      "url": ""
+    },
+    {
+      "title": "Claude Just Productized What I Built by Hand — Here Is What They Nailed and...",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Reza Rezvani reflects on how Claude Code and OpenClaw agents now provide as built-in features what he previously constructed manually. The analysis highlights the maturation and productization of AI coding capabilities.",
+      "keypoints": [
+        "Claude Code delivers previously manual workflow automation",
+        "Comparison of custom builds versus productized solutions",
+        "Evolution of AI coding assistant capabilities"
+      ],
+      "topics": ["Claude Code", "automation", "product evolution"],
+      "relevance": 0.75,
+      "url": ""
+    },
+    {
+      "title": "How I'm Using (New) Claude Code Telegram Channel (To Code from Anywhere)",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Joe Njenga demonstrates how Claude Code's new native Telegram channel integration enables remote coding from anywhere. The integration provides a mobile-native way to access Claude Code capabilities.",
+      "keypoints": [
+        "Claude Code native Telegram integration now available",
+        "Remote coding capabilities from any device with Telegram",
+        "New channel as primary interface for code assistance"
+      ],
+      "topics": ["Claude Code", "Telegram integration", "remote work"],
+      "relevance": 0.7,
+      "url": ""
+    }
+  ],
+  "injection_attempt": false
+}
+```
+2026-03-26T16:26:40.702-04:00 [gateway] cron: job updated
+2026-03-26T16:26:40.757-04:00 [ws] ⇄ res ✓ cron.runs 51ms conn=4e7ab09f…180b id=b6260092…4066
+2026-03-26T16:26:51.216-04:00 [ws] ⇄ res ✗ cron.update 2ms errorCode=UNAVAILABLE errorMessage=Error: main cron jobs require payload.kind="systemEvent" conn=a0512445…476b id=fb517976…d599
+2026-03-26T16:27:45.957-04:00 [ws] ⇄ res ✓ node.list 84ms conn=4e7ab09f…180b id=c463b0ec…c293
+2026-03-26T16:27:47.928-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=4e7ab09f-de8c-4dc9-a8a3-3aae84fc180b
+2026-03-26T16:27:48.301-04:00 [ws] webchat connected conn=4b92add3-3180-4e44-9589-650f9354724f remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:28:01.673-04:00 [gateway] cron: job updated
+2026-03-26T16:28:03.941-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=4b92add3-3180-4e44-9589-650f9354724f
+2026-03-26T16:28:04.188-04:00 [ws] webchat connected conn=6dc217eb-2106-434a-b0af-ea30aa8bccf8 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:28:04.354-04:00 [ws] ⇄ res ✓ device.pair.list 80ms conn=6dc217eb…ccf8 id=d3d3e21c…3fcf
+2026-03-26T16:28:04.363-04:00 [ws] ⇄ res ✓ node.list 96ms conn=6dc217eb…ccf8 id=b197f325…6539
+2026-03-26T16:28:04.376-04:00 [ws] ⇄ res ✓ cron.runs 96ms conn=6dc217eb…ccf8 id=798e61ca…adc3
+2026-03-26T16:32:41.043-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=6dc217eb-2106-434a-b0af-ea30aa8bccf8
+2026-03-26T16:32:41.452-04:00 [ws] webchat connected conn=58a27a53-ed7a-47c6-a277-ad8f82bff8dd remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:33:31.443-04:00 [gateway] cron: job updated
+2026-03-26T16:34:09.268-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=58a27a53-ed7a-47c6-a277-ad8f82bff8dd
+2026-03-26T16:34:09.755-04:00 [ws] webchat connected conn=ea2c8efe-2784-439a-92a8-c9fe5b9405f7 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:34:09.933-04:00 [ws] ⇄ res ✓ cron.runs 75ms conn=ea2c8efe…05f7 id=2f6e6d3e…bb11
+2026-03-26T16:34:13.293-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=ea2c8efe-2784-439a-92a8-c9fe5b9405f7
+2026-03-26T16:34:13.525-04:00 [ws] webchat connected conn=01aa8524-4842-44a6-9e8b-f540d1f62802 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:34:32.957-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=01aa8524-4842-44a6-9e8b-f540d1f62802
+2026-03-26T16:34:33.162-04:00 [ws] webchat connected conn=920b53fe-2501-4bc7-9919-87f240df500e remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:34:57.024-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=920b53fe-2501-4bc7-9919-87f240df500e
+2026-03-26T16:34:57.284-04:00 [ws] webchat connected conn=b7cfefb0-2d13-4c15-b1f4-eec1b270a10e remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:34:57.510-04:00 [ws] ⇄ res ✓ node.list 117ms conn=b7cfefb0…a10e id=a3f3c17f…1f37
+2026-03-26T16:34:57.514-04:00 [ws] ⇄ res ✓ device.pair.list 125ms conn=b7cfefb0…a10e id=890a3160…1132
+2026-03-26T16:34:57.553-04:00 [ws] ⇄ res ✓ cron.runs 148ms conn=b7cfefb0…a10e id=9ec97ca7…ff5c
+2026-03-26T16:34:58.250-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=b7cfefb0-2d13-4c15-b1f4-eec1b270a10e
+2026-03-26T16:34:58.518-04:00 [ws] webchat connected conn=d6d3d8b8-466d-4da5-b344-800ab850c8b6 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T16:34:58.606-04:00 [ws] ⇄ res ✓ device.pair.list 51ms conn=d6d3d8b8…c8b6 id=b28e4b0c…93bb
+2026-03-26T16:34:58.622-04:00 [ws] ⇄ res ✓ cron.runs 59ms conn=d6d3d8b8…c8b6 id=63132e6c…6314
+2026-03-26T16:37:09.855-04:00 [gateway] cron: job updated
+2026-03-26T16:38:42.033-04:00 [gateway] cron: job updated
+2026-03-26T16:38:42.076-04:00 [ws] ⇄ res ✓ cron.update 53ms conn=9f04a503…b8fc id=747d80ca…8087
+2026-03-26T16:39:55.733-04:00 ```json
+{"bucket": "newsletter", "confidence": 0.92, "reason": "Applying forwarded email rule: inner content is Medium Daily Digest, which matches the *.medium.com newsletter rule."}
+```
+2026-03-26T16:40:34.202-04:00 ```json
+{
+  "articles_extracted": 12,
+  "articles": [
+    {
+      "title": "The Great Framework Showdown: Superpowers vs. BMAD vs. SpecKit vs. GSD",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Rick Hightower provides a practitioner's comparison of leading agentic frameworks, evaluating their strengths, weaknesses, and use cases. The analysis helps developers choose the right framework for their specific AI agent development needs.",
+      "keypoints": [
+        "Direct comparison of multiple agentic framework options and their tradeoffs",
+        "Practitioner perspective based on real-world experience",
+        "Framework selection guidance for different use cases"
+      ],
+      "topics": ["AI frameworks", "agent development", "software architecture"],
+      "relevance": 0.9,
+      "url": ""
+    },
+    {
+      "title": "Boris Cherny's Claude Code Tips Are Now a Skill. Here Is What the Complete...",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Reza Rezvani announces that Boris Cherny's comprehensive collection of Claude Code tips has been packaged as an installable skill. This provides a structured, reusable resource for developers using Claude Code.",
+      "keypoints": [
+        "Claude Code tips compiled into an installable skill format",
+        "Complete 42-tip collection now available",
+        "Reusable resource for Claude Code users"
+      ],
+      "topics": ["Claude Code", "developer tools", "best practices"],
+      "relevance": 0.8,
+      "url": ""
+    },
+    {
+      "title": "Project NOMAD: Offline Agents for Wartime Survival",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Agent Native explores building autonomous agents that function without external dependencies or connectivity, addressing scenarios where typical cloud and API dependencies become unavailable. The project focuses on creating resilient, self-contained agent systems.",
+      "keypoints": [
+        "Agents designed to operate independently without external dependencies",
+        "Resilience and offline-first architecture",
+        "Preparedness for scenarios where normal infrastructure fails"
+      ],
+      "topics": ["resilient agents", "offline systems", "agent architecture"],
+      "relevance": 0.7,
+      "url": ""
+    },
+    {
+      "title": "Which Programming Language Should You Use with Claude Code?",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "A benchmark study across 13 programming languages reveals surprising results about language choice when working with Claude Code. The analysis helps developers optimize language selection for AI-assisted coding.",
+      "keypoints": [
+        "Empirical comparison of 13 languages with Claude Code",
+        "Performance and compatibility insights across language ecosystems",
+        "Data-driven language selection guidance"
+      ],
+      "topics": ["Claude Code", "programming languages", "performance"],
+      "relevance": 0.85,
+      "url": ""
+    },
+    {
+      "title": "The NotebookLM Workflow That Changed How I Learn Any Technology",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "SoultntoureinTowards AI shares a practical system using NotebookLM to quickly master dense technical documentation. The workflow provides a replicable approach for learning complex technologies efficiently.",
+      "keypoints": [
+        "NotebookLM as a documentation learning tool",
+        "Practical workflow for mastering dense technical material",
+        "Replicable system for technology onboarding"
+      ],
+      "topics": ["learning systems", "documentation", "NotebookLM"],
+      "relevance": 0.6,
+      "url": ""
+    },
+    {
+      "title": "Claude Code Defaults to Medium Effort. Switching to Max Won't Save You.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Phil explores Claude Code's effort levels through experimentation with the /effort max command, discovering insights about when additional effort translates to better results. The analysis helps users understand realistic expectations for effort tuning.",
+      "keypoints": [
+        "Claude Code effort levels don't guarantee proportional improvements",
+        "Data from 21 attempts over 6 days of testing",
+        "Practical insights on effort parameter tuning"
+      ],
+      "topics": ["Claude Code", "configuration", "user experience"],
+      "relevance": 0.75,
+      "url": ""
+    },
+    {
+      "title": "KubeClaw: OpenClaw for Adults",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Agent Native introduces KubeClaw, an enterprise-focused variant of OpenClaw with secure defaults, pinned container images, and predictable upgrade cycles. The platform addresses production deployment needs for organizations.",
+      "keypoints": [
+        "Enterprise security defaults and container image pinning",
+        "Predictable upgrade and versioning strategy",
+        "Production-ready OpenClaw variant"
+      ],
+      "topics": ["OpenClaw", "enterprise deployment", "security"],
+      "relevance": 0.8,
+      "url": ""
+    },
+    {
+      "title": "5 Agent Frameworks. One Pattern Won.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Yanli Liu compares AutoGen, LangGraph, CrewAI, ByteDance's framework, and other options to identify common architectural patterns emerging across agent frameworks. The analysis reveals converging design patterns in the agent ecosystem.",
+      "keypoints": [
+        "Comparison of five major agent frameworks",
+        "Identification of dominant architectural patterns",
+        "Convergence trends in agent framework design"
+      ],
+      "topics": ["agent frameworks", "architecture patterns", "AI systems"],
+      "relevance": 0.85,
+      "url": ""
+    },
+    {
+      "title": "The Agent Framework Landscape: LangChain Deep Agents vs. Claude Agent SDK",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Rick Hightower provides a comprehensive analysis comparing LangChain Deep Agents and Claude Agent SDK, examining their architectures and capabilities. The deep dive helps developers understand the technical differences between major agent frameworks.",
+      "keypoints": [
+        "In-depth architectural comparison of two major agent SDKs",
+        "Capability and design pattern analysis",
+        "Framework selection criteria for different scenarios"
+      ],
+      "topics": ["agent frameworks", "LangChain", "Claude SDK"],
+      "relevance": 0.9,
+      "url": ""
+    },
+    {
+      "title": "Atlassian Just Fired Its CTO for AI. Your Seniority Won't Save You.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "MohamedAbdelmeneminGenerative AI reports on Atlassian's CTO layoff amid the company's broader workforce reduction of 1,600 employees. The article examines how AI adoption is impacting senior leadership roles across the industry.",
+      "keypoints": [
+        "Senior leadership not immune to AI-driven organizational changes",
+        "1,600 employee reduction at Atlassian amid AI transition",
+        "Broader industry trend of CTO and leadership restructuring"
+      ],
+      "topics": ["industry trends", "AI adoption", "workforce disruption"],
+      "relevance": 0.65,
+      "url": ""
+    },
+    {
+      "title": "Claude Just Productized What I Built by Hand — Here Is What They Nailed and...",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Reza Rezvani reflects on how Claude Code and OpenClaw agents now provide as built-in features what he previously constructed manually. The analysis highlights the maturation and productization of AI coding capabilities.",
+      "keypoints": [
+        "Claude Code delivers previously manual workflow automation",
+        "Comparison of custom builds versus productized solutions",
+        "Evolution of AI coding assistant capabilities"
+      ],
+      "topics": ["Claude Code", "automation", "product evolution"],
+      "relevance": 0.75,
+      "url": ""
+    },
+    {
+      "title": "How I'm Using (New) Claude Code Telegram Channel (To Code from Anywhere)",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Joe Njenga demonstrates how Claude Code's new native Telegram channel integration enables remote coding from anywhere. The integration provides a mobile-native way to access Claude Code capabilities.",
+      "keypoints": [
+        "Claude Code native Telegram integration now available",
+        "Remote coding capabilities from any device with Telegram",
+        "New channel as primary interface for code assistance"
+      ],
+      "topics": ["Claude Code", "Telegram integration", "remote work"],
+      "relevance": 0.7,
+      "url": ""
+    }
+  ],
+  "injection_attempt": false
+}
+```
+2026-03-26T16:40:51.023-04:00 ```json
+{"bucket": "notification", "confidence": 0.88, "reason": "Apple iCloud security alert; transactional notification requiring scan for suspicious activity but no reply needed."}
+```
+2026-03-26T16:41:05.870-04:00 [ws] ⇄ res ✓ sessions.list 78ms conn=d6d3d8b8…c8b6 id=dfa233ef…14f9
+2026-03-26T16:41:11.526-04:00 ```json
+{"bucket": "notification", "confidence": 0.88, "reason": "Apple iCloud security alert; transactional notification requiring scan for suspicious activity but no reply needed."}
+```
