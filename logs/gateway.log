@@ -6933,3 +6933,56 @@
 2026-03-25T22:41:48.683-04:00 {"bucket": "notification", "confidence": 0.90, "reason": "Account activation and setup email from Fly.io; transactional confirmation with self-service password reset link, no reply needed."}
 2026-03-25T22:42:33.272-04:00 [ws] ⇄ res ✓ cron.runs 346ms conn=91693c92…9327 id=7bd65c85…06b2
 2026-03-25T22:46:04.031-04:00 [gateway] cron: job updated
+2026-03-25T22:54:24.805-04:00 [gateway] cron: job updated
+2026-03-25T22:54:31.353-04:00 [gateway] cron: job updated
+2026-03-25T23:01:26.331-04:00 [ws] ⇄ res ✓ agent 121ms runId=3d987d49-a1f4-4a11-9938-4e77bac0f4bb conn=075a7473…5653 id=efc5c94f…784f
+2026-03-25T23:01:35.236-04:00 {"bucket": "notification", "confidence": 0.88, "reason": "Welcome/onboarding email from Medium; transactional account setup message that requires no reply, distinct from curated Medium newsletter digests."}
+2026-03-25T23:01:57.677-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a newsletter; VIP classification overrides content type per triage rules."}
+2026-03-25T23:02:20.805-04:00 ```json
+{"draft_reply": "Got it—thanks for sharing. The LiteLLM breach is concerning; I'll check my version and rotate credentials."}
+```
+2026-03-25T23:02:40.921-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com); VIP classification requires reply per triage rules regardless of email content."}
+2026-03-25T23:02:56.358-04:00 ```json
+{"draft_reply": "Got it, thanks for sharing."}
+```
+2026-03-25T23:18:11.672-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a newsletter; VIP classification overrides content type per triage rules."}
+2026-03-25T23:18:25.765-04:00 ```json
+{"draft_reply": "Got it—thanks for the heads up. I'll check my litellm version and rotate creds if needed."}
+```
+2026-03-25T23:18:43.570-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a Medium digest; VIP classification overrides content type per triage rules."}
+2026-03-25T23:18:57.306-04:00 ```json
+{"draft_reply": "Thanks for sending. A few good ones in there—I'll check out the framework comparison."}
+```
+2026-03-25T23:19:13.730-04:00 {"bucket": "notification", "confidence": 0.88, "reason": "Promotional newsletter with list-unsubscribe and bulk signals from unknown sender; pre-classified as 'scan,' archive from inbox without reply."}
+2026-03-25T23:19:24.921-04:00 [ws] ⇄ res ✓ agent 69ms runId=451a21e6-ab64-4e05-8caa-8dd093bbd879 conn=b6265791…2c6b id=c03a999c…75ab
+2026-03-25T23:19:34.927-04:00 {"bucket": "newsletter", "confidence": 0.92, "reason": "Pre-classified as 'deep_read' (newsletter category); promotional digest from Pinterest about home design topics, matches newsletter extraction intent."}
+2026-03-25T23:19:54.876-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding job posting; VIP classification overrides content type per triage rules."}
+2026-03-25T23:20:11.178-04:00 ```json
+{"draft_reply": "Thanks for passing this along. I'll take a look and get back to you if it's a fit."}
+```
+2026-03-25T23:21:00.041-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a Medium digest; VIP classification overrides content type per triage rules."}
+2026-03-25T23:29:08.063-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a newsletter; VIP classification overrides content type per triage rules."}
+2026-03-25T23:29:28.372-04:00 ```json
+{"draft_reply": "Thanks for the heads up. The LiteLLM issue is definitely worth checking on—I'll verify my version."}
+```
+2026-03-25T23:35:30.147-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a newsletter; VIP classification overrides content type per triage rules."}
+2026-03-25T23:35:42.220-04:00 ```json
+{"draft_reply": "Thanks for sharing. I'll check my litellm version and rotate credentials if needed."}
+```
+2026-03-25T23:35:59.253-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a Medium digest; VIP classification overrides content type per triage rules."}
+2026-03-25T23:36:14.875-04:00 ```json
+{"draft_reply": "Thanks for the digest. The framework comparison looks interesting—I'll give it a read."}
+```
+2026-03-25T23:36:33.286-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com); VIP classification overrides content type per triage rules."}
+2026-03-25T23:36:48.181-04:00 ```json
+{"draft_reply": "Got it, thanks."}
+```
+2026-03-25T23:37:08.125-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding a newsletter; VIP classification overrides content type per triage rules."}
+2026-03-25T23:37:23.424-04:00 ```json
+{"draft_reply": "Thanks for sharing. I'll check out the Replit Agent tutorial."}
+```
+2026-03-25T23:37:42.292-04:00 {"bucket": "needs_reply", "confidence": 0.98, "reason": "Email from VIP contact (naytunthein70@gmail.com) forwarding job posting; VIP classification overrides content type per triage rules."}
+2026-03-25T23:37:57.834-04:00 ```json
+{"draft_reply": "Thanks for passing this along. I'll take a look."}
+```
+2026-03-25T23:38:17.871-04:00 {"bucket": "notification", "confidence": 0.90, "reason": "Forwarded bank alert about credit card transaction; informational notification that doesn't require a reply (sender naytunthein1970@gmail.com is not on VIP list)."}

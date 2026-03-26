@@ -4965,3 +4965,14 @@ Use a different name with --name <name>
 2026-03-25T22:05:58.707-04:00 [telegram] answerCallbackQuery failed: Call to 'answerCallbackQuery' failed! (400: Bad Request: query is too old and response timeout expired or query ID is invalid)
 2026-03-25T22:06:08.127-04:00 [telegram] answerCallbackQuery failed: Call to 'answerCallbackQuery' failed! (400: Bad Request: query is too old and response timeout expired or query ID is invalid)
 2026-03-25T22:36:20.571-04:00 [gateway] request handler failed: Error: main cron jobs require payload.kind="systemEvent"
+2026-03-25T22:56:53.535-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:01:53.534-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:06:53.533-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:11:53.527-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:16:53.525-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:21:53.520-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:26:53.518-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:31:53.516-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:36:53.568-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:41:53.521-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-25T23:41:53.857-04:00 [agent/embedded] read tool called without path: toolCallId=toolu_01VYMUectjdnYS3rW4BXsD4F argsType=object

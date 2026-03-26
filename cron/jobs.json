@@ -32,9 +32,9 @@
       "id": "6fa273bf-74f9-42c8-bdec-99f4b8d5a7c5",
       "name": "email-triage-cleanup",
       "description": "Purge pending draft entries older than 48h",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1773551637280,
-      "updatedAtMs": 1774482791945,
+      "updatedAtMs": 1774493664793,
       "schedule": {
         "kind": "cron",
         "expr": "17 3 * * *",
@@ -54,7 +54,6 @@
         "to": "1771281565"
       },
       "state": {
-        "nextRunAtMs": 1774509420000,
         "lastRunAtMs": 1774478409952,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
@@ -67,9 +66,9 @@
     {
       "id": "d62bfecc-28a5-44c9-8db1-8b187f60af62",
       "name": "memory-consolidation",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1774482821786,
-      "updatedAtMs": 1774482821786,
+      "updatedAtMs": 1774493671347,
       "schedule": {
         "kind": "cron",
         "expr": "0 4 * * *",
@@ -87,9 +86,7 @@
         "channel": "telegram",
         "to": "1771281565"
       },
-      "state": {
-        "nextRunAtMs": 1774512000000
-      }
+      "state": {}
     }
   ]
 }
