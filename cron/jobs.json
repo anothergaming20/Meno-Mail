@@ -5,9 +5,9 @@
       "id": "60c2f369-62dc-42fe-b2f3-0b8d32648593",
       "name": "email-triage-dispatcher",
       "description": "Fetch, classify, and act on new inbox emails",
-      "enabled": false,
+      "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1774493164026,
+      "updatedAtMs": 1774554225375,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -20,21 +20,22 @@
         "text": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
       },
       "state": {
-        "lastRunAtMs": 1774492952740,
+        "lastRunAtMs": 1774554219485,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 9045,
+        "lastDurationMs": 5890,
         "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1774555119485
       }
     },
     {
       "id": "6fa273bf-74f9-42c8-bdec-99f4b8d5a7c5",
       "name": "email-triage-cleanup",
       "description": "Purge pending draft entries older than 48h",
-      "enabled": false,
+      "enabled": true,
       "createdAtMs": 1773551637280,
-      "updatedAtMs": 1774493664793,
+      "updatedAtMs": 1774552599199,
       "schedule": {
         "kind": "cron",
         "expr": "17 3 * * *",
@@ -60,7 +61,8 @@
         "lastDurationMs": 24806,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": true
+        "lastDelivered": true,
+        "nextRunAtMs": 1774595820000
       }
     },
     {

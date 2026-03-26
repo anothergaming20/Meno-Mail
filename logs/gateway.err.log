@@ -4976,3 +4976,277 @@ Use a different name with --name <name>
 2026-03-25T23:36:53.568-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
 2026-03-25T23:41:53.521-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
 2026-03-25T23:41:53.857-04:00 [agent/embedded] read tool called without path: toolCallId=toolu_01VYMUectjdnYS3rW4BXsD4F argsType=object
+2026-03-25T23:46:53.518-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T00:02:47.107-04:00 [telegram] Polling stall detected (no getUpdates for 711.08s); forcing restart.
+2026-03-26T00:02:47.209-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T00:02:47.277-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T00:03:02.610-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T00:18:13.325-04:00 [telegram] Polling stall detected (no getUpdates for 894.36s); forcing restart.
+2026-03-26T00:18:13.332-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T00:18:13.480-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T00:18:30.836-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T00:21:05.169-04:00 [telegram] Polling stall detected (no getUpdates for 137.97s); forcing restart.
+2026-03-26T00:21:05.211-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T00:21:20.187-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T00:38:50.167-04:00 [telegram] Polling stall detected (no getUpdates for 1033.86s); forcing restart.
+2026-03-26T00:38:50.219-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T00:38:50.361-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T00:39:05.193-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T00:46:04.153-04:00 [telegram] Polling stall detected (no getUpdates for 402.64s); forcing restart.
+2026-03-26T00:46:04.161-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T00:46:04.320-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T00:46:06.245-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TypeError: fetch failed
+2026-03-26T00:46:18.627-04:00 [agent/embedded] read tool called without path: toolCallId=toolu_016T4wCroBo7CeeQwPJMGnZi argsType=object
+2026-03-26T00:46:20.496-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T00:46:20.885-04:00 [bonjour] watchdog detected non-announced service; attempting re-advertise (gateway fqdn=Nay’s MacBook Pro (OpenClaw)._openclaw-gw._tcp.local. host=openclaw.local. port=18789 state=probing)
+2026-03-26T00:48:35.109-04:00 [telegram] Polling stall detected (no getUpdates for 118.43s); forcing restart.
+2026-03-26T00:48:35.112-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T00:48:36.016-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ENETUNREACH)
+2026-03-26T00:48:50.441-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T00:51:07.110-04:00 [telegram] Polling stall detected (no getUpdates for 120.54s); forcing restart.
+2026-03-26T00:51:07.112-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T00:51:07.171-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T00:51:22.130-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T00:53:39.101-04:00 [telegram] Polling stall detected (no getUpdates for 120.72s); forcing restart.
+2026-03-26T00:53:39.104-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T00:53:40.009-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ENETUNREACH)
+2026-03-26T00:53:54.297-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T01:22:00.129-04:00 [telegram] Polling stall detected (no getUpdates for 1669.49s); forcing restart.
+2026-03-26T01:22:00.144-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T01:22:00.215-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T01:22:15.605-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T01:40:22.286-04:00 [telegram] Polling stall detected (no getUpdates for 1070.41s); forcing restart.
+2026-03-26T01:40:22.386-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T01:40:22.563-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T01:40:37.389-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T01:56:41.134-04:00 [telegram] Polling stall detected (no getUpdates for 947.42s); forcing restart.
+2026-03-26T01:56:41.142-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T01:56:41.223-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T01:56:56.205-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T02:23:02.188-04:00 [telegram] Polling stall detected (no getUpdates for 1549.73s); forcing restart.
+2026-03-26T02:23:02.191-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T02:23:02.214-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T02:23:17.633-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T02:47:08.245-04:00 [telegram] Polling stall detected (no getUpdates for 1414.29s); forcing restart.
+2026-03-26T02:47:08.248-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T02:47:08.280-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T02:47:23.459-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T02:58:18.176-04:00 [telegram] Polling stall detected (no getUpdates for 638.52s); forcing restart.
+2026-03-26T02:58:18.179-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T02:58:18.201-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T02:58:20.006-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TypeError: fetch failed
+2026-03-26T02:58:33.088-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T02:58:33.750-04:00 [bonjour] watchdog detected non-announced service; attempting re-advertise (gateway fqdn=Nay’s MacBook Pro (OpenClaw)._openclaw-gw._tcp.local. host=openclaw.local. port=18789 state=probing)
+2026-03-26T03:06:49.182-04:00 [telegram] Polling stall detected (no getUpdates for 479.86s); forcing restart.
+2026-03-26T03:06:49.184-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T03:06:49.211-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T03:07:04.191-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T03:43:47.255-04:00 [telegram] Polling stall detected (no getUpdates for 2187s); forcing restart.
+2026-03-26T03:43:47.259-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T03:43:47.293-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T03:44:02.265-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T03:46:47.179-04:00 [telegram] Polling stall detected (no getUpdates for 148.66s); forcing restart.
+2026-03-26T03:46:47.186-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T03:47:02.388-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T03:51:42.352-04:00 [telegram] Polling stall detected (no getUpdates for 263.69s); forcing restart.
+2026-03-26T03:51:42.354-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T03:51:42.383-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T03:51:57.362-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T04:20:08.217-04:00 [telegram] Polling stall detected (no getUpdates for 1674.62s); forcing restart.
+2026-03-26T04:20:08.220-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T04:20:08.254-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T04:20:10.988-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TypeError: fetch failed
+2026-03-26T04:20:23.620-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T04:20:40.770-04:00 [telegram] answerCallbackQuery failed: Call to 'answerCallbackQuery' failed! (400: Bad Request: query is too old and response timeout expired or query ID is invalid)
+2026-03-26T04:43:55.314-04:00 [telegram] Polling stall detected (no getUpdates for 1386.41s); forcing restart.
+2026-03-26T04:43:55.322-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T04:43:55.368-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T04:43:56.864-04:00 [telegram] editMessage failed: Network request for 'editMessageText' failed!
+2026-03-26T04:44:10.329-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T04:46:39.152-04:00 [telegram] Polling stall detected (no getUpdates for 131.08s); forcing restart.
+2026-03-26T04:46:39.154-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T04:46:54.172-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T04:49:19.195-04:00 [telegram] Polling stall detected (no getUpdates for 128.78s); forcing restart.
+2026-03-26T04:49:19.198-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T04:49:19.237-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T04:49:19.987-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ENETUNREACH)
+2026-03-26T04:49:35.286-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T04:52:00.168-04:00 [telegram] Polling stall detected (no getUpdates for 128.83s); forcing restart.
+2026-03-26T04:52:00.218-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T04:52:03.805-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TypeError: fetch failed
+2026-03-26T04:52:15.369-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T04:54:37.249-04:00 [telegram] Polling stall detected (no getUpdates for 125.48s); forcing restart.
+2026-03-26T04:54:37.253-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T04:54:37.302-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T04:54:37.987-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ENETUNREACH)
+2026-03-26T04:54:52.261-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T05:01:28.191-04:00 [telegram] Polling stall detected (no getUpdates for 379.61s); forcing restart.
+2026-03-26T05:01:28.195-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T05:01:28.221-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T05:01:44.420-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T05:36:48.228-04:00 [telegram] Polling stall detected (no getUpdates for 2087.42s); forcing restart.
+2026-03-26T05:36:48.232-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T05:36:48.267-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T05:36:55.488-04:00 [agent/embedded] read tool called without path: toolCallId=toolu_01TurmDPhsvRGMqcezLNnRMB argsType=object
+2026-03-26T05:37:03.237-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T05:55:33.256-04:00 [telegram] Polling stall detected (no getUpdates for 1093.78s); forcing restart.
+2026-03-26T05:55:33.258-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T05:55:33.290-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T05:55:48.764-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T06:05:43.152-04:00 [telegram] Polling stall detected (no getUpdates for 578.12s); forcing restart.
+2026-03-26T06:05:43.156-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T06:05:43.186-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T06:05:58.190-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T06:22:43.200-04:00 [telegram] Polling stall detected (no getUpdates for 988.92s); forcing restart.
+2026-03-26T06:22:43.203-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T06:22:43.232-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T06:22:58.214-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T06:44:43.157-04:00 [telegram] Polling stall detected (no getUpdates for 1075.42s); forcing restart.
+2026-03-26T06:44:43.231-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T06:44:43.261-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T06:44:58.177-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T07:05:02.244-04:00 [telegram] Polling stall detected (no getUpdates for 1096.34s); forcing restart.
+2026-03-26T07:05:02.249-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T07:05:02.275-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T07:05:17.258-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T07:05:17.507-04:00 [bonjour] watchdog detected non-announced service; attempting re-advertise (gateway fqdn=Nay’s MacBook Pro (OpenClaw)._openclaw-gw._tcp.local. host=openclaw.local. port=18789 state=probing)
+2026-03-26T07:22:46.264-04:00 [telegram] Polling stall detected (no getUpdates for 971.98s); forcing restart.
+2026-03-26T07:22:46.293-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T07:22:46.450-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T07:23:01.356-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T07:31:37.191-04:00 [telegram] Polling stall detected (no getUpdates for 499.61s); forcing restart.
+2026-03-26T07:31:37.222-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T07:31:37.268-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T07:31:52.199-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T08:14:52.284-04:00 [telegram] Polling stall detected (no getUpdates for 2563.8s); forcing restart.
+2026-03-26T08:14:52.286-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T08:14:52.344-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T08:14:54.370-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TypeError: fetch failed
+2026-03-26T08:15:07.643-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T08:15:08.163-04:00 [bonjour] watchdog detected non-announced service; attempting re-advertise (gateway fqdn=Nay’s MacBook Pro (OpenClaw)._openclaw-gw._tcp.local. host=openclaw.local. port=18789 state=probing)
+2026-03-26T08:28:29.236-04:00 [telegram] Polling stall detected (no getUpdates for 785.28s); forcing restart.
+2026-03-26T08:28:29.239-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T08:28:29.266-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T08:28:44.239-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T08:54:55.186-04:00 [telegram] Polling stall detected (no getUpdates for 1554.7s); forcing restart.
+2026-03-26T08:54:55.189-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T08:54:55.225-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T08:55:10.196-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T08:57:56.168-04:00 [telegram] Polling stall detected (no getUpdates for 149.79s); forcing restart.
+2026-03-26T08:57:56.171-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T08:58:11.727-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T09:00:41.171-04:00 [telegram] Polling stall detected (no getUpdates for 133.22s); forcing restart.
+2026-03-26T09:00:41.175-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T09:00:41.195-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T09:00:42.022-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ENETUNREACH)
+2026-03-26T09:00:56.124-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T09:04:45.297-04:00 [telegram] Polling stall detected (no getUpdates for 212.84s); forcing restart.
+2026-03-26T09:04:45.300-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T09:04:45.986-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ENETUNREACH)
+2026-03-26T09:05:00.511-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T09:24:00.201-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T09:24:00.439-04:00 [telegram] Polling stall detected (no getUpdates for 1123.62s); forcing restart.
+2026-03-26T09:24:00.441-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T09:24:02.198-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TypeError: fetch failed
+2026-03-26T09:24:19.458-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T10:08:21.158-04:00 [telegram] Polling stall detected (no getUpdates for 2627.81s); forcing restart.
+2026-03-26T10:08:21.161-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T10:08:21.181-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T10:08:36.183-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T10:21:47.145-04:00 [telegram] Polling stall detected (no getUpdates for 774.68s); forcing restart.
+2026-03-26T10:21:47.149-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T10:21:47.179-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T10:22:02.244-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T10:29:38.192-04:00 [telegram] Polling stall detected (no getUpdates for 439.63s); forcing restart.
+2026-03-26T10:29:38.195-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T10:29:38.231-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T10:29:40.099-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TypeError: fetch failed
+2026-03-26T10:29:53.201-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T10:29:53.592-04:00 [bonjour] watchdog detected non-announced service; attempting re-advertise (gateway fqdn=Nay’s MacBook Pro (OpenClaw)._openclaw-gw._tcp.local. host=openclaw.local. port=18789 state=probing)
+2026-03-26T10:32:27.122-04:00 [telegram] Polling stall detected (no getUpdates for 137.62s); forcing restart.
+2026-03-26T10:32:27.220-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T10:32:27.963-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ENETUNREACH)
+2026-03-26T10:32:42.135-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T10:35:12.113-04:00 [telegram] Polling stall detected (no getUpdates for 133.72s); forcing restart.
+2026-03-26T10:35:12.117-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T10:35:12.161-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T10:35:13.003-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ENETUNREACH)
+2026-03-26T10:35:27.122-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T11:08:51.118-04:00 [telegram] Polling stall detected (no getUpdates for 1987.58s); forcing restart.
+2026-03-26T11:08:51.136-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T11:08:51.223-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T11:09:06.434-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T11:19:49.154-04:00 [telegram] Polling stall detected (no getUpdates for 626.45s); forcing restart.
+2026-03-26T11:19:49.162-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T11:19:49.227-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T11:20:04.165-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T11:29:40.150-04:00 [telegram] Polling stall detected (no getUpdates for 559.7s); forcing restart.
+2026-03-26T11:29:40.153-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T11:29:40.272-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T11:29:42.341-04:00 [agents/vercel-ai-gateway] Failed to discover Vercel AI Gateway models: TypeError: fetch failed
+2026-03-26T11:29:55.164-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T11:57:55.240-04:00 [telegram] fetch fallback: enabling sticky IPv4-only dispatcher (codes=ETIMEDOUT,ENETDOWN)
+2026-03-26T11:57:55.246-04:00 [telegram] Polling stall detected (no getUpdates for 1663.78s); forcing restart.
+2026-03-26T11:57:55.251-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T11:57:55.314-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T11:58:10.687-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T12:01:34.384-04:00 [telegram] Polling stall detected (no getUpdates for 187.47s); forcing restart.
+2026-03-26T12:01:34.386-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T12:01:49.583-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T12:08:38.187-04:00 [telegram] Polling stall detected (no getUpdates for 392.21s); forcing restart.
+2026-03-26T12:08:38.191-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T12:08:38.228-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T12:08:53.199-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T12:16:02.165-04:00 [telegram] Polling stall detected (no getUpdates for 412.79s); forcing restart.
+2026-03-26T12:16:02.169-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T12:16:02.219-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T12:16:17.816-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T12:45:19.289-04:00 [telegram] Polling stall detected (no getUpdates for 1725.11s); forcing restart.
+2026-03-26T12:45:19.293-04:00 [telegram] polling runner stopped (polling stall detected); restarting in 30s.
+2026-03-26T12:45:19.709-04:00 [memory] qmd update failed (Error: spawn qmd ENOENT)
+2026-03-26T12:45:34.641-04:00 [telegram] Polling runner stop timed out after 15s; forcing restart cycle.
+2026-03-26T12:48:08.162-04:00 [reload] config change requires gateway restart (auth.profiles.vercel-ai-gateway:default, auth.profiles.anthropic:claude, auth.profiles.anthropic:claude:default)
+2026-03-26T12:48:20.700-04:00 [memory] qmd collection add failed for memory-root-main: spawn qmd ENOENT
+2026-03-26T12:48:20.716-04:00 [memory] qmd collection add failed for memory-alt-main: spawn qmd ENOENT
+2026-03-26T12:48:23.581-04:00 [memory] qmd collection add skipped for memory-dir-main: qmd collection add /Users/aiagnet/.openclaw/workspace-main/memory --name memory-dir-main --mask **/*.md failed (code 1): Collection 'memory-dir-main' already exists.
+Use a different name with --name <name>
+
+2026-03-26T12:56:20.716-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 21f866a9cc79910a78806228157d64476f5a1863dd1a26041f2e17518f87bbb0 -> 8b9ed8966f97a20d41d0f48e693751a2910a3eed163f486eba193904237ab9b0, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:23.894-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 8b9ed8966f97a20d41d0f48e693751a2910a3eed163f486eba193904237ab9b0 -> e90fd56116b566b7a279707e5883f03efdcae9735ac60c1a0e980382425a8825, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:25.130-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 e90fd56116b566b7a279707e5883f03efdcae9735ac60c1a0e980382425a8825 -> 61588feb9a7c62fc2b16c5156ca2612e423477364aa632b7ec13079ee1f61bf6, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:25.987-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 61588feb9a7c62fc2b16c5156ca2612e423477364aa632b7ec13079ee1f61bf6 -> 9fe7cd55ce0fad6c944f2e25d1a969750aec6d0b98903018dfe55ad7284caa8d, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:28.811-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 9fe7cd55ce0fad6c944f2e25d1a969750aec6d0b98903018dfe55ad7284caa8d -> 31774a7bb44fb3c89e384feba38c6fadd48abe7cb788d28e1466475043264860, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:30.009-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 31774a7bb44fb3c89e384feba38c6fadd48abe7cb788d28e1466475043264860 -> 8e239193f3a1fbc723fea6b85be0514357ad94eda3bf42902474154f30074745, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:31.227-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 8e239193f3a1fbc723fea6b85be0514357ad94eda3bf42902474154f30074745 -> a6a3560ea865380802d32a33302447275d36d68a8bee453f064237804f3b9e61, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:33.929-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 a6a3560ea865380802d32a33302447275d36d68a8bee453f064237804f3b9e61 -> 5b70cbd9ac517f9a9f03915b9ce8a9009675da99b5bf0bc935ab521050816bdd, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:34.810-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 5b70cbd9ac517f9a9f03915b9ce8a9009675da99b5bf0bc935ab521050816bdd -> 49b93d5046d4b9bf68fa64922cb3c7a1ab5116752a5e612939e1b0029dc9b2d0, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:35.753-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 49b93d5046d4b9bf68fa64922cb3c7a1ab5116752a5e612939e1b0029dc9b2d0 -> ddd33f1f8f15ac9f6ed5d7a2ba1ea19f10f8a347d1c57d360f05714fe0e754b1, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:36.865-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 ddd33f1f8f15ac9f6ed5d7a2ba1ea19f10f8a347d1c57d360f05714fe0e754b1 -> 34865c39f63c511e8614da3fe9a7365a52fdf6f76d9539f1395905e205c16203, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:38.113-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 34865c39f63c511e8614da3fe9a7365a52fdf6f76d9539f1395905e205c16203 -> 1aa67c854e5f1babe395bc159563b25392b77daafa4de6721c1aae30ed737748, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:39.322-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 1aa67c854e5f1babe395bc159563b25392b77daafa4de6721c1aae30ed737748 -> 71eddd573a37c531cab4125c904bec96e5b2525e04b6fde9f62b6a1eafaba653, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:41.650-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 71eddd573a37c531cab4125c904bec96e5b2525e04b6fde9f62b6a1eafaba653 -> 98eb6786d3c5c4ee1440c436dd45fe61528aeb8d18b6a1d1969df29759d4d52b, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:45.944-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 98eb6786d3c5c4ee1440c436dd45fe61528aeb8d18b6a1d1969df29759d4d52b -> 2d66a8c60aedbf2c4d1a298c91141676ca15e2eb22feba4490d5bf483952298e, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:49.313-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 2d66a8c60aedbf2c4d1a298c91141676ca15e2eb22feba4490d5bf483952298e -> 21ec16a14ec9b197e77a4b24e8a24095f653f4f266e1978f4b0e8fa954a5b635, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:52.019-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 21ec16a14ec9b197e77a4b24e8a24095f653f4f266e1978f4b0e8fa954a5b635 -> 238b2982657da6a987fbb0a85273ff3df596ae6ee7793172fa8933142960af8f, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:53.307-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 238b2982657da6a987fbb0a85273ff3df596ae6ee7793172fa8933142960af8f -> 6c3e899d6ae607a4eaee52ab82df62bee3a26a7d8a351f7e7555781800b225dd, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:56:55.069-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 6c3e899d6ae607a4eaee52ab82df62bee3a26a7d8a351f7e7555781800b225dd -> 6990d790abff215b9ca41d78cd909090409180682a965bcfe6d9fff6fc023a2d, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:05.402-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 6990d790abff215b9ca41d78cd909090409180682a965bcfe6d9fff6fc023a2d -> b3ee86e554679d5b65bd60553ad6641bf339c3a12b90050b768a776a0c3ba0b1, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:06.273-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 b3ee86e554679d5b65bd60553ad6641bf339c3a12b90050b768a776a0c3ba0b1 -> 8bc5275ce62468c644edc91f6ba3696c044ea73ac8e39314f23fd2373c7b4037, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:14.092-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 8bc5275ce62468c644edc91f6ba3696c044ea73ac8e39314f23fd2373c7b4037 -> c26a8e818b62fd173ed9b6bc4b32fcd8a60b37ef58a32479ca4bf314e3b61c21, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:16.699-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 c26a8e818b62fd173ed9b6bc4b32fcd8a60b37ef58a32479ca4bf314e3b61c21 -> 88ec23fd30aeb5446a5858cd8e9fa0ca0becedb73ec2b4c7a4584a7118a50750, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:19.604-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 88ec23fd30aeb5446a5858cd8e9fa0ca0becedb73ec2b4c7a4584a7118a50750 -> 42bb8b86cc536dde47111460a1a2dab8ded333ea0fc9b53c954bac9e8384d017, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:20.671-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 42bb8b86cc536dde47111460a1a2dab8ded333ea0fc9b53c954bac9e8384d017 -> 03997a799a946248a1b7544e2fb7caab981994328d2a7b007923689d20594bcb, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:24.153-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 03997a799a946248a1b7544e2fb7caab981994328d2a7b007923689d20594bcb -> ee6dd15bef62215c02e5bf71c47bd131abe4619373f04f9c5448e1d596b8ffc2, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:26.874-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 ee6dd15bef62215c02e5bf71c47bd131abe4619373f04f9c5448e1d596b8ffc2 -> 1df1c50f2db6db8f91206a086af47e5694f6d569dd0953d0bacc77f78e369866, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:28.153-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 1df1c50f2db6db8f91206a086af47e5694f6d569dd0953d0bacc77f78e369866 -> 8ed688a2d304a7ac195657f9fa2ea54027ea14ff4a05b5ed0c47e4c8f3478e4e, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:29.665-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 8ed688a2d304a7ac195657f9fa2ea54027ea14ff4a05b5ed0c47e4c8f3478e4e -> d4611555248aa1e292a4e8e5182f368d067152b44ae947523f4db84ba1e344af, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:32.641-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 d4611555248aa1e292a4e8e5182f368d067152b44ae947523f4db84ba1e344af -> c645845f7179017af4acdbf74507fe9b9bb77524f7a1e706ddc29ae295dca266, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:34.375-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 c645845f7179017af4acdbf74507fe9b9bb77524f7a1e706ddc29ae295dca266 -> 042cefb5f12b6b27c1dffa04e37cf03888138019ba065af79177911527ca8641, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:35.171-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 042cefb5f12b6b27c1dffa04e37cf03888138019ba065af79177911527ca8641 -> 5a088951522d893773f1efc05c843eee7500d1dc51a0529145ce83c208fbaf93, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:39.506-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 5a088951522d893773f1efc05c843eee7500d1dc51a0529145ce83c208fbaf93 -> 5f8bcae69769086dadf0d000755c0c41386da16a8518e5fa91b77e299aec3679, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:44.144-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 5f8bcae69769086dadf0d000755c0c41386da16a8518e5fa91b77e299aec3679 -> c562159f0e771a20298cf3ffe133c5816e4140bf85ff5467e0a6dd9afa45aae7, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:45.393-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 c562159f0e771a20298cf3ffe133c5816e4140bf85ff5467e0a6dd9afa45aae7 -> c139f380a09d578d63f7f70ea30591a6383d089e77033d2ebf0f6f119a912d48, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:47.087-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 c139f380a09d578d63f7f70ea30591a6383d089e77033d2ebf0f6f119a912d48 -> 26d7b5036c82aed8ddf713c36978e8098214cfd7a82592ca3492f3dbe5186ef2, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:49.212-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 26d7b5036c82aed8ddf713c36978e8098214cfd7a82592ca3492f3dbe5186ef2 -> 31d7b19ae0c3a74c19aac7ca33d1d8f1bf0d6f0f0603428bb71708dc71aa4078, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:57:50.475-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 31d7b19ae0c3a74c19aac7ca33d1d8f1bf0d6f0f0603428bb71708dc71aa4078 -> 7b802231d97fd1972598b2b36bc0b1467f4762c6d36434233b2aa28e689a4b31, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
+2026-03-26T12:58:16.291-04:00 [tools] tools.allow allowlist contains unknown entries (lobster). These entries won't match any tool unless the plugin is enabled.

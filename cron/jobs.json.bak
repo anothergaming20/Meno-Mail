@@ -5,9 +5,9 @@
       "id": "60c2f369-62dc-42fe-b2f3-0b8d32648593",
       "name": "email-triage-dispatcher",
       "description": "Fetch, classify, and act on new inbox emails",
-      "enabled": false,
+      "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1774493164026,
+      "updatedAtMs": 1774552592064,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -20,12 +20,13 @@
         "text": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
       },
       "state": {
-        "lastRunAtMs": 1774492952740,
+        "lastRunAtMs": 1774544293771,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 9045,
+        "lastDurationMs": 13255,
         "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1774553319477
       }
     },
     {
@@ -66,9 +67,9 @@
     {
       "id": "d62bfecc-28a5-44c9-8db1-8b187f60af62",
       "name": "memory-consolidation",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1774482821786,
-      "updatedAtMs": 1774482821786,
+      "updatedAtMs": 1774493671347,
       "schedule": {
         "kind": "cron",
         "expr": "0 4 * * *",
@@ -86,9 +87,7 @@
         "channel": "telegram",
         "to": "1771281565"
       },
-      "state": {
-        "nextRunAtMs": 1774512000000
-      }
+      "state": {}
     }
   ]
 }
