@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.13",
-    "lastTouchedAt": "2026-03-17T05:00:55.860Z"
+    "lastTouchedAt": "2026-03-25T03:11:01.919Z"
   },
   "env": {
     "vars": {}
@@ -13,6 +13,7 @@
     "lastRunMode": "local"
   },
   "update": {
+    "channel": "stable",
     "checkOnStart": true,
     "auto": {
       "enabled": true,

@@ -1,0 +1,13 @@
+collections:
+  memory-root-draft-reply:
+    path: /Users/aiagnet/.openclaw/workspace-draft-reply
+    pattern: MEMORY.md
+  memory-alt-draft-reply:
+    path: /Users/aiagnet/.openclaw/workspace-draft-reply
+    pattern: memory.md
+  memory-dir-draft-reply:
+    path: /Users/aiagnet/.openclaw/workspace-draft-reply/memory
+    pattern: "**/*.md"
+  workspace-draft-reply:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: "**/*.md"

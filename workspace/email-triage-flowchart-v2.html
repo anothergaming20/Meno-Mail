@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Triage System — Data Flow v2.6</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#0d1117;
+  --surface:#161b22;
+  --surface2:#21262d;
+  --border:#30363d;
+  --purple:#a78bfa; --purple-bg:#1a1433; --purple-bd:#3d2d7a;
+  --teal:#34d399;   --teal-bg:#0a2a1f;   --teal-bd:#145c3f;
+  --gray:#8b949e;   --gray-bg:#161b22;   --gray-bd:#30363d;
+  --blue:#60a5fa;   --blue-bg:#0c1929;   --blue-bd:#1d4170;
+  --coral:#f87171;  --coral-bg:#2d1010;  --coral-bd:#7a2020;
+  --amber:#fbbf24;  --amber-bg:#231a05;  --amber-bd:#6b4e10;
+  --green:#4ade80;  --green-bg:#0a2218;  --green-bd:#145c30;
+  --text:#e6edf3; --muted:#8b949e; --dim:#484f58;
+  --mono:'JetBrains Mono',monospace;
+}
+
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:12px;line-height:1.5;
+  padding:32px 28px 80px;
+}
+
+h1{font-size:17px;font-weight:600;letter-spacing:-.3px;margin-bottom:3px}
+.sub{color:var(--muted);font:11px/1 var(--mono);margin-bottom:28px}
+
+.legend{display:flex;gap:16px;flex-wrap:wrap;padding:10px 14px;margin-bottom:28px;background:var(--surface);border:1px solid var(--border);border-radius:8px;}
+.li{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted)}
+.ld{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+
+/* Containers */
+.box{border:1px solid;border-radius:10px;padding:14px;position:relative}
+.bl{font-size:9px;font-weight:600;letter-spacing:.9px;text-transform:uppercase;position:absolute;top:-8px;left:12px;padding:0 5px;border-radius:2px;}
+.b-oc{background:var(--purple-bg);border-color:var(--purple-bd)}.b-oc .bl{color:var(--purple);background:var(--purple-bg)}
+.b-lb{background:var(--gray-bg);border-color:var(--gray-bd)}.b-lb .bl{color:var(--gray);background:var(--gray-bg)}
+.b-ob{border:1px dashed var(--coral-bd);background:var(--coral-bg);border-radius:10px;padding:14px;position:relative}.b-ob .bl{color:var(--coral);background:var(--coral-bg);font-size:9px;font-weight:600;letter-spacing:.9px;text-transform:uppercase;position:absolute;top:-8px;left:12px;padding:0 5px;}
+
+/* ═══ NODES — the core fix ═══
+   .nt = title: stays on one line (nowrap)
+   .ns = subtitle: WRAPS freely, monospace, slightly smaller
+*/
+.node{border:1px solid;border-radius:6px;padding:8px 11px;display:flex;flex-direction:column;gap:3px;}
+.nt{font-size:11px;font-weight:500;white-space:nowrap;}
+.ns{font-size:9.5px;font-family:var(--mono);line-height:1.55;white-space:normal;word-break:break-word;opacity:.88;}
+
+.n-oc{background:var(--purple-bg);border-color:var(--purple-bd)}.n-oc .nt,.n-oc .ns{color:var(--purple)}
+.n-ag{background:var(--teal-bg);border-color:var(--teal-bd)}.n-ag .nt,.n-ag .ns{color:var(--teal)}
+.n-sc{background:var(--gray-bg);border-color:var(--gray-bd)}.n-sc .nt,.n-sc .ns{color:var(--gray)}
+.n-mt{background:var(--blue-bg);border-color:var(--blue-bd)}.n-mt .nt,.n-mt .ns{color:var(--blue)}
+.n-tg{background:var(--coral-bg);border-color:var(--coral-bd)}.n-tg .nt,.n-tg .ns{color:var(--coral)}
+.n-lg{background:var(--amber-bg);border-color:var(--amber-bd)}.n-lg .nt,.n-lg .ns{color:var(--amber)}
+.n-hm{background:var(--coral-bg);border-color:var(--coral-bd)}.n-hm .nt,.n-hm .ns{color:var(--coral)}
+.n-mem{background:#0f1d14;border-color:#1c4a2c}.n-mem .nt,.n-mem .ns{color:var(--green)}
+
+/* Vertical arrows */
+.av{display:flex;flex-direction:column;align-items:center;padding:3px 0}
+.al{width:1.5px;background:var(--dim)}
+.ad{font-size:9px;font-family:var(--mono);color:var(--dim);text-align:center;padding:2px 7px;background:var(--bg);border:1px solid var(--border);border-radius:3px;margin:2px 0;white-space:normal;max-width:540px;}
+.ah{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid var(--dim)}
+
+/* Horizontal arrows */
+.ah2{display:flex;align-items:center;padding:0 6px}
+.hl2{height:1.5px;background:var(--dim)}
+.hh2{width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:6px solid var(--dim)}
+.hd2{font-size:9px;font-family:var(--mono);color:var(--dim);padding:2px 5px;background:var(--bg);border:1px solid var(--border);border-radius:3px;white-space:normal;max-width:120px;text-align:center;}
+
+/* Layout helpers */
+.col{display:flex;flex-direction:column;align-items:center}
+.row{display:flex;align-items:center}
+.row-top{display:flex;align-items:flex-start;gap:12px}
+.flex1{flex:1;min-width:0}
+.w100{width:100%}
+.mt4{margin-top:4px}.mt6{margin-top:6px}.mt8{margin-top:8px}.mt10{margin-top:10px}.mt12{margin-top:12px}
+.ml8{margin-left:8px}.ml28{margin-left:28px}
+.gap4{gap:4px}.gap8{gap:8px}
+
+/* Step row: number badge + node side by side */
+.sr{display:flex;align-items:flex-start;gap:8px;width:100%}
+.sn{width:18px;height:18px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:var(--dim);flex-shrink:0;margin-top:2px;}
+
+.sh{font-size:9px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;padding-bottom:5px;border-bottom:1px solid var(--border);}
+
+.gapb{display:block;font-size:9px;font-family:var(--mono);color:var(--coral);background:#2d1010;border:1px solid #7a2020;border-radius:3px;padding:3px 7px;margin-top:4px;white-space:normal;line-height:1.5;}
+
+.pill{display:inline-flex;align-items:center;font:9px/1 var(--mono);padding:3px 7px;border-radius:3px;border:1px solid;white-space:nowrap;margin:2px;}
+.p-oc{color:var(--purple);border-color:var(--purple-bd);background:var(--purple-bg)}
+.p-ag{color:var(--teal);border-color:var(--teal-bd);background:var(--teal-bg)}
+.p-mem{color:var(--green);border-color:#1c4a2c;background:#0f1d14}
+.p-sc{color:var(--gray);border-color:var(--gray-bd);background:var(--gray-bg)}
+
+/* Branch layout for bucket decision */
+.branches{display:flex;gap:8px;width:100%;align-items:flex-start}
+.branch{display:flex;flex-direction:column;align-items:center;flex:1;min-width:0}
+.blabel{font:9px/1 var(--mono);color:var(--muted);padding:2px 5px;background:var(--surface2);border:1px solid var(--border);border-radius:3px;margin-bottom:3px;white-space:nowrap;}
+.bline{width:1.5px;height:14px;background:var(--dim)}
+
+/* Memory / boot annotation boxes */
+.mnote{display:flex;align-items:flex-start;gap:7px;padding:7px 10px;background:#0f1d14;border:1px solid #1c4a2c;border-radius:5px;font:9.5px/1.55 var(--mono);color:var(--green);}
+.mnote b{flex-shrink:0;font-weight:600}
+.bnote{display:flex;align-items:flex-start;gap:7px;padding:7px 10px;background:var(--purple-bg);border:1px solid var(--purple-bd);border-radius:5px;font:9.5px/1.55 var(--mono);color:var(--purple);}
+.bnote b{flex-shrink:0;font-weight:600}
+
+.layout{display:flex;gap:20px;align-items:flex-start}
+.main{flex:1;min-width:0}
+.side{width:230px;flex-shrink:0;display:flex;flex-direction:column;gap:16px}
+
+.sep{height:1px;background:var(--border);margin:18px 0}
+
+.code{font:9px/1.9 var(--mono);color:var(--teal);padding:8px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:6px;}
+</style>
+</head>
+<body>
+
+<h1>Email Triage System — Data Flow</h1>
+<div class="sub">v2.6 · OpenClaw + Lobster + Maton · Haiku · Mac Mini M4</div>
+
+<div class="legend">
+  <div class="li"><div class="ld" style="background:#a78bfa"></div>OpenClaw infra</div>
+  <div class="li"><div class="ld" style="background:#34d399"></div>Agent / LLM</div>
+  <div class="li"><div class="ld" style="background:#4ade80"></div>Memory (MEMORY.md)</div>
+  <div class="li"><div class="ld" style="background:#8b949e"></div>Shell scripts</div>
+  <div class="li"><div class="ld" style="background:#60a5fa"></div>Maton / Gmail API</div>
+  <div class="li"><div class="ld" style="background:#f87171"></div>Telegram / human</div>
+  <div class="li"><div class="ld" style="background:#fbbf24"></div>Log outputs</div>
+  <div class="li" style="margin-left:auto"><span style="font:9px/1 var(--mono);color:var(--dim)">arrow labels = data flowing between components</span></div>
+</div>
+
+<div class="layout">
+<div class="main">
+
+<!-- ── OpenClaw Gateway ── -->
+<div class="box b-oc">
+  <div class="bl">OpenClaw Gateway · ~/.openclaw/</div>
+
+  <div class="row mt12 gap8" style="align-items:flex-start">
+    <div class="node n-oc" style="min-width:196px">
+      <div class="nt">Cron scheduler</div>
+      <div class="ns">*/15 * * * *<br>→ agentTurn (email triage)</div>
+      <div class="ns">0 3 * * *<br>→ agentTurn (stale draft cleanup)</div>
+      <div class="ns">at +2m on gateway restart<br>→ systemEvent (health check)</div>
+    </div>
+    <div class="ah2" style="align-self:center">
+      <div class="hl2" style="width:14px"></div>
+      <div class="hd2">isolated<br>session</div>
+      <div class="hl2" style="width:8px"></div>
+      <div class="hh2"></div>
+    </div>
+    <div class="node n-ag flex1">
+      <div class="nt">email-triage agent session</div>
+      <div class="ns">Model: claude-haiku-4-5-20251001</div>
+      <div class="ns">Session key: cron:email-triage-dispatcher</div>
+      <div class="ns">Session transcript auto-logged to<br>~/.openclaw/agents/email-triage/sessions/&lt;id&gt;.jsonl</div>
+    </div>
+  </div>
+
+  <div class="mt10">
+    <div style="font-size:9px;color:var(--muted);margin-bottom:5px">All workspace files injected into agent context at every session start:</div>
+    <div style="display:flex;flex-wrap:wrap">
+      <span class="pill p-oc">AGENTS.md</span>
+      <span class="pill p-ag">soul.md</span>
+      <span class="pill p-ag">user.md</span>
+      <span class="pill p-ag">IDENTITY.md</span>
+      <span class="pill p-sc">TOOLS.md</span>
+      <span class="pill p-sc">BOOT.md</span>
+      <span class="pill p-mem">MEMORY.md</span>
+      <span class="pill p-mem">memory/YYYY-MM-DD.md</span>
+      <span class="pill p-ag">skills/gmail/SKILL.md → injects MATON_API_KEY</span>
+    </div>
+    <div style="margin-top:5px;font-size:9px;color:var(--dim)">
+      Not used: HEARTBEAT.md (cron agentTurn ≠ heartbeat) · BOOTSTRAP.md (one-time setup, deleted after ritual)
+    </div>
+  </div>
+
+  <div class="bnote mt8">
+    <b>BOOT.md</b>
+    <span>On gateway restart: verify label-ids.env exists · MATON_API_KEY set · telegram-chat-id file present.
+      Alert Telegram only on failure. Reply NO_REPLY when all checks pass.</span>
+  </div>
+</div>
+
+<!-- Arrow 1 -->
+<div class="col mt8">
+  <div class="ad">agent reads AGENTS.md cron pattern → calls exec tool → bash run-triage.sh</div>
+  <div class="al" style="height:14px"></div>
+  <div class="ah"></div>
+</div>
+
+<!-- ── run-triage.sh ── -->
+<div class="box b-lb mt4">
+  <div class="bl">run-triage.sh · bash subprocess · stdout captured by agent exec tool</div>
+
+  <div class="sr mt10">
+    <div class="sn">1</div>
+    <div class="node n-sc flex1">
+      <div class="nt">Fetch unprocessed email IDs</div>
+      <div class="ns">GET /messages<br>
+        ?q=-label:Triage/Processed is:inbox newer_than:30d<br>
+        &amp;maxResults=50</div>
+    </div>
+    <div class="ah2 ml8" style="align-self:center">
+      <div class="hl2" style="width:12px"></div>
+      <div class="hh2"></div>
+    </div>
+    <div class="node n-mt" style="min-width:128px">
+      <div class="nt">Maton API gateway</div>
+      <div class="ns">→ gmail.googleapis.com</div>
+    </div>
+  </div>
+
+  <div class="col ml28 mt4" style="align-items:flex-start">
+    <div class="ad">returns: {messages: [{id}, {id}, ...]} · up to 50 IDs per run</div>
+    <div class="al" style="height:10px"></div><div class="ah"></div>
+  </div>
+
+  <div class="sr mt4">
+    <div class="sn">2</div>
+    <div class="node n-sc flex1">
+      <div class="nt">Overlap guard (lockfile)</div>
+      <div class="ns">/tmp/email-triage-dispatcher.lock<br>
+        Skip entire run if lock age &lt; 600 s<br>
+        Log warn entry to triage.jsonl</div>
+    </div>
+  </div>
+
+  <div class="col ml28 mt4" style="align-items:flex-start">
+    <div class="ad">for each email_id → lobster run (MATON_API_KEY inherited from agent session env)</div>
+    <div class="al" style="height:10px"></div><div class="ah"></div>
+  </div>
+
+  <div class="sr mt4">
+    <div class="sn">3</div>
+    <div class="node n-sc flex1">
+      <div class="nt">lobster run · email-triage.lobster</div>
+      <div class="ns">--args-json '{"email_id":"..."}'<br>
+        stdout + stderr merged into $OUTPUT via 2&gt;&amp;1<br>
+        exit code determines ok vs error counter</div>
+    </div>
+  </div>
+
+  <div class="mnote mt8">
+    <b>MEMORY.md</b>
+    <span>After each run: agent writes senders-replied-to, classification corrections, draft style notes.
+      Recalled via memory_search (hybrid BM25 + vector) in future classify steps.</span>
+  </div>
+</div>
+
+<!-- Arrow 2 -->
+<div class="col mt8">
+  <div class="ad">email_id arg · MATON_API_KEY env inherited · PATH=/usr/local/opt/node@22/bin:... · lobster subprocess</div>
+  <div class="al" style="height:14px"></div>
+  <div class="ah"></div>
+</div>
+
+<!-- ── Lobster Pipeline ── -->
+<div class="box b-lb mt4">
+  <div class="bl">email-triage.lobster · stdout of each step → stdin of next step</div>
+
+  <!-- S1 -->
+  <div class="sr mt10">
+    <div class="sn">S1</div>
+    <div class="node n-sc flex1">
+      <div class="nt">fetch-email.sh</div>
+      <div class="ns">GET /messages/{email_id}?format=full<br>
+        Body truncated to 3 000 chars to control context budget</div>
+    </div>
+    <div class="ah2 ml8" style="align-self:center">
+      <div class="hl2" style="width:12px"></div>
+      <div class="hh2"></div>
+    </div>
+    <div class="node n-mt" style="min-width:128px">
+      <div class="nt">Maton → Gmail</div>
+      <div class="ns">Full message<br>payload returned</div>
+    </div>
+  </div>
+  <div class="col ml28 mt4" style="align-items:flex-start">
+    <div class="ad">stdout → stdin:<br>{email_id, thread_id, message_id, from, to, subject, date, body_text}</div>
+    <div class="al" style="height:10px"></div><div class="ah"></div>
+  </div>
+
+  <!-- S2 -->
+  <div class="sr mt4">
+    <div class="sn">S2</div>
+    <div class="node n-ag flex1">
+      <div class="nt">classify-email.sh</div>
+      <div class="ns">openclaw.invoke --tool llm-task --action json<br>
+        Model: Haiku · schema-validated output<br>
+        triage-rules.md injected inline into prompt<br>
+        MEMORY.md recalled via memory_search<br>
+        AGENTS.md context from session bootstrap</div>
+    </div>
+  </div>
+  <div class="col ml28 mt4" style="align-items:flex-start">
+    <div class="ad">stdout → stdin: {bucket, confidence, reason, email:{...}}</div>
+    <div class="al" style="height:10px"></div><div class="ah"></div>
+  </div>
+
+  <!-- S3 -->
+  <div class="sr mt4">
+    <div class="sn">S3</div>
+    <div class="node n-sc flex1">
+      <div class="nt">mark-processed.sh</div>
+      <div class="ns">POST /messages/{id}/modify<br>
+        addLabelIds: [Triage/Processed]<br>
+        Passes stdin through to stdout unchanged<br>
+        Prevents reprocessing on next cron run</div>
+    </div>
+    <div class="ah2 ml8" style="align-self:center">
+      <div class="hl2" style="width:12px"></div>
+      <div class="hh2"></div>
+    </div>
+    <div class="node n-mt" style="min-width:128px">
+      <div class="nt">Maton → Gmail</div>
+      <div class="ns">Label applied<br>Blocks reprocessing</div>
+    </div>
+  </div>
+  <div class="col ml28 mt4" style="align-items:flex-start">
+    <div class="ad">stdout → stdin: same JSON passthrough (bucket + full email fields)</div>
+    <div class="al" style="height:10px"></div><div class="ah"></div>
+  </div>
+
+  <!-- S4 -->
+  <div class="sr mt4">
+    <div class="sn">S4</div>
+    <div class="node n-sc flex1">
+      <div class="nt">route-and-act.sh · case "$BUCKET"</div>
+      <div class="ns">Reads .bucket field from stdin JSON<br>
+        Sources label-ids.env for Gmail label IDs<br>
+        Calls draft-reply.sh only for needs_reply branch</div>
+    </div>
+  </div>
+
+  <!-- 5 branches -->
+  <div class="branches mt10 ml28">
+
+    <div class="branch">
+      <div class="blabel">spam_junk</div>
+      <div class="bline"></div>
+      <div class="node n-mt w100">
+        <div class="nt">POST .../trash</div>
+        <div class="ns">Auto-trashed<br>No notification<br>Silent</div>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="blabel">newsletter</div>
+      <div class="bline"></div>
+      <div class="node n-mt w100">
+        <div class="nt">POST .../modify</div>
+        <div class="ns">Add label:<br>Triage/<br>Newsletter</div>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="blabel">notification</div>
+      <div class="bline"></div>
+      <div class="node n-mt w100">
+        <div class="nt">POST .../modify</div>
+        <div class="ns">Add label:<br>Triage/<br>Notification</div>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="blabel">review</div>
+      <div class="bline"></div>
+      <div class="col gap4 w100">
+        <div class="node n-mt w100">
+          <div class="nt">POST .../modify</div>
+          <div class="ns">Add label:<br>Triage/Review</div>
+        </div>
+        <div class="al" style="height:8px"></div>
+        <div class="ah"></div>
+        <div class="node n-tg w100">
+          <div class="nt">Telegram</div>
+          <div class="ns">from · subject<br>reason · Gmail link<br>Heads-up only</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="branch">
+      <div class="blabel">needs_reply</div>
+      <div class="bline"></div>
+      <div class="col gap4 w100">
+        <div class="node n-mt w100">
+          <div class="nt">POST .../modify</div>
+          <div class="ns">Add label:<br>Triage/NeedsReply</div>
+        </div>
+        <div class="al" style="height:6px"></div><div class="ah"></div>
+        <div class="node n-ag w100">
+          <div class="nt">draft-reply.sh</div>
+          <div class="ns">openclaw.invoke<br>--tool llm-task<br>soul.md tone applied<br>Returns {draft_reply}</div>
+        </div>
+        <div class="al" style="height:6px"></div><div class="ah"></div>
+        <div class="node n-mt w100">
+          <div class="nt">POST /drafts</div>
+          <div class="ns">RFC 2822 message<br>threadId preserved<br>→ gmail_draft_id</div>
+        </div>
+        <div class="al" style="height:6px"></div><div class="ah"></div>
+        <div class="node n-sc w100">
+          <div class="nt">pending-drafts.json</div>
+          <div class="ns">email_id → {<br>&nbsp;draft,<br>&nbsp;from, subject,<br>&nbsp;gmail_draft_id,<br>&nbsp;created_at<br>}</div>
+        </div>
+        <div class="al" style="height:6px"></div><div class="ah"></div>
+        <div class="node n-tg w100">
+          <div class="nt">Telegram</div>
+          <div class="ns">Draft preview<br>Approve / Dismiss<br>inline buttons</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /branches -->
+
+  <div class="col mt10 ml28" style="align-items:flex-start">
+    <div class="ad">final stdout (route-and-act.sh only — intermediate steps consumed by stdin piping):<br>
+      {bucket, action_taken, email_id, draft_reply?}<br>
+      Lobster returns this to run-triage.sh $OUTPUT</div>
+    <div class="al" style="height:10px"></div><div class="ah"></div>
+  </div>
+
+  <div class="sr mt4">
+    <div style="width:26px"></div>
+    <div class="node n-sc flex1">
+      <div class="nt">run-triage.sh result capture</div>
+      <div class="ns">Parse bucket + action_taken from $OUTPUT<br>
+        Log {ts, level, msg, data} to triage.jsonl via tee<br>
+        Increment COUNT (success) or ERRORS (failure)</div>
+    </div>
+  </div>
+</div><!-- /lobster -->
+
+<!-- Arrow back -->
+<div class="col mt8">
+  <div class="ad">{processed: N, errors: N, results: [...]}<br>Printed to stdout → agent exec tool reads and evaluates</div>
+  <div class="al" style="height:14px"></div>
+  <div class="ah"></div>
+</div>
+
+<div class="node n-ag w100 mt4">
+  <div class="nt">Agent evaluates run result</div>
+  <div class="ns">If errors &gt; 0: openclaw message send → Telegram error alert<br>
+    Writes operational note to memory/YYYY-MM-DD.md<br>
+    Full exec output visible in cron session transcript</div>
+</div>
+
+<div class="mnote mt8">
+  <b>MEMORY.md write-back</b>
+  <span>Agent appends: newly discovered senders-replied-to (enforces never-auto-trash rule) ·
+    classification corrections Nay signals via Telegram ·
+    draft style feedback · recurring operational errors.
+    Future runs recall these via memory_search.</span>
+</div>
+
+<div class="sep"></div>
+
+<!-- ── Out-of-band Approval ── -->
+<div class="b-ob">
+  <div class="bl">Out-of-band approval · no agent session · triggered by Telegram button tap</div>
+
+  <div class="row-top mt10">
+
+    <div class="col gap4">
+      <div class="node n-hm">
+        <div class="nt">Nay taps Approve</div>
+        <div class="ns">Telegram inline button callback</div>
+      </div>
+      <div class="al" style="height:12px"></div><div class="ah"></div>
+      <div class="node n-oc">
+        <div class="nt">OpenClaw Telegram handler</div>
+        <div class="ns">Receives button callback<br>Triggers shell script directly<br>No agent session created</div>
+      </div>
+      <div class="al" style="height:12px"></div><div class="ah"></div>
+      <div class="node n-sc">
+        <div class="nt">send-approved-reply.sh</div>
+        <div class="ns">Reads pending-drafts.json<br>by email_id key</div>
+      </div>
+    </div>
+
+    <div class="col gap4" style="padding-top:14px">
+      <div class="al" style="height:18px"></div><div class="ah"></div>
+      <div class="node n-mt">
+        <div class="nt">POST /drafts/send</div>
+        <div class="ns">gmail_draft_id → sent via Gmail<br>Thread reply preserved</div>
+      </div>
+      <div class="al" style="height:8px"></div><div class="ah"></div>
+      <div class="node n-mt">
+        <div class="nt">POST /messages/{id}/modify</div>
+        <div class="ns">addLabelIds: [Triage/Approved]</div>
+      </div>
+      <div class="al" style="height:8px"></div><div class="ah"></div>
+      <div class="node n-sc">
+        <div class="nt">pending-drafts.json · del($id)</div>
+        <div class="ns">Entry removed after successful send</div>
+      </div>
+      <div class="gapb">⚠ Logging gap: errors go to stderr only<br>Not captured in any session or log file</div>
+    </div>
+
+    <div class="col gap4" style="padding-top:60px">
+      <div class="node n-sc">
+        <div class="nt">cleanup-stale-drafts.sh</div>
+        <div class="ns">Daily 3 am · agentTurn cron job<br>Removes pending-drafts.json entries<br>older than 48 hours<br>Logged in its own session transcript</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<!-- ════════════════════════════════════
+     SIDE COLUMN
+════════════════════════════════════ -->
+<div class="side">
+
+  <div>
+    <div class="sh">Workspace files · loaded every session</div>
+    <div class="col gap4" style="align-items:stretch">
+      <div class="node n-oc w100">
+        <div class="nt">AGENTS.md</div>
+        <div class="ns">Operating instructions · exec cron pattern ·
+          memory write rules · hard triage constraints</div>
+      </div>
+      <div class="node n-ag w100">
+        <div class="nt">soul.md</div>
+        <div class="ns">Nay's writing voice · reply tone ·
+          sign-off rules · what never to write</div>
+      </div>
+      <div class="node n-ag w100">
+        <div class="nt">user.md</div>
+        <div class="ns">Who Nay is · Telegram preferences ·
+          inbox characteristics · trust model</div>
+      </div>
+      <div class="node n-ag w100">
+        <div class="nt">IDENTITY.md</div>
+        <div class="ns">Agent name · role · model ·
+          what it is and is not</div>
+      </div>
+      <div class="node n-sc w100">
+        <div class="nt">TOOLS.md</div>
+        <div class="ns">Binary paths · file locations ·
+          Maton endpoints · openclaw.invoke rules</div>
+      </div>
+      <div class="node n-sc w100">
+        <div class="nt">BOOT.md</div>
+        <div class="ns">Gateway restart checklist ·
+          health checks · NO_REPLY if healthy</div>
+      </div>
+      <div class="node n-mem w100">
+        <div class="nt">MEMORY.md</div>
+        <div class="ns">Senders replied-to · corrections ·
+          style notes · errors (agent writes here)</div>
+      </div>
+      <div class="node n-mem w100">
+        <div class="nt">memory/YYYY-MM-DD.md</div>
+        <div class="ns">Daily session log ·
+          per-run operational notes</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sh">Data files · not loaded as context</div>
+    <div class="col gap4" style="align-items:stretch">
+      <div class="node n-sc w100">
+        <div class="nt">memory/triage-rules.md</div>
+        <div class="ns">Sender lists · classification rules ·
+          injected inline into classify prompt</div>
+      </div>
+      <div class="node n-sc w100">
+        <div class="nt">data/label-ids.env</div>
+        <div class="ns">Gmail label ID mapping ·
+          sourced by all routing scripts</div>
+      </div>
+      <div class="node n-sc w100">
+        <div class="nt">data/pending-drafts.json</div>
+        <div class="ns">Drafts awaiting Telegram approval ·
+          keyed by email_id</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="sh">Log outputs · auto-captured</div>
+    <div class="col gap4" style="align-items:stretch">
+      <div class="node n-lg w100">
+        <div class="nt">Session transcript</div>
+        <div class="ns">~/.openclaw/agents/email-triage/<br>sessions/&lt;id&gt;.jsonl<br>Retention: 7 days</div>
+      </div>
+      <div class="node n-lg w100">
+        <div class="nt">Cron run log</div>
+        <div class="ns">~/.openclaw/cron/runs/<br>email-triage-dispatcher.jsonl<br>Cap: 5 MB / 3 000 lines</div>
+      </div>
+      <div class="node n-lg w100">
+        <div class="nt">Triage log (structured)</div>
+        <div class="ns">data/logs/triage.jsonl<br>{ts, level, msg, data} per email<br>tee'd from run-triage.sh stdout</div>
+      </div>
+    </div>
+    <div class="code mt8">
+openclaw cron runs \<br>
+&nbsp;&nbsp;--id email-triage-dispatcher \<br>
+&nbsp;&nbsp;--limit 20<br>
+<br>
+openclaw sessions \<br>
+&nbsp;&nbsp;--agent email-triage<br>
+<br>
+tail -f data/logs/triage.jsonl \<br>
+&nbsp;&nbsp;| jq .
+    </div>
+  </div>
+
+  <div>
+    <div class="sh">Known logging gaps</div>
+    <div class="gapb">Lobster step stderr → 2&gt;/dev/null<br>Swallowed silently</div>
+    <div class="gapb">curl -sf HTTP errors → status and body<br>lost on 4xx / 5xx responses</div>
+    <div class="gapb">llm-task errors → 2&gt;/dev/null<br>Empty response, no trace logged</div>
+    <div class="gapb">send-approved-reply.sh → no agent session<br>Errors go to stderr only</div>
+  </div>
+
+  <div>
+    <div class="sh">Memory read / write cycle</div>
+    <div class="col gap4" style="align-items:stretch">
+      <div class="node n-mem w100">
+        <div class="nt">memory_search (read)</div>
+        <div class="ns">classify-email.sh recalls:<br>
+          senders replied-to · past corrections<br>
+          Hybrid: BM25 keyword + vector semantic</div>
+      </div>
+      <div class="node n-mem w100">
+        <div class="nt">MEMORY.md (write)</div>
+        <div class="ns">Agent writes after each run:<br>
+          new patterns · Nay corrections ·<br>
+          recurring errors</div>
+      </div>
+      <div class="node n-mem w100">
+        <div class="nt">memory/YYYY-MM-DD.md</div>
+        <div class="ns">Daily session log for this<br>run's operational context</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /side -->
+</div><!-- /layout -->
+</body>
+</html>

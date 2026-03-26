@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.13",
-    "lastTouchedAt": "2026-03-17T05:05:41.484Z"
+    "lastTouchedAt": "2026-03-25T03:11:23.213Z"
   },
   "env": {
     "vars": {}
@@ -13,6 +13,7 @@
     "lastRunMode": "local"
   },
   "update": {
+    "channel": "stable",
     "checkOnStart": true,
     "auto": {
       "enabled": true,
@@ -37,6 +38,11 @@
         "primary": "anthropic/claude-opus-4-6"
       },
       "workspace": "~/.openclaw/workspace",
+      "sandbox": {
+        "mode": "all",
+        "scope": "agent",
+        "workspaceAccess": "rw"
+      },
       "contextPruning": {
         "mode": "cache-ttl",
         "ttl": "5m",
@@ -66,10 +72,44 @@
       },
       {
         "id": "email-triage",
-        "name": "email-triage",
-        "workspace": "/Users/aiagnet/.openclaw/workspace",
-        "agentDir": "/Users/aiagnet/.openclaw/agents/email-triage/agent",
-        "model": "anthropic/claude-haiku-4-5-20251001"
+        "default": true,
+        "name": "MenoMail Triage",
+        "workspace": "~/.openclaw/workspace-email-triage",
+        "agentDir": "~/.openclaw/agents/email-triage/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": ["browser", "canvas", "nodes"]
+        }
+      },
+      {
+        "id": "newsletter-extract",
+        "name": "MenoMail Newsletter",
+        "workspace": "~/.openclaw/workspace-newsletter",
+        "agentDir": "~/.openclaw/agents/newsletter-extract/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": ["browser", "canvas", "nodes", "cron"]
+        }
+      },
+      {
+        "id": "draft-reply",
+        "name": "MenoMail Drafter",
+        "workspace": "~/.openclaw/workspace-draft-reply",
+        "agentDir": "~/.openclaw/agents/draft-reply/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": ["write", "edit", "exec", "apply_patch", "browser", "canvas", "nodes", "cron"]
+        }
+      },
+      {
+        "id": "consolidation",
+        "name": "MenoMail Consolidation",
+        "workspace": "~/.openclaw/workspace-consolidation",
+        "agentDir": "~/.openclaw/agents/consolidation/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": ["browser", "canvas", "nodes", "cron", "exec"]
+        }
       }
     ]
   },

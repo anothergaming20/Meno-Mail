@@ -7,7 +7,7 @@
       "description": "Fetch, classify, and act on new inbox emails",
       "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1773724425678,
+      "updatedAtMs": 1774488953480,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -17,7 +17,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the email triage dispatcher: bash ~/.openclaw/workspace/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors.",
+        "message": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors.",
         "lightContext": true,
         "model": "anthropic/claude-haiku-4-5-20251001"
       },
@@ -27,11 +27,11 @@
         "to": "1771281565"
       },
       "state": {
-        "nextRunAtMs": 1773725319494,
-        "lastRunAtMs": 1773724419494,
+        "nextRunAtMs": 1774489845157,
+        "lastRunAtMs": 1774488945157,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 6184,
+        "lastDurationMs": 8323,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
@@ -43,7 +43,7 @@
       "description": "Purge pending draft entries older than 48h",
       "enabled": true,
       "createdAtMs": 1773551637280,
-      "updatedAtMs": 1773645517521,
+      "updatedAtMs": 1774482791945,
       "schedule": {
         "kind": "cron",
         "expr": "17 3 * * *",
@@ -53,7 +53,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the stale draft cleanup: bash ~/.openclaw/workspace/scripts/cleanup-stale-drafts.sh — report how many drafts were removed.",
+        "message": "Run the stale draft cleanup: bash ~/Projects/menomail/scripts/cleanup-stale-drafts.sh — report how many drafts were removed.",
         "lightContext": true,
         "model": "anthropic/claude-haiku-4-5-20251001"
       },
@@ -63,14 +63,41 @@
         "to": "1771281565"
       },
       "state": {
-        "nextRunAtMs": 1773731820000,
-        "lastRunAtMs": 1773645495456,
+        "nextRunAtMs": 1774509420000,
+        "lastRunAtMs": 1774478409952,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 22065,
+        "lastDurationMs": 24806,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
+      }
+    },
+    {
+      "id": "d62bfecc-28a5-44c9-8db1-8b187f60af62",
+      "name": "memory-consolidation",
+      "enabled": true,
+      "createdAtMs": 1774482821786,
+      "updatedAtMs": 1774482821786,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "tz": "America/New_York"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run memory consolidation: bash ~/Projects/menomail/scripts/consolidation-pass.sh",
+        "model": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram",
+        "to": "1771281565"
+      },
+      "state": {
+        "nextRunAtMs": 1774512000000
       }
     }
   ]
