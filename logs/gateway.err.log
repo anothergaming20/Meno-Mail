@@ -5250,3 +5250,4 @@ Use a different name with --name <name>
 2026-03-26T12:57:49.212-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 26d7b5036c82aed8ddf713c36978e8098214cfd7a82592ca3492f3dbe5186ef2 -> 31d7b19ae0c3a74c19aac7ca33d1d8f1bf0d6f0f0603428bb71708dc71aa4078, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
 2026-03-26T12:57:50.475-04:00 Config overwrite: /Users/aiagnet/.openclaw/openclaw.json (sha256 31d7b19ae0c3a74c19aac7ca33d1d8f1bf0d6f0f0603428bb71708dc71aa4078 -> 7b802231d97fd1972598b2b36bc0b1467f4762c6d36434233b2aa28e689a4b31, backup=/Users/aiagnet/.openclaw/openclaw.json.bak)
 2026-03-26T12:58:16.291-04:00 [tools] tools.allow allowlist contains unknown entries (lobster). These entries won't match any tool unless the plugin is enabled.
+2026-03-26T15:48:21.764-04:00 [agent/embedded] read tool called without path: toolCallId=toolu_01T5kUfXTGFyHQpAa5kadg1b argsType=object

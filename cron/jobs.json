@@ -7,7 +7,7 @@
       "description": "Fetch, classify, and act on new inbox emails",
       "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1774554225375,
+      "updatedAtMs": 1774556033382,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -20,13 +20,13 @@
         "text": "Run the email triage dispatcher: bash ~/Projects/menomail/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
       },
       "state": {
-        "lastRunAtMs": 1774554219485,
+        "lastRunAtMs": 1774556019494,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 5890,
+        "lastDurationMs": 13888,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774555119485
+        "nextRunAtMs": 1774556919494
       }
     },
     {

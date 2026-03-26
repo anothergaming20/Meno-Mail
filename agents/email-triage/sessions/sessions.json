@@ -1,7 +1,7 @@
 {
   "agent:email-triage:main": {
     "sessionId": "ee63a042-0a68-426f-98f5-ea7a7f7e3e2f",
-    "updatedAt": 1774554225335,
+    "updatedAt": 1774556033363,
     "systemSent": true,
     "abortedLastRun": false,
     "authProfileOverride": "anthropic:claude",
@@ -135,13 +135,13 @@
       "version": 0
     },
     "status": "done",
-    "startedAt": 1774554221104,
+    "startedAt": 1774556021361,
     "modelProvider": "anthropic",
     "model": "claude-haiku-4-5-20251001",
     "contextTokens": 200000,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774554221087,
+      "generatedAt": 1774556021336,
       "sessionId": "ee63a042-0a68-426f-98f5-ea7a7f7e3e2f",
       "sessionKey": "agent:email-triage:main",
       "provider": "anthropic",
@@ -350,13 +350,13 @@
       }
     },
     "inputTokens": 16,
-    "outputTokens": 154,
+    "outputTokens": 129,
     "cacheRead": 8347,
-    "cacheWrite": 31055,
-    "totalTokens": 39408,
+    "cacheWrite": 42419,
+    "totalTokens": 50772,
     "totalTokensFresh": true,
-    "endedAt": 1774554225138,
-    "runtimeMs": 4034
+    "endedAt": 1774556033203,
+    "runtimeMs": 11842
   },
   "agent:email-triage:cron:60c2f369-62dc-42fe-b2f3-0b8d32648593": {
     "sessionId": "945c07ff-9107-4cba-98db-6d3fb8fa8717",
@@ -1347,7 +1347,7 @@
       "accountId": "default"
     },
     "sessionId": "1bb0b4ba-57fb-4190-a70e-522c8f41ceba",
-    "updatedAt": 1774553602801,
+    "updatedAt": 1774555629803,
     "deliveryContext": {
       "channel": "telegram",
       "to": "telegram:1771281565",
@@ -1478,13 +1478,13 @@
       "version": 0
     },
     "status": "done",
-    "startedAt": 1774553599204,
+    "startedAt": 1774555613981,
     "modelProvider": "anthropic",
     "model": "claude-haiku-4-5-20251001",
     "contextTokens": 200000,
     "systemPromptReport": {
       "source": "run",
-      "generatedAt": 1774553599143,
+      "generatedAt": 1774555613952,
       "sessionId": "1bb0b4ba-57fb-4190-a70e-522c8f41ceba",
       "sessionKey": "agent:email-triage:telegram:direct:1771281565",
       "provider": "anthropic",
@@ -1693,13 +1693,13 @@
       }
     },
     "inputTokens": 10,
-    "outputTokens": 144,
-    "cacheRead": 0,
-    "cacheWrite": 15854,
-    "totalTokens": 15864,
+    "outputTokens": 113,
+    "cacheRead": 16446,
+    "cacheWrite": 166,
+    "totalTokens": 16622,
     "totalTokensFresh": true,
-    "endedAt": 1774553602666,
-    "runtimeMs": 3462
+    "endedAt": 1774555629671,
+    "runtimeMs": 15690
   },
   "agent:email-triage:cron:60c2f369-62dc-42fe-b2f3-0b8d32648593:run:484897ff-383f-4e60-8bcb-e47a4d9c9ceb": {
     "sessionId": "484897ff-383f-4e60-8bcb-e47a4d9c9ceb",
