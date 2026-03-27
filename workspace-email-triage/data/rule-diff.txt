@@ -1,0 +1,16 @@
+# MenoMail triage-rules.md — proposed changes
+# Generated: 2026-03-26T02:05:22Z
+# Session: 2026-03-26-001
+# Labeled: 6  Skipped: 1
+
+### Newsletter (deep_read)
+- "anothergaming20@gmail.com" — Re: Supadata in Claude and ChatGPT
+- "pinterest-recommendations@ideas.pinterest.com" — Tiny house architecture for you
+
+### VIP (needs_reply)
+- "support@fly.io" — Activate your Fly.io account
+
+### Notification (scan)
+- "team@news.fly.io" — Your 🎉 free 🎉 30 days of Fly.io Support starts now!
+- "noreply@email.fly.io" — [Fly.io] Your trial just started!
+- "rafal@supadata.ai" — Supadata in Claude and ChatGPT

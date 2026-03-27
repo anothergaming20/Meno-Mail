@@ -1,6 +1,8 @@
 {
-  "lastCheckedAt": "2026-03-17T03:57:09.980Z",
-  "lastNotifiedVersion": "2026.3.13",
+  "lastCheckedAt": "2026-03-26T23:48:19.892Z",
+  "lastNotifiedVersion": "2026.3.24",
   "lastNotifiedTag": "latest",
-  "autoInstallId": "c105b94e-3ae7-4203-9163-c48ed774a543"
+  "autoInstallId": "c105b94e-3ae7-4203-9163-c48ed774a543",
+  "autoLastAttemptVersion": "2026.3.23-2",
+  "autoLastAttemptAt": "2026-03-25T03:11:15.288Z"
 }

@@ -7,7 +7,7 @@
       "description": "Fetch, classify, and act on new inbox emails",
       "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1773721615005,
+      "updatedAtMs": 1774557468701,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -17,25 +17,32 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the email triage dispatcher: bash ~/.openclaw/workspace/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors.",
-        "lightContext": true,
+        "message": "Run the email triage dispatcher: bash ~/.openclaw/workspace-email-triage/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors.",
         "model": "anthropic/claude-haiku-4-5-20251001"
       },
-      "delivery": {
-        "mode": "none",
-        "channel": "telegram",
-        "to": "1771281565"
-      },
       "state": {
+<<<<<<< HEAD
         "nextRunAtMs": 1773723519477,
         "lastRunAtMs": 1773721607165,
+=======
+        "lastRunAtMs": 1774557439949,
+>>>>>>> development
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 7840,
+        "lastDurationMs": 28752,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
+<<<<<<< HEAD
         "lastDelivered": false,
         "runningAtMs": 1773723519481
+=======
+        "nextRunAtMs": 1774557754718,
+        "lastDelivered": false
+      },
+      "agentId": "email-triage",
+      "delivery": {
+        "mode": "announce"
+>>>>>>> development
       }
     },
     {
@@ -44,18 +51,47 @@
       "description": "Purge pending draft entries older than 48h",
       "enabled": true,
       "createdAtMs": 1773551637280,
-      "updatedAtMs": 1773645517521,
+      "updatedAtMs": 1774552599199,
       "schedule": {
         "kind": "cron",
         "expr": "17 3 * * *",
+        "tz": "America/New_York"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the stale draft cleanup: bash ~/Projects/menomail/scripts/cleanup-stale-drafts.sh — report how many drafts were removed.",
+        "lightContext": true,
+        "model": "anthropic/claude-haiku-4-5-20251001"
+      },
+      "state": {
+        "lastRunAtMs": 1774478409952,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 24806,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true,
+        "nextRunAtMs": 1774595820000
+      }
+    },
+    {
+      "id": "d62bfecc-28a5-44c9-8db1-8b187f60af62",
+      "name": "memory-consolidation",
+      "enabled": true,
+      "createdAtMs": 1774482821786,
+      "updatedAtMs": 1774556881665,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
         "tz": "America/New_York"
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the stale draft cleanup: bash ~/.openclaw/workspace/scripts/cleanup-stale-drafts.sh — report how many drafts were removed.",
-        "lightContext": true,
+        "message": "Run memory consolidation: bash ~/Projects/menomail/scripts/consolidation-pass.sh",
         "model": "anthropic/claude-haiku-4-5-20251001"
       },
       "delivery": {
@@ -64,14 +100,7 @@
         "to": "1771281565"
       },
       "state": {
-        "nextRunAtMs": 1773731820000,
-        "lastRunAtMs": 1773645495456,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 22065,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1774598400000
       }
     }
   ]

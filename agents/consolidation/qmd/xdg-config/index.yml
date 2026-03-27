@@ -1,0 +1,13 @@
+collections:
+  memory-root-consolidation:
+    path: /Users/aiagnet/.openclaw/workspace-consolidation
+    pattern: MEMORY.md
+  memory-alt-consolidation:
+    path: /Users/aiagnet/.openclaw/workspace-consolidation
+    pattern: memory.md
+  memory-dir-consolidation:
+    path: /Users/aiagnet/.openclaw/workspace-consolidation/memory
+    pattern: "**/*.md"
+  workspace-consolidation:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: "**/*.md"

@@ -12,6 +12,9 @@
       "token": "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"
     }
   },
+  "lastGood": {
+    "anthropic": "anthropic:claude"
+  },
   "usageStats": {
     "vercel-ai-gateway:default": {
       "errorCount": 0,
@@ -19,7 +22,11 @@
     },
     "anthropic:claude": {
       "errorCount": 0,
+<<<<<<< HEAD
       "lastUsed": 1773723997778
+=======
+      "lastUsed": 1774480851669
+>>>>>>> development
     }
   }
 }

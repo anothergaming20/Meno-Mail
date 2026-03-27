@@ -22,7 +22,8 @@
     },
     "anthropic:claude": {
       "errorCount": 0,
-      "lastUsed": 1773719860887
+      "lastUsed": 1774570178600,
+      "lastFailureAt": 1774565568493
     }
   }
 }

@@ -1,0 +1,116 @@
+{
+  "session_id": "2026-03-26-001",
+  "started_at": "2026-03-26T01:46:11Z",
+  "completed_at": "2026-03-26T02:05:22Z",
+  "total_senders": 7,
+  "labeled": 6,
+  "skipped": 1,
+  "senders": [
+    {
+      "sender": "anothergaming20@gmail.com",
+      "domain": "gmail.com",
+      "email_count": 1,
+      "sample_subject": "Re: Supadata in Claude and ChatGPT",
+      "sample_snippet": "Thanks for letting me know! I&#39;ll check out the Claude integration when I get a chance.",
+      "last_date": "2026-03-26T01:09:30Z"
+    },
+    {
+      "sender": "no-reply@accounts.google.com",
+      "domain": "accounts.google.com",
+      "email_count": 1,
+      "sample_subject": "Security alert",
+      "sample_snippet": "You allowed Maton access to some of your Google Account data anothergaming20@gmail.com If you didn&#39;t allow Maton acc",
+      "last_date": "2026-03-26T00:22:36Z"
+    },
+    {
+      "sender": "team@news.fly.io",
+      "domain": "news.fly.io",
+      "email_count": 1,
+      "sample_subject": "Your \ud83c\udf89 free \ud83c\udf89 30 days of Fly.io Support starts now!",
+      "sample_snippet": "Welcome to Fly.io! We want to help you get up and running smoothly, so we&#39;ve activated 30 days of Standard support f",
+      "last_date": "2026-03-25T22:05:57Z"
+    },
+    {
+      "sender": "noreply@email.fly.io",
+      "domain": "email.fly.io",
+      "email_count": 1,
+      "sample_subject": "[Fly.io] Your trial just started!",
+      "sample_snippet": "Hi there, Welcome to Fly.io! You&#39;ve signed up with a free trial, which is good for 7 days or 2 total hours of machin",
+      "last_date": "2026-03-25T22:05:56Z"
+    },
+    {
+      "sender": "support@fly.io",
+      "domain": "fly.io",
+      "email_count": 1,
+      "sample_subject": "Activate your Fly.io account",
+      "sample_snippet": "Welcome to Fly.io! Check out our docs to help you get things rolling: https://fly.io/docs/ If you have questions, get st",
+      "last_date": "2026-03-25T22:05:52Z"
+    },
+    {
+      "sender": "rafal@supadata.ai",
+      "domain": "supadata.ai",
+      "email_count": 1,
+      "sample_subject": "Supadata in Claude and ChatGPT",
+      "sample_snippet": "View in browser Hi friend, I thought I&#39;d let you know about new updates we just shipped at Supadata. We&#39;ve upgra",
+      "last_date": "2026-03-25T15:43:13Z"
+    },
+    {
+      "sender": "pinterest-recommendations@ideas.pinterest.com",
+      "domain": "ideas.pinterest.com",
+      "email_count": 1,
+      "sample_subject": "Tiny house architecture for you",
+      "sample_snippet": "You Won&#39;t Believe This Simple Japanese Tiny House Secret 27 Tiny House Floor Plans That Save Space Contemporary ADU ",
+      "last_date": "2026-03-24T20:53:13Z"
+    }
+  ],
+  "labels": [
+    {
+      "sender": "anothergaming20@gmail.com",
+      "domain": "gmail.com",
+      "action": "deep_read",
+      "sample_subject": "Re: Supadata in Claude and ChatGPT",
+      "email_count": 1,
+      "labeled_at": "2026-03-26T02:04:31Z"
+    },
+    {
+      "sender": "team@news.fly.io",
+      "domain": "news.fly.io",
+      "action": "scan",
+      "sample_subject": "Your \ud83c\udf89 free \ud83c\udf89 30 days of Fly.io Support starts now!",
+      "email_count": 1,
+      "labeled_at": "2026-03-26T02:04:51Z"
+    },
+    {
+      "sender": "noreply@email.fly.io",
+      "domain": "email.fly.io",
+      "action": "scan",
+      "sample_subject": "[Fly.io] Your trial just started!",
+      "email_count": 1,
+      "labeled_at": "2026-03-26T02:04:56Z"
+    },
+    {
+      "sender": "support@fly.io",
+      "domain": "fly.io",
+      "action": "important",
+      "sample_subject": "Activate your Fly.io account",
+      "email_count": 1,
+      "labeled_at": "2026-03-26T02:05:02Z"
+    },
+    {
+      "sender": "rafal@supadata.ai",
+      "domain": "supadata.ai",
+      "action": "scan",
+      "sample_subject": "Supadata in Claude and ChatGPT",
+      "email_count": 1,
+      "labeled_at": "2026-03-26T02:05:15Z"
+    },
+    {
+      "sender": "pinterest-recommendations@ideas.pinterest.com",
+      "domain": "ideas.pinterest.com",
+      "action": "deep_read",
+      "sample_subject": "Tiny house architecture for you",
+      "email_count": 1,
+      "labeled_at": "2026-03-26T02:05:20Z"
+    }
+  ]
+}

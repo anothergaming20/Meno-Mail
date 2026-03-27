@@ -1,0 +1,13 @@
+collections:
+  memory-root-newsletter-extract:
+    path: /Users/aiagnet/.openclaw/workspace-newsletter
+    pattern: MEMORY.md
+  memory-alt-newsletter-extract:
+    path: /Users/aiagnet/.openclaw/workspace-newsletter
+    pattern: memory.md
+  memory-dir-newsletter-extract:
+    path: /Users/aiagnet/.openclaw/workspace-newsletter/memory
+    pattern: "**/*.md"
+  workspace-newsletter-extract:
+    path: /Users/aiagnet/.openclaw/workspace
+    pattern: "**/*.md"

@@ -1,0 +1,87 @@
+{
+  "19d27d88ad6de3ad": {
+    "draft": "Thanks for forwarding. The LiteLLM breach is definitely worth checking on—I'll verify my version and rotate credentials if needed.",
+    "gmail_draft_id": "r-4905962300888797572",
+    "from": "Nay Tun Thein &lt;naytunthein70@gmail.com&gt;",
+    "subject": "Fwd: 🦞 Agents Reframe Open Source",
+    "message_id": "<1185bbad-f38d-4eda-9e2e-d67b1eea0809@Spark>",
+    "created_at": "2026-03-26T20:06:24Z",
+    "risk_flags": [
+      {
+        "code": "unknown_sender",
+        "severity": "amber",
+        "message": "No prior history with sender naytunthein70@gmail.com. Exercise caution approving this draft."
+      }
+    ]
+  },
+  "19d27d8567a737bd": {
+    "draft": "Thanks for sharing. Some good reads in there.",
+    "gmail_draft_id": "r5437459169741098533",
+    "from": "Nay Tun Thein &lt;naytunthein70@gmail.com&gt;",
+    "subject": "Fwd: The Great Framework Showdown: Superpowers vs. BMAD vs. SpecKit vs. GSD | Rick Hightower",
+    "message_id": "<2b7f842a-7658-4906-8589-c303026df582@Spark>",
+    "created_at": "2026-03-26T20:07:04Z",
+    "risk_flags": [
+      {
+        "code": "new_third_party",
+        "severity": "amber",
+        "message": "Draft mentions 'Some' — this name does not appear in the original email or sender notes."
+      },
+      {
+        "code": "unknown_sender",
+        "severity": "amber",
+        "message": "No prior history with sender naytunthein70@gmail.com. Exercise caution approving this draft."
+      }
+    ]
+  },
+  "19d1241ef3586646": {
+    "draft": "Got it, thanks.",
+    "gmail_draft_id": "r-2578433729147520521",
+    "from": "Nay Tun Thein &lt;naytunthein70@gmail.com&gt;",
+    "subject": "icloud",
+    "message_id": "<c1bbb8ad-14e3-443d-a72d-8021c3565a84@Spark>",
+    "created_at": "2026-03-26T03:36:49Z",
+    "risk_flags": [
+      {
+        "code": "new_third_party",
+        "severity": "amber",
+        "message": "Draft mentions 'Got' — this name does not appear in the original email or sender notes."
+      },
+      {
+        "code": "unknown_sender",
+        "severity": "amber",
+        "message": "No prior history with sender naytunthein70@gmail.com. Exercise caution approving this draft."
+      }
+    ]
+  },
+  "19cfe6e7e7245f5c": {
+    "draft": "Thanks for passing this along. I'll take a look.",
+    "gmail_draft_id": "r-6393290559029330601",
+    "from": "Nay Tun Thein &lt;naytunthein70@gmail.com&gt;",
+    "subject": "Fwd: Urgent ::: React Native Developer ::: Framingham, MA [ONSITE] :: Contract",
+    "message_id": "<fe26970d-b60f-4a19-a6a4-aa3915115c07@Spark>",
+    "created_at": "2026-03-26T03:37:59Z",
+    "risk_flags": [
+      {
+        "code": "unknown_sender",
+        "severity": "amber",
+        "message": "No prior history with sender naytunthein70@gmail.com. Exercise caution approving this draft."
+      }
+    ]
+  },
+  "19cfe6f460fb40cc": {
+    "draft": "Thanks for sharing. I'll check out the Replit Agent tutorial.",
+    "gmail_draft_id": "r-1571398941954950644",
+    "from": "Nay Tun Thein &lt;naytunthein70@gmail.com&gt;",
+    "subject": "Fwd: Replit Agent 4 Is Here: Plan, Design, and Build a Habit Tracking App with Multiple AI Agents",
+    "message_id": "<504e8f73-8a75-4f83-ba8c-a3d62f686973@Spark>",
+    "created_at": "2026-03-26T03:37:24Z",
+    "risk_flags": [
+      {
+        "code": "unknown_sender",
+        "severity": "amber",
+        "message": "No prior history with sender naytunthein70@gmail.com. Exercise caution approving this draft."
+      }
+    ]
+  }
+}

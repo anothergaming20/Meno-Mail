@@ -13,11 +13,19 @@ sandboxes/agent-main-f331f052/
 agents/email-triage/agent/auth-profiles.json
 agents/email-triage/agent/models.json
 agents/email-triage/sessions/
+<<<<<<< HEAD
+=======
+agents/email-triage/sessions/sessions.json
+>>>>>>> development
 
 # Main agent
 agents/main/agent/auth-profiles.json
 agents/main/agent/models.json
 agents/main/sessions/
+<<<<<<< HEAD
+=======
+agents/main/sessions/sessions.json
+>>>>>>> development
 
 # Logs
 logs/*.jsonl
@@ -43,3 +51,9 @@ logs/gateway.err.log
 .env.development.local
 .env.test.local
 .env.production.local
+<<<<<<< HEAD
+=======
+
+# Cron runs
+cron/runs/
+>>>>>>> development

@@ -12,7 +12,11 @@
         "operator.read",
         "operator.write"
       ],
+<<<<<<< HEAD
       "updatedAtMs": 1773723620087
+=======
+      "updatedAtMs": 1774567064874
+>>>>>>> development
     }
   }
 }

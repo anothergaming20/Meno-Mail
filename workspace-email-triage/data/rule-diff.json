@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-03-26T02:05:22Z",
+  "session_id": "2026-03-26-001",
+  "entries": [
+    {
+      "sender": "anothergaming20@gmail.com",
+      "domain": "gmail.com",
+      "action": "deep_read",
+      "section": "## Newsletters (deep_read \u2014 Triage/Newsletter label, extract articles)",
+      "sample_subject": "Re: Supadata in Claude and ChatGPT",
+      "email_count": 1
+    },
+    {
+      "sender": "team@news.fly.io",
+      "domain": "news.fly.io",
+      "action": "scan",
+      "section": "## Notifications (scan \u2014 Triage/Notification label, archived from inbox)",
+      "sample_subject": "Your \ud83c\udf89 free \ud83c\udf89 30 days of Fly.io Support starts now!",
+      "email_count": 1
+    },
+    {
+      "sender": "noreply@email.fly.io",
+      "domain": "email.fly.io",
+      "action": "scan",
+      "section": "## Notifications (scan \u2014 Triage/Notification label, archived from inbox)",
+      "sample_subject": "[Fly.io] Your trial just started!",
+      "email_count": 1
+    },
+    {
+      "sender": "support@fly.io",
+      "domain": "fly.io",
+      "action": "important",
+      "section": "## VIP (needs_reply \u2014 always draft a reply)",
+      "sample_subject": "Activate your Fly.io account",
+      "email_count": 1
+    },
+    {
+      "sender": "rafal@supadata.ai",
+      "domain": "supadata.ai",
+      "action": "scan",
+      "section": "## Notifications (scan \u2014 Triage/Notification label, archived from inbox)",
+      "sample_subject": "Supadata in Claude and ChatGPT",
+      "email_count": 1
+    },
+    {
+      "sender": "pinterest-recommendations@ideas.pinterest.com",
+      "domain": "ideas.pinterest.com",
+      "action": "deep_read",
+      "section": "## Newsletters (deep_read \u2014 Triage/Newsletter label, extract articles)",
+      "sample_subject": "Tiny house architecture for you",
+      "email_count": 1
+    }
+  ]
+}

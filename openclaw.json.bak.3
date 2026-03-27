@@ -1,0 +1,359 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.24",
+    "lastTouchedAt": "2026-03-26T16:57:44.139Z"
+  },
+  "env": {
+    "vars": {}
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-15T20:30:38.911Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "update": {
+    "channel": "stable",
+    "checkOnStart": true,
+    "auto": {
+      "enabled": true,
+      "betaCheckIntervalHours": 24
+    }
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:claude:default": {
+        "provider": "anthropic",
+        "mode": "token"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-opus-4-6"
+      },
+      "workspace": "~/.openclaw/workspace",
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "5m",
+        "keepLastAssistants": 3,
+        "softTrim": {
+          "maxChars": 2000,
+          "headChars": 800,
+          "tailChars": 800
+        },
+        "hardClear": {
+          "enabled": true,
+          "placeholder": "[Tool result cleared by session pruning]"
+        }
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "model": "anthropic/claude-sonnet-4-5"
+      },
+      "heartbeat": {
+        "every": "1h",
+        "target": "last"
+      },
+      "sandbox": {
+        "mode": "all",
+        "workspaceAccess": "rw",
+        "scope": "agent"
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "email-triage",
+        "default": true,
+        "name": "MenoMail Triage",
+        "workspace": "~/.openclaw/workspace-email-triage",
+        "agentDir": "~/.openclaw/agents/email-triage/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": [
+            "browser",
+            "canvas",
+            "nodes"
+          ]
+        }
+      },
+      {
+        "id": "newsletter-extract",
+        "name": "MenoMail Newsletter",
+        "workspace": "~/.openclaw/workspace-newsletter",
+        "agentDir": "~/.openclaw/agents/newsletter-extract/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": [
+            "browser",
+            "canvas",
+            "nodes",
+            "cron"
+          ]
+        }
+      },
+      {
+        "id": "draft-reply",
+        "name": "MenoMail Drafter",
+        "workspace": "~/.openclaw/workspace-draft-reply",
+        "agentDir": "~/.openclaw/agents/draft-reply/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": [
+            "write",
+            "edit",
+            "exec",
+            "apply_patch",
+            "browser",
+            "canvas",
+            "nodes",
+            "cron"
+          ]
+        }
+      },
+      {
+        "id": "consolidation",
+        "name": "MenoMail Consolidation",
+        "workspace": "~/.openclaw/workspace-consolidation",
+        "agentDir": "~/.openclaw/agents/consolidation/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": [
+            "browser",
+            "canvas",
+            "nodes",
+            "cron",
+            "exec"
+          ]
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "full",
+    "alsoAllow": [
+      "lobster",
+      "llm-task"
+    ],
+    "fs": {
+      "workspaceOnly": true
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "cron": {
+    "enabled": true
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "capabilities": {
+        "inlineButtons": "dm"
+      },
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8676407950:AAHkY0W-WoU9TSPkSk1-6qK1H4XnIMJ49hg",
+      "groupAllowFrom": [
+        1771281565
+      ],
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "controlUi": {
+      "allowedOrigins": [
+        "http://127.0.0.1:18789",
+        "http://localhost:18789"
+      ]
+    },
+    "auth": {
+      "mode": "token",
+      "token": "39bceeb88cf83dc477efcac7062855d68deaae22ef654ad5"
+    },
+    "trustedProxies": [
+      "127.0.0.1",
+      "::1"
+    ],
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": []
+    }
+  },
+  "memory": {
+    "backend": "qmd",
+    "qmd": {
+      "searchMode": "search",
+      "includeDefaultMemory": true,
+      "paths": [
+        {
+          "path": "/Users/aiagnet/.openclaw/workspace",
+          "name": "workspace"
+        }
+      ],
+      "update": {
+        "onBoot": true
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "entries": {
+      "agentmail": {
+        "enabled": false
+      },
+      "here-now": {
+        "enabled": false
+      },
+      "1password": {
+        "enabled": false
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "bluebubbles": {
+        "enabled": false
+      },
+      "gog": {
+        "enabled": false
+      },
+      "github": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "gh-issues": {
+        "enabled": false
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": false
+      },
+      "goplaces": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "imsg": {
+        "enabled": false
+      },
+      "mcporter": {
+        "enabled": false
+      },
+      "notion": {
+        "enabled": false
+      },
+      "obsidian": {
+        "enabled": false
+      },
+      "xurl": {
+        "enabled": false
+      },
+      "wacli": {
+        "enabled": false
+      },
+      "video-frames": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "things-mac": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "slack": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "lobster": {
+        "enabled": true
+      },
+      "llm-task": {
+        "enabled": true,
+        "config": {
+          "defaultProvider": "anthropic",
+          "defaultModel": "claude-haiku-4-5-20251001",
+          "maxTokens": 800,
+          "timeoutMs": 30000
+        }
+      }
+    }
+  }
+}

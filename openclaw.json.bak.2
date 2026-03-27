@@ -1,10 +1,18 @@
 {
   "meta": {
+<<<<<<< HEAD
     "lastTouchedVersion": "2026.3.13",
     "lastTouchedAt": "2026-03-15T20:31:45.120Z"
   },
   "env": {
     "vars": {    }
+=======
+    "lastTouchedVersion": "2026.3.24",
+    "lastTouchedAt": "2026-03-26T16:57:45.387Z"
+  },
+  "env": {
+    "vars": {}
+>>>>>>> development
   },
   "wizard": {
     "lastRunAt": "2026-03-15T20:30:38.911Z",
@@ -13,6 +21,10 @@
     "lastRunMode": "local"
   },
   "update": {
+<<<<<<< HEAD
+=======
+    "channel": "stable",
+>>>>>>> development
     "checkOnStart": true,
     "auto": {
       "enabled": true,
@@ -21,11 +33,15 @@
   },
   "auth": {
     "profiles": {
+<<<<<<< HEAD
       "vercel-ai-gateway:default": {
         "provider": "vercel-ai-gateway",
         "mode": "api_key"
       },
       "anthropic:claude": {
+=======
+      "anthropic:claude:default": {
+>>>>>>> development
         "provider": "anthropic",
         "mode": "token"
       }
@@ -58,6 +74,14 @@
       "heartbeat": {
         "every": "1h",
         "target": "last"
+<<<<<<< HEAD
+=======
+      },
+      "sandbox": {
+        "mode": "all",
+        "workspaceAccess": "rw",
+        "scope": "agent"
+>>>>>>> development
       }
     },
     "list": [
@@ -66,10 +90,75 @@
       },
       {
         "id": "email-triage",
+<<<<<<< HEAD
         "name": "email-triage",
         "workspace": "/Users/aiagnet/.openclaw/workspace",
         "agentDir": "/Users/aiagnet/.openclaw/agents/email-triage/agent",
         "model": "anthropic/claude-haiku-4-5-20251001"
+=======
+        "default": true,
+        "name": "MenoMail Triage",
+        "workspace": "~/.openclaw/workspace-email-triage",
+        "agentDir": "~/.openclaw/agents/email-triage/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": [
+            "browser",
+            "canvas",
+            "nodes"
+          ]
+        }
+      },
+      {
+        "id": "newsletter-extract",
+        "name": "MenoMail Newsletter",
+        "workspace": "~/.openclaw/workspace-newsletter",
+        "agentDir": "~/.openclaw/agents/newsletter-extract/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": [
+            "browser",
+            "canvas",
+            "nodes",
+            "cron"
+          ]
+        }
+      },
+      {
+        "id": "draft-reply",
+        "name": "MenoMail Drafter",
+        "workspace": "~/.openclaw/workspace-draft-reply",
+        "agentDir": "~/.openclaw/agents/draft-reply/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": [
+            "write",
+            "edit",
+            "exec",
+            "apply_patch",
+            "browser",
+            "canvas",
+            "nodes",
+            "cron"
+          ]
+        }
+      },
+      {
+        "id": "consolidation",
+        "name": "MenoMail Consolidation",
+        "workspace": "~/.openclaw/workspace-consolidation",
+        "agentDir": "~/.openclaw/agents/consolidation/agent",
+        "model": "anthropic/claude-haiku-4-5-20251001",
+        "tools": {
+          "deny": [
+            "browser",
+            "canvas",
+            "nodes",
+            "cron",
+            "exec"
+          ]
+        }
+>>>>>>> development
       }
     ]
   },
@@ -175,6 +264,114 @@
       },
       "here-now": {
         "enabled": false
+<<<<<<< HEAD
+=======
+      },
+      "1password": {
+        "enabled": false
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "blogwatcher": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "bluebubbles": {
+        "enabled": false
+      },
+      "gog": {
+        "enabled": false
+      },
+      "github": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "gh-issues": {
+        "enabled": false
+      },
+      "gemini": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": false
+      },
+      "goplaces": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "imsg": {
+        "enabled": false
+      },
+      "mcporter": {
+        "enabled": false
+      },
+      "notion": {
+        "enabled": false
+      },
+      "obsidian": {
+        "enabled": false
+      },
+      "xurl": {
+        "enabled": false
+      },
+      "wacli": {
+        "enabled": false
+      },
+      "video-frames": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "tmux": {
+        "enabled": false
+      },
+      "things-mac": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "slack": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      },
+      "peekaboo": {
+        "enabled": false
+>>>>>>> development
       }
     }
   },
