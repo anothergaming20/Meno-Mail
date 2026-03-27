@@ -807,8 +807,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var params = new URLSearchParams(window.location.search);
   var targetScreen = params.get('screen');
 
-  // Fetch live data
-  fetch('/api/digest')
+  // Fetch live data (cache:reload forces bypass of any browser/CDN cache)
+  fetch('/api/digest', { cache: 'no-store' })
     .then(function(res) { return res.json(); })
     .then(function(data) {
       renderHome(data.home);

@@ -16,7 +16,20 @@ log = logging.getLogger("menomail-server")
 app = Flask(__name__)
 
 PUSH_SECRET = os.environ.get("MENOMAIL_PUSH_SECRET", "")
-_digest: dict = {}  # in-memory store; persists across auto-stops, resets on deploy
+_DIGEST_CACHE = Path("/tmp/menomail-digest.json")
+_digest: dict = {}  # in-memory store, backed by disk cache
+
+# Load from disk cache on startup so restarts don't wipe the digest
+def _load_cache():
+    try:
+        if _DIGEST_CACHE.exists():
+            data = json.loads(_DIGEST_CACHE.read_text())
+            _digest.update(data)
+            log.info("Loaded digest from disk cache (%d review cards)", len(_digest.get("review", {}).get("cards", [])))
+    except Exception as e:
+        log.warning("Could not load digest cache: %s", e)
+
+_load_cache()
 
 _EMPTY_DIGEST = {
     "home": {
@@ -43,7 +56,11 @@ def index():
 
 @app.route("/api/digest")
 def get_digest():
-    return jsonify(_digest if _digest else _EMPTY_DIGEST)
+    resp = jsonify(_digest if _digest else _EMPTY_DIGEST)
+    resp.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    resp.headers["Pragma"] = "no-cache"
+    resp.headers["Expires"] = "0"
+    return resp
 
 
 @app.route("/api/digest/update", methods=["POST"])
@@ -56,6 +73,10 @@ def update_digest():
         return "bad request", 400
     _digest.clear()
     _digest.update(data)
+    try:
+        _DIGEST_CACHE.write_text(json.dumps(data))
+    except Exception as e:
+        log.warning("Could not write digest cache: %s", e)
     log.info("Digest updated: %d review cards, %d articles",
              len(_digest.get("review", {}).get("cards", [])),
              len(_digest.get("reading", {}).get("articles", [])))
