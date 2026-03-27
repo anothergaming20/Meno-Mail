@@ -7,7 +7,7 @@
       "description": "Fetch, classify, and act on new inbox emails",
       "enabled": true,
       "createdAtMs": 1773551619477,
-      "updatedAtMs": 1774557554799,
+      "updatedAtMs": 1774570178651,
       "schedule": {
         "kind": "every",
         "everyMs": 900000,
@@ -20,13 +20,13 @@
         "text": "Run the email triage dispatcher: bash ~/.openclaw/workspace-email-triage/scripts/dispatcher.sh — then briefly report how many emails were processed and any errors."
       },
       "state": {
-        "lastRunAtMs": 1774557543690,
+        "lastRunAtMs": 1774570170739,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 11109,
+        "lastDurationMs": 7912,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774558339949
+        "nextRunAtMs": 1774571070739
       }
     },
     {

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<!-- Meno Mail — Learn Mini App (Standalone) | v1.1 | Updated: 2026-03-21 | Inbox Training & Active Learning -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+<title>Meno Mail — Inbox Training</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  :root {
+    --cyan: #0891b2; --cyan-dim: #ecfeff; --cyan-mid: #a5f3fc;
+    --amber: #b45309; --amber-dim: #fffbeb;
+    --green: #15803d; --green-dim: #f0fdf4;
+    --red: #b91c1c; --red-dim: #fef2f2;
+    --purple: #6d28d9; --purple-dim: #f5f3ff;
+    --text: #111827; --text-muted: #6b7280; --text-dim: #9ca3af;
+    --surface: #ffffff; --border: #e5e7eb; --bg: #f3f4f6;
+    --mono: 'SF Mono', ui-monospace, Menlo, monospace;
+    --sans: -apple-system, 'SF Pro Text', system-ui, sans-serif;
+    --display: -apple-system, 'SF Pro Display', system-ui, sans-serif;
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --cyan: #22d3ee; --cyan-dim: #164e63; --cyan-mid: #0e7490;
+      --amber: #fbbf24; --amber-dim: #451a03;
+      --green: #4ade80; --green-dim: #052e16;
+      --red: #f87171; --red-dim: #450a0a;
+      --purple: #a78bfa; --purple-dim: #2e1065;
+      --text: #f9fafb; --text-muted: #9ca3af; --text-dim: #6b7280;
+      --surface: #1f2937; --border: #374151; --bg: #111827;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { overflow-x: hidden; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.6; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 12px 16px 10px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .topbar-icon { font-size: 20px; }
+  .topbar-title { font-family: var(--display); font-size: 17px; font-weight: 700; flex: 1; letter-spacing: -0.2px; }
+  .topbar-badge {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 6px; background: var(--purple-dim); color: var(--purple);
+    font-weight: 600;
+  }
+
+  /* ── SESSION HEADER ── */
+  .session-header {
+    padding: 16px 16px 12px;
+    background: var(--surface); border-bottom: 1px solid var(--border);
+  }
+  .session-meta {
+    display: flex; gap: 16px; align-items: center; margin-bottom: 10px;
+  }
+  .session-meta-item {
+    display: flex; flex-direction: column; gap: 1px;
+  }
+  .session-meta-val {
+    font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--text);
+  }
+  .session-meta-label {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim);
+  }
+  .session-divider { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
+
+  /* ── PROGRESS ── */
+  .progress-wrap { padding: 0; }
+  .progress-label {
+    display: flex; justify-content: space-between;
+    font-family: var(--mono); font-size: 10px; color: var(--text-dim); margin-bottom: 6px;
+  }
+  .progress-track { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--purple); border-radius: 3px; transition: width 0.4s cubic-bezier(0.4,0,0.2,1); }
+
+  /* ── VIEWS ── */
+  .view { display: none; }
+  .view.active { display: block; }
+
+  /* ── SENDER CARD ── */
+  .sender-card {
+    margin: 14px 14px 0; background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    animation: cardIn 0.28s ease;
+  }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  .sender-header {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px 10px;
+  }
+  .sender-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 16px; font-weight: 700; color: #fff; flex-shrink: 0;
+  }
+  .sender-name { font-size: 15px; font-weight: 700; }
+  .sender-email { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+  .sender-volume {
+    margin-left: auto; text-align: right; flex-shrink: 0;
+  }
+  .sender-volume-num { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--text); }
+  .sender-volume-label { font-family: var(--mono); font-size: 9px; letter-spacing: 1px; color: var(--text-dim); text-transform: uppercase; }
+
+  /* Email preview */
+  .email-preview {
+    margin: 0 14px 12px; background: var(--bg);
+    border-radius: 10px; padding: 12px 14px;
+    border: 1px solid var(--border);
+  }
+  .email-preview-subject { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .email-preview-body { font-size: 12px; color: var(--text-muted); line-height: 1.55; }
+  .email-preview-meta {
+    display: flex; align-items: center; gap: 6px; margin-top: 8px;
+    font-family: var(--mono); font-size: 9px; color: var(--text-dim);
+  }
+  .email-preview-tag {
+    padding: 1px 7px; border-radius: 4px; background: var(--surface); border: 1px solid var(--border);
+  }
+
+  /* Past behavior hint */
+  .past-hint {
+    margin: 0 14px 12px; padding: 9px 12px;
+    background: var(--amber-dim); border-left: 3px solid var(--amber);
+    border-radius: 0 8px 8px 0; font-size: 12px; color: var(--text-muted); line-height: 1.5;
+  }
+  .past-hint strong { color: var(--amber); font-weight: 600; }
+
+  /* ── LABEL GRID ── */
+  .label-section { padding: 0 14px 6px; }
+  .label-section-eyebrow {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text-dim); padding: 4px 0 10px;
+  }
+  .label-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .label-btn {
+    padding: 16px 10px; border: 1.5px solid var(--border); border-radius: 12px;
+    background: var(--surface); cursor: pointer; text-align: center;
+    transition: all 0.15s; display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .label-btn:active { transform: scale(0.97); }
+  .label-btn.archive.selected { border-color: var(--red); background: var(--red-dim); }
+  .label-btn.scan.selected    { border-color: var(--amber); background: var(--amber-dim); }
+  .label-btn.read.selected    { border-color: var(--cyan); background: var(--cyan-dim); }
+  .label-btn.important.selected { border-color: var(--green); background: var(--green-dim); }
+  .label-emoji { font-size: 24px; }
+  .label-name { font-family: var(--mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); }
+  .label-desc { font-size: 11px; color: var(--text-dim); line-height: 1.35; margin-top: 2px; }
+
+  /* Skip row */
+  .skip-row { display: flex; justify-content: center; padding: 10px 0 14px; }
+  .skip-btn {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text-dim); background: none; border: none; cursor: pointer; padding: 8px 16px;
+  }
+
+  /* ── TOPIC DISCOVERY ── */
+  .topic-panel {
+    display: none; margin: 0 14px 14px;
+    background: var(--cyan-dim); border: 1px solid var(--cyan-mid);
+    border-radius: 12px; padding: 14px;
+    animation: panelIn 0.22s ease;
+  }
+  .topic-panel.open { display: block; }
+  @keyframes panelIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .topic-panel-label {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--cyan); margin-bottom: 10px;
+  }
+  .topic-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
+  .topic-chip {
+    font-family: var(--mono); font-size: 11px; padding: 5px 12px; border-radius: 20px;
+    border: 1px solid var(--cyan-mid); background: var(--surface); color: var(--text-muted);
+    cursor: pointer; transition: all 0.12s;
+  }
+  .topic-chip.selected { background: var(--cyan); color: #fff; border-color: var(--cyan); }
+  .topic-confirm {
+    width: 100%; padding: 11px 0; border: none; border-radius: 10px;
+    background: var(--cyan); color: #fff; font-family: var(--mono); font-size: 11px;
+    font-weight: 700; letter-spacing: 0.5px; cursor: pointer; text-align: center;
+  }
+  .topic-skip {
+    display: block; text-align: center; margin-top: 8px;
+    font-family: var(--mono); font-size: 10px; color: var(--text-dim);
+    background: none; border: none; cursor: pointer; padding: 4px;
+  }
+
+  /* ── DIFF PREVIEW VIEW ── */
+  .diff-header { padding: 20px 16px 8px; }
+  .diff-eyebrow {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--text-dim); display: flex; align-items: center; gap: 8px; margin-bottom: 6px;
+  }
+  .diff-eyebrow::before { content: ''; width: 18px; height: 1px; background: var(--text-dim); }
+  .diff-title { font-family: var(--display); font-size: 22px; font-weight: 700; letter-spacing: -0.4px; }
+  .diff-sub { font-size: 13px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+
+  .diff-list { padding: 0 14px 8px; }
+  .diff-item {
+    display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .diff-avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono); font-size: 13px; font-weight: 700; color: #fff; flex-shrink: 0;
+  }
+  .diff-sender { flex: 1; min-width: 0; }
+  .diff-email { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .diff-rule { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+  .diff-action-pill {
+    font-family: var(--mono); font-size: 9px; letter-spacing: 1px; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 20px; font-weight: 700; flex-shrink: 0;
+  }
+  .diff-action-pill.archive  { background: var(--red-dim);    color: var(--red); }
+  .diff-action-pill.scan     { background: var(--amber-dim);  color: var(--amber); }
+  .diff-action-pill.deep_read{ background: var(--cyan-dim);   color: var(--cyan); }
+  .diff-action-pill.important{ background: var(--green-dim);  color: var(--green); }
+  .diff-action-pill.skip     { background: var(--bg);         color: var(--text-dim); }
+  .diff-edit-btn {
+    background: none; border: none; font-size: 15px; cursor: pointer; padding: 4px;
+    color: var(--text-dim); flex-shrink: 0;
+  }
+
+  .diff-skipped-note {
+    margin: 0 14px 10px; padding: 10px 14px;
+    background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+    font-size: 12px; color: var(--text-dim); line-height: 1.5;
+  }
+
+  .diff-actions { padding: 10px 14px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .btn-apply {
+    padding: 16px; border: none; border-radius: 14px;
+    background: var(--purple); color: #fff;
+    font-family: var(--sans); font-size: 15px; font-weight: 700; cursor: pointer;
+    text-align: center; letter-spacing: 0.2px; transition: filter 0.12s;
+  }
+  .btn-apply:active { filter: brightness(0.88); }
+  .btn-cancel {
+    padding: 14px; border: 1px solid var(--border); border-radius: 14px;
+    background: var(--surface); color: var(--text-muted);
+    font-family: var(--sans); font-size: 14px; cursor: pointer; text-align: center;
+  }
+
+  /* ── DONE VIEW ── */
+  .done-wrap { text-align: center; padding: 48px 24px 32px; }
+  .done-icon { font-size: 56px; margin-bottom: 16px; }
+  .done-title { font-family: var(--display); font-size: 24px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.3px; }
+  .done-sub { font-size: 14px; color: var(--text-muted); line-height: 1.55; max-width: 260px; margin: 0 auto 28px; }
+  .done-stats {
+    display: flex; justify-content: center; gap: 24px; margin-bottom: 28px;
+    padding: 16px; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border);
+    max-width: 300px; margin-left: auto; margin-right: auto;
+  }
+  .done-stat-num { font-family: var(--mono); font-size: 22px; font-weight: 700; color: var(--purple); display: block; }
+  .done-stat-label { font-size: 11px; color: var(--text-dim); }
+  .done-close {
+    display: block; width: 100%; max-width: 280px; margin: 0 auto;
+    padding: 15px; border: none; border-radius: 14px;
+    background: var(--purple); color: #fff;
+    font-family: var(--sans); font-size: 15px; font-weight: 700; cursor: pointer; text-align: center;
+  }
+  .done-next-session {
+    margin-top: 12px; font-family: var(--mono); font-size: 10px; color: var(--text-dim); text-align: center;
+  }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(16px);
+    background: var(--text); color: var(--bg); padding: 9px 18px; border-radius: 20px;
+    font-size: 13px; font-weight: 500; opacity: 0; transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none; white-space: nowrap; z-index: 999; max-width: 90vw;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .safe-bottom { height: 24px; }
+</style>
+</head>
+<body>
+
+<!-- ── TOP BAR ── -->
+<div class="topbar">
+  <span class="topbar-icon">🎓</span>
+  <span class="topbar-title">Inbox Training</span>
+  <span class="topbar-badge" id="topbar-badge">6 senders</span>
+</div>
+
+<!-- ════════════════════════════
+     VIEW: WALKTHROUGH
+     ════════════════════════════ -->
+<div id="view-walk" class="view active">
+
+  <!-- Session header -->
+  <div class="session-header">
+    <div class="session-meta">
+      <div class="session-meta-item">
+        <span class="session-meta-val" id="meta-count">1 of 6</span>
+        <span class="session-meta-label">Senders</span>
+      </div>
+      <div class="session-divider"></div>
+      <div class="session-meta-item">
+        <span class="session-meta-val" id="meta-time">~5 min left</span>
+        <span class="session-meta-label">Est. time</span>
+      </div>
+      <div class="session-divider"></div>
+      <div class="session-meta-item">
+        <span class="session-meta-val" id="meta-coverage">0%</span>
+        <span class="session-meta-label">Coverage</span>
+      </div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="progress-text">Getting started</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <!-- Sender card -->
+  <div class="sender-card" id="sender-card">
+    <div class="sender-header">
+      <div class="sender-avatar" id="s-avatar">T</div>
+      <div>
+        <div class="sender-name" id="s-name">TLDR Tech</div>
+        <div class="sender-email" id="s-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="265143434d4a5f66524a4254085243454e">[email&#160;protected]</a></div>
+      </div>
+      <div class="sender-volume">
+        <div class="sender-volume-num" id="s-vol">12</div>
+        <div class="sender-volume-label">emails/mo</div>
+      </div>
+    </div>
+
+    <div class="email-preview">
+      <div class="email-preview-subject" id="s-subject">TLDR: OpenAI releases new model</div>
+      <div class="email-preview-body" id="s-body">Your daily dose of tech news in 5 minutes — AI, startups, dev tools…</div>
+      <div class="email-preview-meta">
+        <span class="email-preview-tag" id="s-tag">Newsletter</span>
+        <span id="s-date">Mar 16</span>
+      </div>
+    </div>
+
+    <!-- Past behavior hint (shown when available) -->
+    <div class="past-hint" id="past-hint" style="display:none">
+      <strong>Hint:</strong> <span id="past-hint-text"></span>
+    </div>
+
+    <!-- Label grid -->
+    <div class="label-section">
+      <div class="label-section-eyebrow">How should this sender be handled?</div>
+      <div class="label-grid">
+        <div class="label-btn archive" onclick="labelSender('archive')">
+          <div class="label-emoji">🗄</div>
+          <div class="label-name">Archive</div>
+          <div class="label-desc">Skip without reading</div>
+        </div>
+        <div class="label-btn scan" onclick="labelSender('scan')">
+          <div class="label-emoji">👀</div>
+          <div class="label-name">Scan</div>
+          <div class="label-desc">Glance for key info</div>
+        </div>
+        <div class="label-btn read" onclick="labelSender('deep_read')">
+          <div class="label-emoji">📖</div>
+          <div class="label-name">Read</div>
+          <div class="label-desc">Worth reading fully</div>
+        </div>
+        <div class="label-btn important" onclick="labelSender('important')">
+          <div class="label-emoji">⚡</div>
+          <div class="label-name">Important</div>
+          <div class="label-desc">Needs reply or action</div>
+        </div>
+      </div>
+      <div class="skip-row">
+        <button class="skip-btn" onclick="labelSender('skip')">⏭ Skip for now</button>
+      </div>
+    </div>
+
+    <!-- Topic discovery panel (appears after Read label) -->
+    <div class="topic-panel" id="topic-panel">
+      <div class="topic-panel-label">What topics does this sender cover?</div>
+      <div class="topic-chips" id="topic-chips"></div>
+      <button class="topic-confirm" onclick="confirmTopics()">Save topics</button>
+      <button class="topic-skip" onclick="skipTopics()">Skip topic selection</button>
+    </div>
+
+  </div><!-- /sender-card -->
+  <div class="safe-bottom"></div>
+</div>
+
+<!-- ════════════════════════════
+     VIEW: DIFF PREVIEW
+     ════════════════════════════ -->
+<div id="view-diff" class="view">
+  <div class="diff-header">
+    <div class="diff-eyebrow">Review changes</div>
+    <div class="diff-title">Apply to inbox?</div>
+    <div class="diff-sub">These rules will take effect on the next triage run. You can edit any before applying.</div>
+  </div>
+  <div class="diff-list" id="diff-list"></div>
+  <div class="diff-skipped-note" id="diff-skipped-note" style="display:none">
+    ⏭ Skipped senders will stay in Review until you label them.
+  </div>
+  <div class="diff-actions">
+    <button class="btn-apply" onclick="applyLabels()">Apply rules to inbox</button>
+    <button class="btn-cancel" onclick="showView('walk')">← Back and edit</button>
+  </div>
+  <div class="safe-bottom"></div>
+</div>
+
+<!-- ════════════════════════════
+     VIEW: DONE
+     ════════════════════════════ -->
+<div id="view-done" class="view">
+  <div class="done-wrap">
+    <div class="done-icon">✓</div>
+    <div class="done-title">All done</div>
+    <div class="done-sub">Rules applied. Your inbox will be cleaner from the next triage run.</div>
+    <div class="done-stats" id="done-stats"></div>
+    <button class="done-close" onclick="closeMiniApp()">Back to Meno Mail</button>
+    <div class="done-next-session" id="done-next-session"></div>
+  </div>
+  <div class="safe-bottom"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+var tg = window.Telegram?.WebApp; if (tg) { tg.ready(); tg.expand(); }
+
+/* ── DATA ── */
+var senders = [
+  { email: 'weekly@tldr.tech',        name: 'TLDR Tech',        initial: 'T', color: '#0891b2', vol: 12, subject: 'TLDR: OpenAI releases new model', body: 'Your daily dose of tech news in 5 minutes — AI, startups, dev tools…', tag: 'Newsletter', date: 'Mar 16', hint: null,                        topics: ['AI & ML','Dev Tools','Startups','Security'] },
+  { email: 'no-reply@stripe.com',     name: 'Stripe',           initial: 'S', color: '#6d28d9', vol: 4,  subject: 'March invoice ready — $49.00',      body: 'Your Stripe invoice for March 2026 is available.',                   tag: 'Finance',    date: 'Mar 1',  hint: null,                        topics: null },
+  { email: 'alice@clientcorp.com',    name: 'Alice (ClientCo)', initial: 'A', color: '#b91c1c', vol: 8,  subject: 'Follow up: proposal',               body: 'Just circling back on the proposal I sent last week…',              tag: 'Human',      date: 'Mar 14', hint: 'You replied to 7 of 8 emails.', topics: null },
+  { email: 'noreply@github.com',      name: 'GitHub',           initial: 'G', color: '#1f2937', vol: 31, subject: 'PR #4821 merged into main',          body: '3 files changed, 24 insertions(+), 11 deletions(-)…',               tag: 'Dev',        date: 'Mar 16', hint: 'You open ~30% of these.',       topics: null },
+  { email: 'hello@dense-discovery.com',name: 'Dense Discovery', initial: 'D', color: '#b45309', vol: 4,  subject: 'Dense Discovery #312',              body: 'Design, tech, culture — thoughtfully curated…',                     tag: 'Newsletter', date: 'Mar 15', hint: null,                        topics: ['Design','Culture','Tech'] },
+  { email: 'deals@coupondaily.com',   name: 'CouponDaily',      initial: 'C', color: '#6b7280', vol: 28, subject: '80% off — TODAY ONLY!!!',            body: 'FLASH SALE ends at midnight…',                                      tag: 'Promo',      date: 'Mar 16', hint: 'You never open these.',         topics: null }
+];
+
+var currentIdx = 0;
+var results = {};       // { email: { action, topics } }
+var pendingTopics = []; // topics selected for current sender
+var waitingForTopics = false;
+
+/* ── NAVIGATION ── */
+function showView(id) {
+  document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
+  document.getElementById('view-' + id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+
+/* ── RENDER SENDER CARD ── */
+function renderCard() {
+  if (currentIdx >= senders.length) {
+    showDiffView(); return;
+  }
+  var s = senders[currentIdx];
+  waitingForTopics = false;
+  pendingTopics = [];
+
+  // Header
+  document.getElementById('s-avatar').textContent = s.initial;
+  document.getElementById('s-avatar').style.background = s.color;
+  document.getElementById('s-name').textContent = s.name;
+  document.getElementById('s-email').textContent = s.email;
+  document.getElementById('s-vol').textContent = s.vol;
+  document.getElementById('s-subject').textContent = s.subject;
+  document.getElementById('s-body').textContent = s.body;
+  document.getElementById('s-tag').textContent = s.tag;
+  document.getElementById('s-date').textContent = s.date;
+
+  // Past hint
+  var hintEl = document.getElementById('past-hint');
+  if (s.hint) {
+    document.getElementById('past-hint-text').textContent = s.hint;
+    hintEl.style.display = 'block';
+  } else {
+    hintEl.style.display = 'none';
+  }
+
+  // Reset label selections + topic panel
+  document.querySelectorAll('.label-btn').forEach(function(b){ b.classList.remove('selected'); });
+  document.getElementById('topic-panel').classList.remove('open');
+
+  // Progress
+  var pct = Math.round(currentIdx / senders.length * 100);
+  document.getElementById('meta-count').textContent = (currentIdx + 1) + ' of ' + senders.length;
+  document.getElementById('meta-time').textContent = '~' + Math.max(1, senders.length - currentIdx) + ' min left';
+  document.getElementById('meta-coverage').textContent = pct + '%';
+  document.getElementById('progress-text').textContent = 'Sender ' + (currentIdx + 1) + ' of ' + senders.length;
+  document.getElementById('progress-pct').textContent = pct + '%';
+  document.getElementById('progress-fill').style.width = pct + '%';
+  document.getElementById('topbar-badge').textContent = (senders.length - currentIdx) + ' remaining';
+
+  // Reanimate card
+  var card = document.getElementById('sender-card');
+  card.style.animation = 'none';
+  card.offsetHeight; // reflow
+  card.style.animation = '';
+}
+
+/* ── LABEL ACTION ── */
+window.labelSender = function(action) {
+  if (waitingForTopics) return;
+  var s = senders[currentIdx];
+
+  if (action === 'skip') {
+    results[s.email] = { action: 'skip', topics: [] };
+    advance(); return;
+  }
+
+  // Visual feedback
+  var map = { archive: 0, scan: 1, deep_read: 2, important: 3 };
+  document.querySelectorAll('.label-btn')[map[action]].classList.add('selected');
+  var emoji = { archive: '🗄', scan: '👀', deep_read: '📖', important: '⚡' }[action] || action;
+  showToast(emoji);
+
+  // Topic discovery for Read senders with topics defined
+  if (action === 'deep_read' && s.topics && s.topics.length) {
+    results[s.email] = { action: action, topics: [] };
+    waitingForTopics = true;
+    showTopicPanel(s.topics);
+    return;
+  }
+
+  results[s.email] = { action: action, topics: [] };
+  setTimeout(advance, 300);
+};
+
+/* ── TOPIC DISCOVERY ── */
+function showTopicPanel(topics) {
+  var chips = document.getElementById('topic-chips');
+  chips.innerHTML = '';
+  topics.forEach(function(t) {
+    var chip = document.createElement('button');
+    chip.className = 'topic-chip';
+    chip.textContent = t;
+    chip.onclick = function() { chip.classList.toggle('selected'); };
+    chips.appendChild(chip);
+  });
+  document.getElementById('topic-panel').classList.add('open');
+  document.getElementById('topic-panel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+window.confirmTopics = function() {
+  var selected = [];
+  document.querySelectorAll('.topic-chip.selected').forEach(function(c){ selected.push(c.textContent); });
+  var s = senders[currentIdx];
+  results[s.email].topics = selected;
+  waitingForTopics = false;
+  document.getElementById('topic-panel').classList.remove('open');
+  if (selected.length) showToast('Topics saved ✓');
+  setTimeout(advance, 200);
+};
+
+window.skipTopics = function() {
+  waitingForTopics = false;
+  document.getElementById('topic-panel').classList.remove('open');
+  setTimeout(advance, 100);
+};
+
+/* ── ADVANCE ── */
+function advance() {
+  currentIdx++;
+  renderCard();
+}
+
+/* ── DIFF VIEW ── */
+function showDiffView() {
+  var actionLabels = { archive: 'Archive', scan: 'Scan', deep_read: 'Read', important: 'Important', skip: 'Skip' };
+  var html = '';
+  var skippedCount = 0;
+  senders.forEach(function(s) {
+    var r = results[s.email];
+    if (!r) return;
+    if (r.action === 'skip') { skippedCount++; return; }
+    var topicStr = r.topics && r.topics.length ? ' · ' + r.topics.join(', ') : '';
+    html += '<div class="diff-item">'
+      + '<div class="diff-avatar" style="background:' + s.color + '">' + s.initial + '</div>'
+      + '<div class="diff-sender">'
+      + '<div class="diff-email">' + s.email + '</div>'
+      + '<div class="diff-rule">' + actionLabels[r.action] + topicStr + '</div>'
+      + '</div>'
+      + '<span class="diff-action-pill ' + r.action + '">' + actionLabels[r.action] + '</span>'
+      + '<button class="diff-edit-btn" onclick="editSender(' + senders.indexOf(s) + ')" title="Edit">✏️</button>'
+      + '</div>';
+  });
+  document.getElementById('diff-list').innerHTML = html;
+  var skippedNote = document.getElementById('diff-skipped-note');
+  skippedNote.style.display = skippedCount > 0 ? 'block' : 'none';
+  // Update progress to 100%
+  document.getElementById('progress-fill').style.width = '100%';
+  document.getElementById('progress-pct').textContent = '100%';
+  document.getElementById('meta-coverage').textContent = '100%';
+  document.getElementById('topbar-badge').textContent = 'Review changes';
+  showView('diff');
+}
+
+window.editSender = function(i) {
+  currentIdx = i;
+  showView('walk');
+  renderCard();
+};
+
+/* ── APPLY ── */
+window.applyLabels = function() {
+  sendAction('apply_labels', results);
+  // Show done view
+  var labeled = Object.values(results).filter(function(r){ return r.action !== 'skip'; }).length;
+  var skipped = Object.values(results).filter(function(r){ return r.action === 'skip'; }).length;
+  var stats = '<div class="done-stat"><span class="done-stat-num">' + labeled + '</span><span class="done-stat-label">Rules added</span></div>';
+  if (skipped) stats += '<div class="done-stat"><span class="done-stat-num">' + skipped + '</span><span class="done-stat-label">Skipped</span></div>';
+  var topicCount = Object.values(results).reduce(function(n,r){ return n + (r.topics ? r.topics.length : 0); }, 0);
+  if (topicCount) stats += '<div class="done-stat"><span class="done-stat-num">' + topicCount + '</span><span class="done-stat-label">Topics saved</span></div>';
+  document.getElementById('done-stats').innerHTML = stats;
+  document.getElementById('done-next-session').textContent = skipped ? skipped + ' skipped sender' + (skipped > 1 ? 's' : '') + ' will appear next session.' : 'Next session available after your next triage run.';
+  document.getElementById('topbar-badge').textContent = 'Complete';
+  showView('done');
+};
+
+window.closeMiniApp = function() {
+  if (tg && tg.close) { tg.close(); }
+  else { showToast('Session complete ✓'); }
+};
+
+/* ── SEND ACTION ── */
+window.sendAction = function(type, payload) {
+  var data = JSON.stringify({ action: type, data: payload, ts: Date.now() });
+  if (tg && tg.sendData) { tg.sendData(data); }
+  else { console.log('[sendAction]', type, payload); }
+};
+
+/* ── TOAST ── */
+var toastTimer;
+function showToast(msg) {
+  var el = document.getElementById('toast');
+  el.textContent = msg; el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){ el.classList.remove('show'); }, 1600);
+}
+
+/* ── INIT ── */
+document.addEventListener('DOMContentLoaded', function() {
+  renderCard();
+});
+</script>
+</body>
+</html>

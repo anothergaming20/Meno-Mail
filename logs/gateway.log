@@ -7936,3 +7936,292 @@
 2026-03-26T16:41:11.526-04:00 ```json
 {"bucket": "notification", "confidence": 0.88, "reason": "Apple iCloud security alert; transactional notification requiring scan for suspicious activity but no reply needed."}
 ```
+2026-03-26T16:56:58.501-04:00 ⚠️ API rate limit reached. Please try again later.
+2026-03-26T16:57:41.074-04:00 ⚠️ API rate limit reached. Please try again later.
+2026-03-26T16:58:21.838-04:00 ⚠️ API rate limit reached. Please try again later.
+2026-03-26T16:59:00.454-04:00 ⚠️ API rate limit reached. Please try again later.
+2026-03-26T16:59:38.188-04:00 ⚠️ API rate limit reached. Please try again later.
+2026-03-26T17:00:17.246-04:00 ⚠️ API rate limit reached. Please try again later.
+2026-03-26T17:15:18.063-04:00 [telegram] sendMessage ok chat=1771281565 message=349
+2026-03-26T17:37:21.515-04:00 [ws] ⇄ res ✓ sessions.list 52ms conn=d6d3d8b8…c8b6 id=8af139cc…5ab8
+2026-03-26T17:37:29.695-04:00 [ws] ⇄ res ✓ sessions.list 65ms conn=d6d3d8b8…c8b6 id=7e7be706…a300
+2026-03-26T18:07:22.051-04:00 [ws] ⇄ res ✓ sessions.list 199ms conn=d6d3d8b8…c8b6 id=239f70ec…4bc9
+2026-03-26T18:59:32.471-04:00 [ws] ⇄ res ✓ node.list 86ms conn=d6d3d8b8…c8b6 id=51d2b387…6a2d
+2026-03-26T19:09:17.744-04:00 [ws] ⇄ res ✓ sessions.list 202ms conn=d6d3d8b8…c8b6 id=9a9b129b…5e16
+2026-03-26T19:09:17.751-04:00 [ws] ⇄ res ✓ channels.status 208ms conn=d6d3d8b8…c8b6 id=ac75e98d…4ee7
+2026-03-26T19:09:17.758-04:00 [ws] ⇄ res ✓ cron.status 213ms conn=d6d3d8b8…c8b6 id=6559bdf4…9595
+2026-03-26T19:09:17.760-04:00 [ws] ⇄ res ✓ cron.list 220ms conn=d6d3d8b8…c8b6 id=6ed4038b…90b4
+2026-03-26T19:09:17.806-04:00 [ws] ⇄ res ✓ cron.runs 55ms conn=d6d3d8b8…c8b6 id=70c1e67a…fa03
+2026-03-26T19:09:17.812-04:00 [ws] ⇄ res ✓ node.list 50ms conn=d6d3d8b8…c8b6 id=b68ee73c…f2a4
+2026-03-26T19:09:17.815-04:00 [ws] ⇄ res ✓ cron.runs 274ms conn=d6d3d8b8…c8b6 id=286f552c…7b43
+2026-03-26T19:09:21.328-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=d6d3d8b8-466d-4da5-b344-800ab850c8b6
+2026-03-26T19:09:21.592-04:00 [ws] webchat connected conn=f4cf7fe5-75cf-4aa0-b883-a9362d85cab6 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T19:09:35.202-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=f4cf7fe5-75cf-4aa0-b883-a9362d85cab6
+2026-03-26T19:09:35.485-04:00 [ws] webchat connected conn=f5c7e068-33cf-45da-aa50-8a11ce720af5 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T19:09:35.600-04:00 [ws] ⇄ res ✓ device.pair.list 54ms conn=f5c7e068…0af5 id=cf76a34d…2a68
+2026-03-26T19:09:35.605-04:00 [ws] ⇄ res ✓ node.list 64ms conn=f5c7e068…0af5 id=9a61b2bb…34dd
+2026-03-26T19:09:35.617-04:00 [ws] ⇄ res ✓ cron.runs 56ms conn=f5c7e068…0af5 id=125c65da…8049
+2026-03-26T19:09:38.259-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=f5c7e068-33cf-45da-aa50-8a11ce720af5
+2026-03-26T19:09:38.521-04:00 [ws] webchat connected conn=1d4b3d86-1fae-4fe2-a22e-95085e094291 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T19:09:48.615-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=1d4b3d86-1fae-4fe2-a22e-95085e094291
+2026-03-26T19:09:48.843-04:00 [ws] webchat connected conn=3cd97574-b36c-4158-930e-b0d593d18182 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T19:09:50.743-04:00 [ws] ⇄ res ✓ sessions.list 95ms conn=3cd97574…8182 id=f7be6810…ae5f
+2026-03-26T19:09:51.275-04:00 [ws] ⇄ res ✓ skills.status 491ms conn=3cd97574…8182 id=cbfba175…0b6d
+2026-03-26T19:09:51.320-04:00 [ws] ⇄ res ✓ models.list 535ms conn=3cd97574…8182 id=e6488e3f…9961
+2026-03-26T19:09:51.328-04:00 [ws] ⇄ res ✓ cron.list 578ms conn=3cd97574…8182 id=2b9e6da9…1e1a
+2026-03-26T19:09:51.369-04:00 [ws] ⇄ res ✓ status 622ms conn=3cd97574…8182 id=3f01c3a5…e2a3
+2026-03-26T19:09:51.379-04:00 [ws] ⇄ res ✓ logs.tail 73ms conn=3cd97574…8182 id=f77ff48f…7dda
+2026-03-26T19:09:51.621-04:00 [ws] ⇄ res ✓ sessions.usage 344ms conn=3cd97574…8182 id=5deeef23…0bfe
+2026-03-26T19:10:10.147-04:00 [ws] webchat disconnected code=1001 reason=n/a conn=3cd97574-b36c-4158-930e-b0d593d18182
+2026-03-26T19:10:10.435-04:00 [ws] webchat connected conn=075a4ecb-bfd8-4783-9a80-93b52348e1c2 remote=127.0.0.1 client=openclaw-control-ui webchat v2026.3.24
+2026-03-26T19:10:15.824-04:00 [ws] ⇄ res ✓ sessions.list 51ms conn=075a4ecb…e1c2 id=34097280…ebd8
+2026-03-26T19:10:16.084-04:00 [ws] ⇄ res ✓ skills.status 237ms conn=075a4ecb…e1c2 id=35459008…52f2
+2026-03-26T19:10:16.110-04:00 [ws] ⇄ res ✓ models.list 266ms conn=075a4ecb…e1c2 id=d5ad69fe…e8d6
+2026-03-26T19:10:16.113-04:00 [ws] ⇄ res ✓ cron.status 288ms conn=075a4ecb…e1c2 id=18bd92dc…dbc5
+2026-03-26T19:10:16.130-04:00 [ws] ⇄ res ✓ status 304ms conn=075a4ecb…e1c2 id=a9b9fff5…1208
+2026-03-26T19:10:16.134-04:00 [ws] ⇄ res ✓ cron.list 308ms conn=075a4ecb…e1c2 id=c9349942…a5de
+2026-03-26T19:10:16.350-04:00 [ws] ⇄ res ✓ sessions.usage 263ms conn=075a4ecb…e1c2 id=24c9abb2…8324
+2026-03-26T19:15:29.175-04:00 [ws] ⇄ res ✓ sessions.list 86ms conn=075a4ecb…e1c2 id=6b12f2bb…fd6a
+2026-03-26T19:15:40.166-04:00 HEARTBEAT_OK
+
+```json
+{"bucket": "notification", "confidence": 0.75, "reason": "Promotional email from Pinterest with unsubscribe option; automated recommendations that don't require a reply."}
+```
+2026-03-26T19:15:58.529-04:00 ```json
+{"bucket": "newsletter", "confidence": 0.88, "reason": "AgentMail newsletter (#006) with substantive content about agent management and multi-agent systems; regular publication with unsubscribe option."}
+```
+2026-03-26T19:16:08.664-04:00 [ws] ⇄ res ✓ sessions.list 130ms conn=075a4ecb…e1c2 id=2fabedb1…27bc
+2026-03-26T19:16:13.799-04:00 ```json
+{"bucket": "newsletter", "confidence": 0.92, "reason": "Applying forwarded email rule: inner content is Medium Daily Digest, which matches the *.medium.com newsletter rule."}
+```
+2026-03-26T19:16:23.735-04:00 [ws] ⇄ res ✓ sessions.list 50ms conn=075a4ecb…e1c2 id=0c2daa7e…837e
+2026-03-26T19:16:45.091-04:00 ```json
+{
+  "articles_extracted": 12,
+  "articles": [
+    {
+      "title": "The Great Framework Showdown: Superpowers vs. BMAD vs. SpecKit vs. GSD",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Rick Hightower provides a practitioner's comparison of leading agentic frameworks, evaluating their strengths, weaknesses, and use cases. The analysis helps developers choose the right framework for their specific AI agent development needs.",
+      "keypoints": [
+        "Direct comparison of multiple agentic framework options and their tradeoffs",
+        "Practitioner perspective based on real-world experience",
+        "Framework selection guidance for different use cases"
+      ],
+      "topics": ["AI frameworks", "agent development", "software architecture"],
+      "relevance": 0.9,
+      "url": ""
+    },
+    {
+      "title": "Boris Cherny's Claude Code Tips Are Now a Skill. Here Is What the Complete...",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Reza Rezvani announces that Boris Cherny's comprehensive collection of Claude Code tips has been packaged as an installable skill. This provides a structured, reusable resource for developers using Claude Code.",
+      "keypoints": [
+        "Claude Code tips compiled into an installable skill format",
+        "Complete 42-tip collection now available",
+        "Reusable resource for Claude Code users"
+      ],
+      "topics": ["Claude Code", "developer tools", "best practices"],
+      "relevance": 0.8,
+      "url": ""
+    },
+    {
+      "title": "Project NOMAD: Offline Agents for Wartime Survival",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Agent Native explores building autonomous agents that function without external dependencies or connectivity, addressing scenarios where typical cloud and API dependencies become unavailable. The project focuses on creating resilient, self-contained agent systems.",
+      "keypoints": [
+        "Agents designed to operate independently without external dependencies",
+        "Resilience and offline-first architecture",
+        "Preparedness for scenarios where normal infrastructure fails"
+      ],
+      "topics": ["resilient agents", "offline systems", "agent architecture"],
+      "relevance": 0.7,
+      "url": ""
+    },
+    {
+      "title": "Which Programming Language Should You Use with Claude Code?",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "A benchmark study across 13 programming languages reveals surprising results about language choice when working with Claude Code. The analysis helps developers optimize language selection for AI-assisted coding.",
+      "keypoints": [
+        "Empirical comparison of 13 languages with Claude Code",
+        "Performance and compatibility insights across language ecosystems",
+        "Data-driven language selection guidance"
+      ],
+      "topics": ["Claude Code", "programming languages", "performance"],
+      "relevance": 0.85,
+      "url": ""
+    },
+    {
+      "title": "The NotebookLM Workflow That Changed How I Learn Any Technology",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "SoultntoureinTowards AI shares a practical system using NotebookLM to quickly master dense technical documentation. The workflow provides a replicable approach for learning complex technologies efficiently.",
+      "keypoints": [
+        "NotebookLM as a documentation learning tool",
+        "Practical workflow for mastering dense technical material",
+        "Replicable system for technology onboarding"
+      ],
+      "topics": ["learning systems", "documentation", "NotebookLM"],
+      "relevance": 0.6,
+      "url": ""
+    },
+    {
+      "title": "Claude Code Defaults to Medium Effort. Switching to Max Won't Save You.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Phil explores Claude Code's effort levels through experimentation with the /effort max command, discovering insights about when additional effort translates to better results. The analysis helps users understand realistic expectations for effort tuning.",
+      "keypoints": [
+        "Claude Code effort levels don't guarantee proportional improvements",
+        "Data from 21 attempts over 6 days of testing",
+        "Practical insights on effort parameter tuning"
+      ],
+      "topics": ["Claude Code", "configuration", "user experience"],
+      "relevance": 0.75,
+      "url": ""
+    },
+    {
+      "title": "KubeClaw: OpenClaw for Adults",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Agent Native introduces KubeClaw, an enterprise-focused variant of OpenClaw with secure defaults, pinned container images, and predictable upgrade cycles. The platform addresses production deployment needs for organizations.",
+      "keypoints": [
+        "Enterprise security defaults and container image pinning",
+        "Predictable upgrade and versioning strategy",
+        "Production-ready OpenClaw variant"
+      ],
+      "topics": ["OpenClaw", "enterprise deployment", "security"],
+      "relevance": 0.8,
+      "url": ""
+    },
+    {
+      "title": "5 Agent Frameworks. One Pattern Won.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Yanli Liu compares AutoGen, LangGraph, CrewAI, ByteDance's framework, and other options to identify common architectural patterns emerging across agent frameworks. The analysis reveals converging design patterns in the agent ecosystem.",
+      "keypoints": [
+        "Comparison of five major agent frameworks",
+        "Identification of dominant architectural patterns",
+        "Convergence trends in agent framework design"
+      ],
+      "topics": ["agent frameworks", "architecture patterns", "AI systems"],
+      "relevance": 0.85,
+      "url": ""
+    },
+    {
+      "title": "The Agent Framework Landscape: LangChain Deep Agents vs. Claude Agent SDK",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Rick Hightower provides a comprehensive analysis comparing LangChain Deep Agents and Claude Agent SDK, examining their architectures and capabilities. The deep dive helps developers understand the technical differences between major agent frameworks.",
+      "keypoints": [
+        "In-depth architectural comparison of two major agent SDKs",
+        "Capability and design pattern analysis",
+        "Framework selection criteria for different scenarios"
+      ],
+      "topics": ["agent frameworks", "LangChain", "Claude SDK"],
+      "relevance": 0.9,
+      "url": ""
+    },
+    {
+      "title": "Atlassian Just Fired Its CTO for AI. Your Seniority Won't Save You.",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "MohamedAbdelmeneminGenerative AI reports on Atlassian's CTO layoff amid the company's broader workforce reduction of 1,600 employees. The article examines how AI adoption is impacting senior leadership roles across the industry.",
+      "keypoints": [
+        "Senior leadership not immune to AI-driven organizational changes",
+        "1,600 employee reduction at Atlassian amid AI transition",
+        "Broader industry trend of CTO and leadership restructuring"
+      ],
+      "topics": ["industry trends", "AI adoption", "workforce disruption"],
+      "relevance": 0.65,
+      "url": ""
+    },
+    {
+      "title": "Claude Just Productized What I Built by Hand — Here Is What They Nailed and...",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Reza Rezvani reflects on how Claude Code and OpenClaw agents now provide as built-in features what he previously constructed manually. The analysis highlights the maturation and productization of AI coding capabilities.",
+      "keypoints": [
+        "Claude Code delivers previously manual workflow automation",
+        "Comparison of custom builds versus productized solutions",
+        "Evolution of AI coding assistant capabilities"
+      ],
+      "topics": ["Claude Code", "automation", "product evolution"],
+      "relevance": 0.75,
+      "url": ""
+    },
+    {
+      "title": "How I'm Using (New) Claude Code Telegram Channel (To Code from Anywhere)",
+      "source": "Medium",
+      "newsletter": "Medium Daily Digest",
+      "summary": "Joe Njenga demonstrates how Claude Code's new native Telegram channel integration enables remote coding from anywhere. The integration provides a mobile-native way to access Claude Code capabilities.",
+      "keypoints": [
+        "Claude Code native Telegram integration now available",
+        "Remote coding capabilities from any device with Telegram",
+        "New channel as primary interface for code assistance"
+      ],
+      "topics": ["Claude Code", "Telegram integration", "remote work"],
+      "relevance": 0.7,
+      "url": ""
+    }
+  ],
+  "injection_attempt": false
+}
+```
+2026-03-26T19:16:53.115-04:00 [ws] ⇄ res ✓ sessions.list 83ms conn=075a4ecb…e1c2 id=56b14843…6125
+2026-03-26T19:16:54.719-04:00 [ws] ⇄ res ✓ sessions.list 52ms conn=075a4ecb…e1c2 id=13d1900b…93ce
+2026-03-26T19:17:01.056-04:00 ```json
+{"bucket": "notification", "confidence": 0.80, "reason": "Promotional email from TinyFish CEO with marketing content about web agents; bulk email with unsubscribe option but no reply required."}
+```
+2026-03-26T19:17:11.265-04:00 [ws] ⇄ res ✓ sessions.list 89ms conn=075a4ecb…e1c2 id=7921fd3d…cd0d
+2026-03-26T19:17:22.263-04:00 ```json
+{
+  "articles_extracted": 2,
+  "articles": [
+    {
+      "title": "We spent years making AI think. The real money? Making AI do.",
+      "source": "TinyFish",
+      "newsletter": "TinyFish",
+      "summary": "Sudheesh Nair argues that the real value in AI lies not in reasoning capabilities but in autonomous action on the live web. Ninety percent of the internet lacks APIs, creating opportunities for agents that can navigate, authenticate, extract, and transact directly through web interfaces—positioning the infrastructure for agent-driven web automation as the next major paradigm shift.",
+      "keypoints": [
+        "AI agents must move from reasoning to action on unstructured web interfaces",
+        "90% of internet data has no API; web automation through agent navigation is the frontier",
+        "Infrastructure for agent-driven web automation ('roads') is the critical bottleneck, not more advanced models"
+      ],
+      "topics": ["AI agents", "web automation", "infrastructure", "API gaps"],
+      "relevance": 0.95,
+      "url": ""
+    },
+    {
+      "title": "The Era of Abundant Intelligence",
+      "source": "TinyFish",
+      "newsletter": "TinyFish",
+      "summary": "An article exploring the implications of abundant AI capabilities and how it reshapes software infrastructure and business models. The piece contextualizes the shift toward agent-driven automation and the infrastructure needed to support it.",
+      "keypoints": [
+        "Abundant intelligence enables new paradigms for software architecture",
+        "Infrastructure design must shift to accommodate agent-first workflows",
+        "The robotic web represents the next evolution in internet infrastructure"
+      ],
+      "topics": ["AI paradigms", "infrastructure", "abundant intelligence"],
+      "relevance": 0.85,
+      "url": ""
+    }
+  ],
+  "injection_attempt": false
+}
+```
+2026-03-26T19:17:34.849-04:00 ```json
+{"bucket": "notification", "confidence": 0.88, "reason": "Apple iCloud security alert; transactional notification requiring scan for suspicious activity but no reply needed."}
+```
+2026-03-26T19:17:45.122-04:00 [ws] ⇄ res ✓ sessions.list 113ms conn=075a4ecb…e1c2 id=0b401158…f707
+2026-03-26T19:17:49.041-04:00 [ws] ⇄ res ✓ sessions.list 76ms conn=075a4ecb…e1c2 id=b04fb19c…075a
+2026-03-26T19:17:49.139-04:00 ```json
+{"bucket": "notification", "confidence": 0.88, "reason": "Apple iCloud security alert; transactional notification requiring scan for suspicious activity but no reply needed."}
+```
+2026-03-26T19:17:56.434-04:00 [ws] ⇄ res ✓ node.list 73ms conn=075a4ecb…e1c2 id=cc8b84a6…9969
+2026-03-26T19:39:32.340-04:00 [ws] ⇄ res ✓ sessions.list 51ms conn=075a4ecb…e1c2 id=dedbabd1…c9c1
+2026-03-26T19:48:22.224-04:00 [ws] ⇄ res ✓ sessions.list 63ms conn=075a4ecb…e1c2 id=ebcf4470…d132
+2026-03-26T19:54:32.227-04:00 [ws] ⇄ res ✓ sessions.list 60ms conn=075a4ecb…e1c2 id=fcdff25f…fc62
